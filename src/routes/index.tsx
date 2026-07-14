@@ -84,10 +84,10 @@ function Index() {
           loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 z-0 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-40 brightness-75 saturate-110"
         />
-        <div className="absolute inset-0 z-[1] bg-section-glow" />
-        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="absolute inset-0 z-[1] bg-section-glow opacity-60" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
