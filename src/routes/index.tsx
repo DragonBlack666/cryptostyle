@@ -3,6 +3,7 @@ import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroBg from "@/assets/hero-bg.jpg";
 import nftCard from "@/assets/nft-card.jpg";
+import logoAsset from "@/assets/logo.png.asset.json";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
   Rocket, DollarSign, Send, ShieldAlert, Wallet, MessageCircle,
