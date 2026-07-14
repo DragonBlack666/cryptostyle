@@ -76,7 +76,7 @@ function Index() {
       </section>
 
       {/* WHY */}
-      <section id="why" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="why" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
           src={whyBg}
           alt=""
@@ -85,7 +85,7 @@ function Index() {
           height={1080}
           className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/35 via-transparent to-background/35" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
@@ -113,7 +113,7 @@ function Index() {
       </section>
 
       {/* NFT */}
-      <section id="nft" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="nft" className="relative isolate overflow-hidden py-24 sm:py-32">
         <div className="absolute inset-0 -z-10 bg-hero opacity-70" />
         <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <div>
@@ -149,7 +149,7 @@ function Index() {
       </section>
 
       {/* TON */}
-      <section id="ton" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="ton" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
           src={tonBg}
           alt=""
@@ -158,7 +158,7 @@ function Index() {
           height={1080}
           className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/35 via-transparent to-background/35" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.ton.eyebrow}</p>
@@ -188,7 +188,7 @@ function Index() {
       </section>
 
       {/* ROADMAP */}
-      <section id="roadmap" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="roadmap" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
           src={roadmapBg}
           alt=""
@@ -197,7 +197,7 @@ function Index() {
           height={1080}
           className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/35 via-transparent to-background/35" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.roadmap.eyebrow}</p>
@@ -222,7 +222,7 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-24 sm:py-32">
+      <section className="relative isolate overflow-hidden py-24 sm:py-32">
         <div className="absolute inset-0 -z-10 bg-hero" />
         <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="font-display text-4xl sm:text-6xl">
