@@ -65,7 +65,7 @@ const ru: Dict = {
       "Партнёрские программы без админов и посредников. Мгновенные выплаты прямо на ваш кошелёк, NFT-паспорта участников и 100% прозрачность на блокчейне TON.",
     cta1: "Подключить кошелёк",
     cta2: "Узнать больше",
-    cta1Link: "https://cryptostylematrix.github.io/frontend",
+    cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
   why: {
     eyebrow: "Почему Crypto Style?",
