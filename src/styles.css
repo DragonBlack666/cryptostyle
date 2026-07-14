@@ -107,3 +107,20 @@
 @utility bg-hero {
   background: var(--gradient-hero);
 }
+
+@utility bg-gold-gradient {
+  background-image: var(--gradient-gold);
+  background-color: var(--gold);
+}
+
+@utility btn-gold {
+  background-image: var(--gradient-gold);
+  background-color: var(--gold);
+  color: var(--primary-foreground);
+  box-shadow: var(--shadow-gold);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+  &:hover {
+    transform: translateY(-2px);
+    filter: brightness(1.05);
+  }
+}
