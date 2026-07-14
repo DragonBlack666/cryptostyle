@@ -145,7 +145,7 @@ const en: Dict = {
       "Affiliate programs without admins or middlemen. Instant payouts straight to your wallet, NFT participant passports and 100% transparency on the TON blockchain.",
     cta1: "Connect wallet",
     cta2: "Learn more",
-    cta1Link: "#top",
+    cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
   why: {
     eyebrow: "Why Crypto Style?",
