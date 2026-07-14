@@ -18,7 +18,7 @@ export type LangCode = (typeof LANGUAGES)[number]["code"];
 
 export type Dict = {
   nav: { features: string; nft: string; ton: string; roadmap: string };
-  hero: { title1: string; title2: string; subtitle: string; cta1: string; cta2: string };
+  hero: { title1: string; title2: string; subtitle: string; cta1: string; cta2: string; cta1Link: string };
   why: {
     eyebrow: string;
     title: string;
