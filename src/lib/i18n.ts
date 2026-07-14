@@ -68,6 +68,11 @@ const ru: Dict = {
     cta2: "Узнать больше",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
+  social: {
+    youtube: "https://www.youtube.com/@CryptoStyleOfficial",
+    twitter: "#",
+    telegram: "#",
+  },
   why: {
     eyebrow: "Почему Crypto Style?",
     title: "Платформа, где правила нельзя изменить",
@@ -148,6 +153,11 @@ const en: Dict = {
     cta2: "Learn more",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
+  social: {
+    youtube: "https://www.youtube.com/@CryptoStyleOfficial-EN",
+    twitter: "#",
+    telegram: "#",
+  },
   why: {
     eyebrow: "Why Crypto Style?",
     title: "A platform where the rules can't be changed",
@@ -224,46 +234,55 @@ const de: Dict = {
   ...en,
   nav: { features: "Funktionen", nft: "NFT-Profil", ton: "TON", roadmap: "Roadmap" },
   hero: { ...en.hero, title2: "Die Plattform der nächsten Generation", cta1: "Wallet verbinden", cta2: "Mehr erfahren" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-DE" },
 };
 const fr: Dict = {
   ...en,
   nav: { features: "Fonctionnalités", nft: "Profil NFT", ton: "TON", roadmap: "Feuille de route" },
   hero: { ...en.hero, title2: "La plateforme de nouvelle génération", cta1: "Connecter le portefeuille", cta2: "En savoir plus" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-FR" },
 };
 const it: Dict = {
   ...en,
   nav: { features: "Funzionalità", nft: "Profilo NFT", ton: "TON", roadmap: "Roadmap" },
   hero: { ...en.hero, title2: "La piattaforma di nuova generazione", cta1: "Collega il wallet", cta2: "Scopri di più" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-IT" },
 };
 const es: Dict = {
   ...en,
   nav: { features: "Funciones", nft: "Perfil NFT", ton: "TON", roadmap: "Hoja de ruta" },
   hero: { ...en.hero, title2: "La plataforma de nueva generación", cta1: "Conectar wallet", cta2: "Saber más" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-ES" },
 };
 const pt: Dict = {
   ...en,
   nav: { features: "Funcionalidades", nft: "Perfil NFT", ton: "TON", roadmap: "Roteiro" },
   hero: { ...en.hero, title2: "A plataforma da nova geração", cta1: "Conectar carteira", cta2: "Saiba mais" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-PT" },
 };
 const uk: Dict = {
   ...ru,
   nav: { features: "Можливості", nft: "NFT-профіль", ton: "TON", roadmap: "Дорожня карта" },
   hero: { ...ru.hero, title2: "Платформа нового покоління", cta1: "Підключити гаманець", cta2: "Дізнатися більше" },
+  social: { ...ru.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-UA" },
 };
 const kk: Dict = {
   ...ru,
   nav: { features: "Мүмкіндіктер", nft: "NFT-профиль", ton: "TON", roadmap: "Жол картасы" },
   hero: { ...ru.hero, title2: "Жаңа буын платформасы", cta1: "Әмиянды қосу", cta2: "Толығырақ" },
+  social: { ...ru.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-KK" },
 };
 const pl: Dict = {
   ...en,
   nav: { features: "Funkcje", nft: "Profil NFT", ton: "TON", roadmap: "Plan działania" },
   hero: { ...en.hero, title2: "Platforma nowej generacji", cta1: "Połącz portfel", cta2: "Dowiedz się więcej" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-PL" },
 };
 const hu: Dict = {
   ...en,
   nav: { features: "Funkciók", nft: "NFT profil", ton: "TON", roadmap: "Ütemterv" },
   hero: { ...en.hero, title2: "Az új generációs platform", cta1: "Tárca csatlakoztatása", cta2: "Tudj meg többet" },
+  social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-HU" },
 };
 
 export const DICTS: Record<LangCode, Dict> = {
