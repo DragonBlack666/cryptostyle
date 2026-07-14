@@ -263,7 +263,7 @@ const pt: Dict = {
 const uk: Dict = {
   ...ru,
   nav: { features: "Можливості", nft: "NFT-профіль", ton: "TON", roadmap: "Дорожня карта" },
-  hero: { ...ru.hero, title2: "Платформа нового покоління", cta1: "Підключити гаманець", cta2: "Дізнатися більше" },
+  hero: { ...ru.hero, title2: "Платформа нового покоління", subtitle: "Партнерські програми без адміністраторів і посередників. Миттєві виплати прямо на ваш гаманець, NFT-паспорти учасників і 100% прозорість у блокчейні TON.", cta1: "Підключити гаманець", cta2: "Дізнатися більше" },
   social: { ...ru.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-UA" },
 };
 const kk: Dict = {
