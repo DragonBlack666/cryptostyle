@@ -8,7 +8,7 @@ const links = [
 
 export function SocialLinks() {
   return (
-    <div className="hidden items-center gap-2 md:flex">
+    <div className="flex items-center gap-2">
       {links.map((link) => {
         const Icon = link.icon;
         return (
@@ -18,7 +18,7 @@ export function SocialLinks() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label={link.name}
-            className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/30 bg-surface/60 text-foreground/80 backdrop-blur transition hover:border-gold hover:text-gold"
+            className="flex h-8 w-8 items-center justify-center rounded-full border border-gold/30 bg-surface/60 text-foreground/80 backdrop-blur transition hover:border-gold hover:text-gold md:h-9 md:w-9"
           >
             <Icon className="h-4 w-4" />
           </a>
