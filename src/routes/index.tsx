@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroBg from "@/assets/hero-bg.jpg";
-import whyBg from "@/assets/bg-why.jpg";
-import tonBg from "@/assets/bg-ton.jpg";
-import roadmapBg from "@/assets/bg-roadmap.jpg";
+import whyBg from "@/assets/bg-why-light.jpg";
+import tonBg from "@/assets/bg-ton-light.jpg";
+import roadmapBg from "@/assets/bg-roadmap-light.jpg";
 import nftCard from "@/assets/nft-card.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import {
@@ -76,17 +76,19 @@ function Index() {
       </section>
 
       {/* WHY */}
-      <section id="why" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="why" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
           src={whyBg}
           alt=""
           aria-hidden
+          loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">{t.why.title}</h2>
@@ -113,9 +115,10 @@ function Index() {
       </section>
 
       {/* NFT */}
-      <section id="nft" className="relative overflow-hidden py-24 sm:py-32">
-        <div className="absolute inset-0 -z-10 bg-hero opacity-70" />
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+      <section id="nft" className="relative isolate overflow-hidden py-24 sm:py-32">
+        <div className="absolute inset-0 z-0 bg-hero opacity-100" />
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.nft.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl">{t.nft.title}</h2>
@@ -149,17 +152,19 @@ function Index() {
       </section>
 
       {/* TON */}
-      <section id="ton" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="ton" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
           src={tonBg}
           alt=""
           aria-hidden
+          loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-[center_70%] opacity-100 brightness-125 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.ton.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">{t.ton.title}</h2>
@@ -188,17 +193,19 @@ function Index() {
       </section>
 
       {/* ROADMAP */}
-      <section id="roadmap" className="relative overflow-hidden py-24 sm:py-32">
+      <section id="roadmap" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
           src={roadmapBg}
           alt=""
           aria-hidden
+          loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-transparent to-background/60" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.roadmap.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">{t.roadmap.title}</h2>
@@ -222,9 +229,10 @@ function Index() {
       </section>
 
       {/* CTA */}
-      <section className="relative overflow-hidden py-24 sm:py-32">
-        <div className="absolute inset-0 -z-10 bg-hero" />
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
+      <section className="relative isolate overflow-hidden py-24 sm:py-32">
+        <div className="absolute inset-0 z-0 bg-hero" />
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="font-display text-4xl sm:text-6xl">
             <span className="text-gradient-gold">{t.cta.title}</span>
           </h2>
