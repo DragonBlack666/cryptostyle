@@ -1,12 +1,15 @@
 import { Twitter, Youtube, Send } from "lucide-react";
-
-const links = [
-  { name: "YouTube", href: "#", icon: Youtube },
-  { name: "Twitter", href: "#", icon: Twitter },
-  { name: "Telegram", href: "#", icon: Send },
-];
+import { useI18n } from "@/lib/i18n";
 
 export function SocialLinks() {
+  const { t } = useI18n();
+
+  const links = [
+    { name: "YouTube", href: t.social.youtube, icon: Youtube },
+    { name: "Twitter", href: t.social.twitter, icon: Twitter },
+    { name: "Telegram", href: t.social.telegram, icon: Send },
+  ];
+
   return (
     <div className="flex items-center gap-2">
       {links.map((link) => {
