@@ -22,7 +22,7 @@ function Index() {
       <header className="fixed top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-[var(--gradient-gold)] text-primary-foreground font-bold">CS</span>
+            <span className="grid h-9 w-9 place-items-center rounded-lg bg-gold-gradient text-primary-foreground font-bold">CS</span>
             <span className="font-display text-lg font-semibold tracking-wide">Crypto Style</span>
           </a>
           <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
@@ -59,7 +59,7 @@ function Index() {
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#top"
-              className="group inline-flex items-center gap-2 rounded-xl bg-[var(--gradient-gold)] px-7 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] transition hover:-translate-y-0.5"
+              className="group inline-flex items-center gap-2 rounded-xl btn-gold px-7 py-3.5 font-semibold"
             >
               <Wallet className="h-5 w-5" /> {t.hero.cta1}
             </a>
@@ -153,7 +153,7 @@ function Index() {
                   key={i}
                   className="flex gap-5 rounded-2xl border border-border bg-card p-7 shadow-[var(--shadow-card)] transition hover:border-gold/50"
                 >
-                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-[var(--gradient-gold)] text-primary-foreground">
+                  <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-xl bg-gold-gradient text-primary-foreground">
                     <Icon className="h-7 w-7" />
                   </div>
                   <div>
@@ -217,7 +217,7 @@ function Index() {
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
               href="#top"
-              className="inline-flex items-center gap-2 rounded-xl bg-[var(--gradient-gold)] px-7 py-3.5 font-semibold text-primary-foreground shadow-[var(--shadow-gold)] transition hover:-translate-y-0.5"
+              className="inline-flex items-center gap-2 rounded-xl btn-gold px-7 py-3.5 font-semibold"
             >
               <Wallet className="h-5 w-5" /> {t.cta.btn1}
             </a>
