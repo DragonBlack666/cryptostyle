@@ -70,7 +70,7 @@ const ru: Dict = {
   },
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial",
-    twitter: "#",
+    twitter: "https://x.com/CryptoStyleTON",
     telegram: "https://t.me/CryptoStyleMatrixNews",
   },
   why: {
@@ -155,7 +155,7 @@ const en: Dict = {
   },
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial-EN",
-    twitter: "#",
+    twitter: "https://x.com/CryptoStyleTON",
     telegram: "https://t.me/CryptoStyleMatrixNews",
   },
   why: {
