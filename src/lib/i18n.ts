@@ -60,7 +60,7 @@ const ru: Dict = {
   nav: { features: "Возможности", nft: "NFT-профиль", ton: "TON", roadmap: "Дорожная карта" },
   hero: {
     title1: "Crypto Style",
-    title2: "платформа нового поколения",
+    title2: "Платформа нового поколения",
     subtitle:
       "Партнёрские программы без админов и посредников. Мгновенные выплаты прямо на ваш кошелёк, NFT-паспорта участников и 100% прозрачность на блокчейне TON.",
     cta1: "Подключить кошелёк",
@@ -139,7 +139,7 @@ const en: Dict = {
   nav: { features: "Features", nft: "NFT profile", ton: "TON", roadmap: "Roadmap" },
   hero: {
     title1: "Crypto Style",
-    title2: "the next-generation platform",
+    title2: "The next-generation platform",
     subtitle:
       "Affiliate programs without admins or middlemen. Instant payouts straight to your wallet, NFT participant passports and 100% transparency on the TON blockchain.",
     cta1: "Connect wallet",
@@ -220,47 +220,47 @@ const en: Dict = {
 const de: Dict = {
   ...en,
   nav: { features: "Funktionen", nft: "NFT-Profil", ton: "TON", roadmap: "Roadmap" },
-  hero: { ...en.hero, title2: "die Plattform der nächsten Generation", cta1: "Wallet verbinden", cta2: "Mehr erfahren" },
+  hero: { ...en.hero, title2: "Die Plattform der nächsten Generation", cta1: "Wallet verbinden", cta2: "Mehr erfahren" },
 };
 const fr: Dict = {
   ...en,
   nav: { features: "Fonctionnalités", nft: "Profil NFT", ton: "TON", roadmap: "Feuille de route" },
-  hero: { ...en.hero, title2: "la plateforme de nouvelle génération", cta1: "Connecter le portefeuille", cta2: "En savoir plus" },
+  hero: { ...en.hero, title2: "La plateforme de nouvelle génération", cta1: "Connecter le portefeuille", cta2: "En savoir plus" },
 };
 const it: Dict = {
   ...en,
   nav: { features: "Funzionalità", nft: "Profilo NFT", ton: "TON", roadmap: "Roadmap" },
-  hero: { ...en.hero, title2: "la piattaforma di nuova generazione", cta1: "Collega il wallet", cta2: "Scopri di più" },
+  hero: { ...en.hero, title2: "La piattaforma di nuova generazione", cta1: "Collega il wallet", cta2: "Scopri di più" },
 };
 const es: Dict = {
   ...en,
   nav: { features: "Funciones", nft: "Perfil NFT", ton: "TON", roadmap: "Hoja de ruta" },
-  hero: { ...en.hero, title2: "la plataforma de nueva generación", cta1: "Conectar wallet", cta2: "Saber más" },
+  hero: { ...en.hero, title2: "La plataforma de nueva generación", cta1: "Conectar wallet", cta2: "Saber más" },
 };
 const pt: Dict = {
   ...en,
   nav: { features: "Funcionalidades", nft: "Perfil NFT", ton: "TON", roadmap: "Roteiro" },
-  hero: { ...en.hero, title2: "a plataforma da nova geração", cta1: "Conectar carteira", cta2: "Saiba mais" },
+  hero: { ...en.hero, title2: "A plataforma da nova geração", cta1: "Conectar carteira", cta2: "Saiba mais" },
 };
 const uk: Dict = {
   ...ru,
   nav: { features: "Можливості", nft: "NFT-профіль", ton: "TON", roadmap: "Дорожня карта" },
-  hero: { ...ru.hero, title2: "платформа нового покоління", cta1: "Підключити гаманець", cta2: "Дізнатися більше" },
+  hero: { ...ru.hero, title2: "Платформа нового покоління", cta1: "Підключити гаманець", cta2: "Дізнатися більше" },
 };
 const kk: Dict = {
   ...ru,
   nav: { features: "Мүмкіндіктер", nft: "NFT-профиль", ton: "TON", roadmap: "Жол картасы" },
-  hero: { ...ru.hero, title2: "жаңа буын платформасы", cta1: "Әмиянды қосу", cta2: "Толығырақ" },
+  hero: { ...ru.hero, title2: "Жаңа буын платформасы", cta1: "Әмиянды қосу", cta2: "Толығырақ" },
 };
 const pl: Dict = {
   ...en,
   nav: { features: "Funkcje", nft: "Profil NFT", ton: "TON", roadmap: "Plan działania" },
-  hero: { ...en.hero, title2: "platforma nowej generacji", cta1: "Połącz portfel", cta2: "Dowiedz się więcej" },
+  hero: { ...en.hero, title2: "Platforma nowej generacji", cta1: "Połącz portfel", cta2: "Dowiedz się więcej" },
 };
 const hu: Dict = {
   ...en,
   nav: { features: "Funkciók", nft: "NFT profil", ton: "TON", roadmap: "Ütemterv" },
-  hero: { ...en.hero, title2: "az új generációs platform", cta1: "Tárca csatlakoztatása", cta2: "Tudj meg többet" },
+  hero: { ...en.hero, title2: "Az új generációs platform", cta1: "Tárca csatlakoztatása", cta2: "Tudj meg többet" },
 };
 
 export const DICTS: Record<LangCode, Dict> = {
