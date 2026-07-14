@@ -1,6 +1,7 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { SocialLinks } from "@/components/SocialLinks";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
@@ -34,7 +35,10 @@ function Index() {
             <a href="#ton" className="transition hover:text-gold">{t.nav.ton}</a>
             <a href="#roadmap" className="transition hover:text-gold">{t.nav.roadmap}</a>
           </nav>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-3">
+            <SocialLinks />
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 
