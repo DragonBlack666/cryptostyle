@@ -22,9 +22,8 @@ function Index() {
       {/* NAV */}
       <header className="fixed top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-          <a href="#top" className="flex items-center gap-2">
-            <span className="grid h-9 w-9 place-items-center rounded-lg bg-gold-gradient text-primary-foreground font-bold">CS</span>
-            <span className="font-display text-lg font-semibold tracking-wide">Crypto Style</span>
+          <a href="#top" className="flex items-center">
+            <img src={logoAsset.url} alt="Crypto Style" className="h-10 w-auto" />
           </a>
           <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
             <a href="#why" className="transition hover:text-gold">{t.nav.features}</a>
