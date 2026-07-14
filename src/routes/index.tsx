@@ -83,9 +83,9 @@ function Index() {
           aria-hidden
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-40"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-75"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/40 to-background" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
@@ -156,9 +156,9 @@ function Index() {
           aria-hidden
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/85 to-background" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/45 to-background" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.ton.eyebrow}</p>
@@ -195,9 +195,9 @@ function Index() {
           aria-hidden
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-35"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-70"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/80 to-background" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/40 to-background" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.roadmap.eyebrow}</p>
