@@ -71,7 +71,7 @@ const ru: Dict = {
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial",
     twitter: "#",
-    telegram: "#",
+    telegram: "https://t.me/CryptoStyleMatrixNews",
   },
   why: {
     eyebrow: "Почему Crypto Style?",
@@ -156,7 +156,7 @@ const en: Dict = {
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial-EN",
     twitter: "#",
-    telegram: "#",
+    telegram: "https://t.me/CryptoStyleMatrixNews",
   },
   why: {
     eyebrow: "Why Crypto Style?",
