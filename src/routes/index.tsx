@@ -2,7 +2,7 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroBg from "@/assets/hero-bg.jpg";
-import nftCard from "@/assets/nft-card.jpg";
+import nftCard from "@/assets/nft-card.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
@@ -125,7 +125,7 @@ function Index() {
           <div className="relative mx-auto w-full max-w-md">
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-[var(--gradient-gold)] opacity-30 blur-2xl" />
             <img
-              src={nftCard}
+              src={nftCard.url}
               alt={t.nft.caption}
               loading="lazy"
               width={1024}
