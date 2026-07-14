@@ -63,7 +63,7 @@ function Index() {
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#top"
+              href={t.hero.cta1Link}
               className="group inline-flex items-center gap-2 rounded-xl btn-gold px-7 py-3.5 font-semibold"
             >
               <Wallet className="h-5 w-5" /> {t.hero.cta1}
