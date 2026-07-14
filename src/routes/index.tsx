@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroBg from "@/assets/hero-bg.jpg";
-import whyBg from "@/assets/bg-why.jpg";
-import tonBg from "@/assets/bg-ton.jpg";
-import roadmapBg from "@/assets/bg-roadmap.jpg";
+import whyBg from "@/assets/bg-why-light.jpg";
+import tonBg from "@/assets/bg-ton-light.jpg";
+import roadmapBg from "@/assets/bg-roadmap-light.jpg";
 import nftCard from "@/assets/nft-card.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import {
@@ -81,11 +81,12 @@ function Index() {
           src={whyBg}
           alt=""
           aria-hidden
+          loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-90 brightness-110 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/35 via-transparent to-background/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/20 via-transparent to-background/25" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
@@ -154,11 +155,12 @@ function Index() {
           src={tonBg}
           alt=""
           aria-hidden
+          loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_70%] opacity-90 brightness-110 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/35 via-transparent to-background/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/20 via-transparent to-background/25" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.ton.eyebrow}</p>
@@ -193,11 +195,12 @@ function Index() {
           src={roadmapBg}
           alt=""
           aria-hidden
+          loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover brightness-150 contrast-125 saturate-125"
+          className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_65%] opacity-90 brightness-125 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/35 via-transparent to-background/35" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/20 via-transparent to-background/25" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.roadmap.eyebrow}</p>
