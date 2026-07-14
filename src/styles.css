@@ -108,6 +108,14 @@
   background: var(--gradient-hero);
 }
 
+@utility bg-section-glow {
+  background:
+    radial-gradient(ellipse at 50% 8%, oklch(0.86 0.14 92 / 0.32), transparent 48%),
+    radial-gradient(ellipse at 16% 56%, oklch(0.55 0.24 300 / 0.18), transparent 55%),
+    radial-gradient(ellipse at 86% 42%, oklch(0.92 0.09 92 / 0.20), transparent 52%),
+    linear-gradient(180deg, oklch(0.22 0.04 275 / 0.35), transparent 35%, oklch(0.24 0.04 275 / 0.28));
+}
+
 @utility bg-gold-gradient {
   background-image: var(--gradient-gold);
   background-color: var(--gold);

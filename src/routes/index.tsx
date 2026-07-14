@@ -84,10 +84,11 @@ function Index() {
           loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-90 brightness-110 contrast-110 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/20 via-transparent to-background/25" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">{t.why.title}</h2>
@@ -115,8 +116,9 @@ function Index() {
 
       {/* NFT */}
       <section id="nft" className="relative isolate overflow-hidden py-24 sm:py-32">
-        <div className="absolute inset-0 -z-10 bg-hero opacity-70" />
-        <div className="mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
+        <div className="absolute inset-0 z-0 bg-hero opacity-100" />
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.nft.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl">{t.nft.title}</h2>
@@ -158,10 +160,11 @@ function Index() {
           loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_70%] opacity-90 brightness-110 contrast-110 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-[center_70%] opacity-100 brightness-125 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/20 via-transparent to-background/25" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.ton.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">{t.ton.title}</h2>
@@ -198,10 +201,11 @@ function Index() {
           loading="lazy"
           width={1920}
           height={1080}
-          className="absolute inset-0 -z-20 h-full w-full object-cover object-[center_65%] opacity-90 brightness-125 contrast-110 saturate-125"
+          className="absolute inset-0 z-0 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/20 via-transparent to-background/25" />
-        <div className="mx-auto max-w-7xl px-4 sm:px-6">
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="relative z-10 mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.roadmap.eyebrow}</p>
             <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">{t.roadmap.title}</h2>
@@ -226,8 +230,9 @@ function Index() {
 
       {/* CTA */}
       <section className="relative isolate overflow-hidden py-24 sm:py-32">
-        <div className="absolute inset-0 -z-10 bg-hero" />
-        <div className="mx-auto max-w-6xl px-4 text-center sm:px-6">
+        <div className="absolute inset-0 z-0 bg-hero" />
+        <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="relative z-10 mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="font-display text-4xl sm:text-6xl">
             <span className="text-gradient-gold">{t.cta.title}</span>
           </h2>
