@@ -49,7 +49,6 @@ function Index() {
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
           <h1 className="font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
             <span className="text-gradient-gold uppercase">{t.hero.title1}</span>
-            <span className="mx-3 text-gold-soft/60">—</span>
             <br className="hidden sm:block" />
             <span className="text-foreground">{t.hero.title2}</span>
           </h1>
