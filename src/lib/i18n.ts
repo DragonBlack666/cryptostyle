@@ -51,7 +51,9 @@ export type Dict = {
     intro: string;
     stats: { value: string; label: string; desc: string }[];
     btn1: string;
+    btn1Link: string;
     btn2: string;
+    btn2Link: string;
     tagline: string;
   };
   footer: string;
@@ -136,7 +138,9 @@ const ru: Dict = {
       { value: "TON", label: "Блокчейн-основа", desc: "Построен на одном из самых быстрых блокчейнов в мире" },
     ],
     btn1: "Подключить TON кошелёк",
+    btn1Link: "https://cryptostylematrix.github.io/frontend/",
     btn2: "Открыть в Telegram",
+    btn2Link: "https://t.me/CryptoStyleMatrix",
     tagline: "Ваши деньги. Ваши правила. Ваш блокчейн.",
   },
   footer: "© Crypto Style. Все права принадлежат владельцам кошельков.",
@@ -221,7 +225,9 @@ const en: Dict = {
       { value: "TON", label: "Blockchain base", desc: "Built on one of the fastest blockchains in the world" },
     ],
     btn1: "Connect TON wallet",
+    btn1Link: "https://cryptostylematrix.github.io/frontend/",
     btn2: "Open in Telegram",
+    btn2Link: "https://t.me/CryptoStyleMatrix",
     tagline: "Your money. Your rules. Your blockchain.",
   },
   footer: "© Crypto Style. All rights belong to wallet owners.",
@@ -335,7 +341,9 @@ const uk: Dict = {
       { value: "TON", label: "Блокчейн-основа", desc: "Побудований на одному з найшвидших блокчейнів у світі" },
     ],
     btn1: "Підключити TON гаманець",
+    btn1Link: "https://cryptostylematrix.github.io/frontend/",
     btn2: "Відкрити в Telegram",
+    btn2Link: "https://t.me/CryptoStyleMatrix",
     tagline: "Ваші гроші. Ваші правила. Ваш блокчейн.",
   },
   footer: "© Crypto Style. Усі права належать власникам гаманців.",

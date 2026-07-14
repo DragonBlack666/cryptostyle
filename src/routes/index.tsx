@@ -256,13 +256,13 @@ function Index() {
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-4">
             <a
-              href="#top"
+              href={t.cta.btn1Link}
               className="inline-flex items-center gap-2 rounded-xl btn-gold px-7 py-3.5 font-semibold"
             >
               <Wallet className="h-5 w-5" /> {t.cta.btn1}
             </a>
             <a
-              href="#top"
+              href={t.cta.btn2Link}
               className="inline-flex items-center gap-2 rounded-xl border border-gold/50 bg-surface/40 px-7 py-3.5 font-semibold text-foreground backdrop-blur transition hover:border-gold"
             >
               <MessageCircle className="h-5 w-5" /> {t.cta.btn2}
