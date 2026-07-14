@@ -35,7 +35,10 @@ function Index() {
             <a href="#ton" className="transition hover:text-gold">{t.nav.ton}</a>
             <a href="#roadmap" className="transition hover:text-gold">{t.nav.roadmap}</a>
           </nav>
-          <LanguageSwitcher />
+          <div className="flex items-center gap-3">
+            <SocialLinks />
+            <LanguageSwitcher />
+          </div>
         </div>
       </header>
 
