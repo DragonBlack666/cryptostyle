@@ -2,6 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import heroBg from "@/assets/hero-bg.jpg";
+import whyBg from "@/assets/bg-why.jpg";
+import tonBg from "@/assets/bg-ton.jpg";
+import roadmapBg from "@/assets/bg-roadmap.jpg";
 import nftCard from "@/assets/nft-card.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import {
@@ -73,7 +76,16 @@ function Index() {
       </section>
 
       {/* WHY */}
-      <section id="why" className="relative py-24 sm:py-32">
+      <section id="why" className="relative overflow-hidden py-24 sm:py-32">
+        <img
+          src={whyBg}
+          alt=""
+          aria-hidden
+          width={1920}
+          height={1080}
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-40"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/80 to-background" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.why.eyebrow}</p>
@@ -137,7 +149,16 @@ function Index() {
       </section>
 
       {/* TON */}
-      <section id="ton" className="py-24 sm:py-32">
+      <section id="ton" className="relative overflow-hidden py-24 sm:py-32">
+        <img
+          src={tonBg}
+          alt=""
+          aria-hidden
+          width={1920}
+          height={1080}
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/85 to-background" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.ton.eyebrow}</p>
@@ -167,7 +188,16 @@ function Index() {
       </section>
 
       {/* ROADMAP */}
-      <section id="roadmap" className="relative py-24 sm:py-32">
+      <section id="roadmap" className="relative overflow-hidden py-24 sm:py-32">
+        <img
+          src={roadmapBg}
+          alt=""
+          aria-hidden
+          width={1920}
+          height={1080}
+          className="absolute inset-0 -z-20 h-full w-full object-cover opacity-35"
+        />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background via-background/80 to-background" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <div className="mx-auto max-w-3xl text-center">
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.roadmap.eyebrow}</p>
