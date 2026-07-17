@@ -121,9 +121,9 @@ const ru: Dict = {
     intro:
       "Crypto Style — это живая экосистема, которая развивается поэтапно, давая преимущества тем, кто присоединился раньше.",
     stages: [
-      { name: "Этап 1", title: "Удобство", desc: "Mini App в Telegram. NFT-профили. Домен в зоне TON. Сервис для ежедневного использования без сложных сайтов и логинов." },
-      { name: "Этап 2", title: "Стабильность", desc: "Собственная монета CS Coin на реальном обеспечении. Разнообразие партнёрских программ. Снижение зависимости от волатильности." },
-      { name: "Этап 3", title: "Экономика", desc: "CS Coin с реальным применением. Маркетплейс. Товарные модели. Частичная конвертация в фиат." },
+      { name: "Этап 1", title: "Удобство", desc: "Mini App в Telegram. NFT-профили. Сервис для ежедневного использования без сложных сайтов и логинов." },
+      { name: "Этап 2", title: "Стабильность", desc: "Властная монета CS USD на реальном обеспечении. Разнообразие партнёрских программ. Снижение зависимости от волатильности." },
+      { name: "Этап 3", title: "Экономика", desc: "CS USD с реальным применением. Маркетплейс. Товарные модели. Частичная конвертация в фиат." },
       { name: "Этап 4", title: "Децентрализация", desc: "DAO — управление сообществом. Выход Coin на DEX и CEX. Стейкинг через Nominator Pool. Собственные валидаторы." },
       { name: "Этап 5", title: "Интеллект", desc: "Платформа для создания собственных маркетингов. AI-модель, которая строит бизнес под цели каждого пользователя." },
     ],
@@ -208,9 +208,9 @@ const en: Dict = {
     intro:
       "Crypto Style is a living ecosystem that grows in stages, rewarding those who joined earlier.",
     stages: [
-      { name: "Stage 1", title: "Convenience", desc: "Telegram Mini App. NFT profiles. TON-zone domain. A daily-use service with no complex sites or logins." },
-      { name: "Stage 2", title: "Stability", desc: "Our own CS Coin backed by real assets. A variety of affiliate programs. Lower dependency on volatility." },
-      { name: "Stage 3", title: "Economy", desc: "CS Coin with real utility. Marketplace. Commerce models. Partial fiat conversion." },
+      { name: "Stage 1", title: "Convenience", desc: "Telegram Mini App. NFT profiles. A daily-use service with no complex sites or logins." },
+      { name: "Stage 2", title: "Stability", desc: "Our own CS USD backed by real assets. A variety of affiliate programs. Lower dependency on volatility." },
+      { name: "Stage 3", title: "Economy", desc: "CS USD with real utility. Marketplace. Commerce models. Partial fiat conversion." },
       { name: "Stage 4", title: "Decentralization", desc: "DAO governance. Coin listing on DEX and CEX. Staking via Nominator Pool. Our own validators." },
       { name: "Stage 5", title: "Intelligence", desc: "A platform to design your own marketing flows. An AI model that shapes a business around each user's goals." },
     ],
@@ -324,9 +324,9 @@ const uk: Dict = {
     intro:
       "Crypto Style — це жива екосистема, яка розвивається поетапно, даючи переваги тим, хто приєднався раніше.",
     stages: [
-      { name: "Етап 1", title: "Зручність", desc: "Mini App у Telegram. NFT-профілі. Домен у зоні TON. Сервіс для щоденного використання без складних сайтів і логінів." },
-      { name: "Етап 2", title: "Стабільність", desc: "Власна монета CS Coin із реальним забезпеченням. Різноманіття партнерських програм. Зниження залежності від волатильності." },
-      { name: "Етап 3", title: "Економіка", desc: "CS Coin із реальним застосуванням. Маркетплейс. Товарні моделі. Часткова конвертація у фіат." },
+      { name: "Етап 1", title: "Зручність", desc: "Mini App у Telegram. NFT-профілі. Сервіс для щоденного використання без складних сайтів і логінів." },
+      { name: "Етап 2", title: "Стабільність", desc: "Власна монета CS USD із реальним забезпеченням. Різноманіття партнерських програм. Зниження залежності від волатильності." },
+      { name: "Етап 3", title: "Економіка", desc: "CS USD із реальним застосуванням. Маркетплейс. Товарні моделі. Частічна конвертація у фіат." },
       { name: "Етап 4", title: "Децентралізація", desc: "DAO — управління спільнотою. Вихід Coin на DEX і CEX. Стейкінг через Nominator Pool. Власні валідатори." },
       { name: "Етап 5", title: "Інтелект", desc: "Платформа для створення власних маркетингів. AI-модель, яка будує бізнес під цілі кожного користувача." },
     ],
