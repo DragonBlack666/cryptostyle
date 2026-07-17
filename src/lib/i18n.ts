@@ -143,7 +143,7 @@ const ru: Dict = {
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Ваши деньги. Ваши правила. Ваш блокчейн.",
   },
-  footer: "© Crypto Style. Все права принадлежат владельцам кошельков.",
+  footer: "© Crypto Style. Все права защищены.",
 };
 
 const en: Dict = {
@@ -230,7 +230,7 @@ const en: Dict = {
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Your money. Your rules. Your blockchain.",
   },
-  footer: "© Crypto Style. All rights belong to wallet owners.",
+  footer: "© Crypto Style. All rights reserved.",
 };
 
 // For all other languages, fall back to English content but with translated nav/hero CTAs where useful.
@@ -346,7 +346,7 @@ const uk: Dict = {
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Ваші гроші. Ваші правила. Ваш блокчейн.",
   },
-  footer: "© Crypto Style. Усі права належать власникам гаманців.",
+  footer: "© Crypto Style. Усі права захищені.",
 };
 const kk: Dict = {
   ...ru,
