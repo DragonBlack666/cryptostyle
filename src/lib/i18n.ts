@@ -112,7 +112,7 @@ const ru: Dict = {
       { title: "Высокая скорость", desc: "Транзакции обрабатываются за секунды. Выплаты поступают на кошелёк практически мгновенно." },
       { title: "Низкие комиссии", desc: "Комиссия в сети TON — доли цента. Вы получаете почти всё вознаграждение без потерь." },
       { title: "Интеграция с Telegram", desc: "TON — нативный блокчейн Telegram. Миллиарды пользователей уже имеют доступ к кошельку и Mini Apps." },
-      { title: "Надёжность сети", desc: "Децентрализованная архитектура TON обеспечивает работу 24/7. Никаких технических остановок." },
+      { title: "Глобальная сеть", desc: "Объединяет пользователей по всему миру и обеспечивает удобную работу с цифровыми активами без географических ограничений." },
     ],
   },
   roadmap: {
@@ -199,7 +199,7 @@ const en: Dict = {
       { title: "High speed", desc: "TON transactions settle in seconds. Payouts arrive in your wallet almost instantly." },
       { title: "Low fees", desc: "Network fees are a fraction of a cent. You keep almost the full reward." },
       { title: "Telegram integration", desc: "TON is Telegram's native blockchain. Billions of users already have a wallet and Mini Apps in-app." },
-      { title: "Network reliability", desc: "TON's decentralized architecture runs 24/7. No downtime, no server dependency." },
+      { title: "Global network", desc: "Connects users worldwide and ensures convenient work with digital assets without geographical restrictions." },
     ],
   },
   roadmap: {
@@ -315,7 +315,7 @@ const uk: Dict = {
       { title: "Висока швидкість", desc: "Транзакції обробляються за секунди. Виплати надходять на гаманець практично миттєво." },
       { title: "Низькі комісії", desc: "Комісія в мережі TON — частки цента. Ви отримуєте майже всю винагороду без втрат." },
       { title: "Інтеграція з Telegram", desc: "TON — нативний блокчейн Telegram. Мільярди користувачів уже мають доступ до гаманця та Mini Apps." },
-      { title: "Надійність мережі", desc: "Децентралізована архітектура TON забезпечує роботу 24/7. Жодних технічних зупинок." },
+      { title: "Глобальна мережа", desc: "Об'єднує користувачів по всьому світу та забезпечує зручну роботу з цифровими активами без географічних обмежень." },
     ],
   },
   roadmap: {
