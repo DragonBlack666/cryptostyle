@@ -150,9 +150,9 @@ const en: Dict = {
   nav: { features: "Features", nft: "NFT profile", ton: "TON", roadmap: "Roadmap" },
   hero: {
     title1: "Crypto Style",
-    title2: "The next-generation platform",
+    title2: "The Next-Generation Affiliate Platform",
     subtitle:
-      "Affiliate programs without admins or middlemen. Instant payouts straight to your wallet, NFT participant passports and 100% transparency on the TON blockchain.",
+      "A decentralized affiliate platform with instant payouts, NFT membership passports, and complete transparency secured by the TON blockchain.",
     cta1: "Connect wallet",
     cta2: "Learn more",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
