@@ -319,10 +319,86 @@ const de: Dict = {
   footer: en.footer,
 };
 const fr: Dict = {
-  ...en,
   nav: { features: "Fonctionnalités", nft: "Profil NFT", ton: "TON", roadmap: "Feuille de route" },
-  hero: { ...en.hero, title2: "La plateforme de nouvelle génération", cta1: "Connecter le portefeuille", cta2: "En savoir plus" },
+  hero: {
+    title1: "Crypto Style",
+    title2: "La plateforme d'affiliation nouvelle génération",
+    subtitle:
+      "Une plateforme d'affiliation décentralisée avec des paiements instantanés, des passeports NFT et une transparence totale garantie par la blockchain TON.",
+    cta1: "Connecter votre portefeuille",
+    cta2: "En savoir plus",
+    cta1Link: en.hero.cta1Link,
+  },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-FR" },
+  why: {
+    eyebrow: "POURQUOI CRYPTO STYLE ?",
+    title: "Une plateforme où les règles ne changent jamais",
+    intro:
+      "Crypto Style n'est pas une simple plateforme d'affiliation fondée sur des promesses. C'est un écosystème décentralisé basé sur la blockchain TON, où chaque transaction est sécurisée par des smart contracts et où vous seul gardez le contrôle de vos fonds.",
+    items: [
+      { title: "Transparence", desc: "Chaque transaction est enregistrée de manière permanente sur la blockchain. Aucune condition cachée. Aucune manipulation. Des smart contracts entièrement transparents." },
+      { title: "Paiements instantanés", desc: "Les récompenses sont calculées automatiquement et versées directement sur votre portefeuille. Aucun délai. Aucun transfert manuel." },
+      { title: "Décentralisation", desc: "Les smart contracts s'exécutent automatiquement selon des règles prédéfinies." },
+      { title: "Profil NFT", desc: "Votre compte existe sous forme de NFT sur la blockchain TON. Il ne peut être ni falsifié, ni supprimé, ni gelé, pas même par notre équipe." },
+    ],
+  },
+  nft: {
+    eyebrow: "VOTRE IDENTITÉ NUMÉRIQUE",
+    title: "Votre identité NFT sur la blockchain TON",
+    intro:
+      "Votre profil Crypto Style est bien plus qu'un simple compte. Il s'agit d'un NFT enregistré de façon permanente sur la blockchain TON : votre passeport numérique au sein de l'écosystème.",
+    points: [
+      "Impossible à falsifier ou à copier",
+      "Ne peut être ni supprimé ni gelé",
+      "Vous seul avez accès à vos fonds",
+      "Contrôle total via votre portefeuille TON",
+      "Peut être transmis par héritage ou vendu",
+    ],
+    quote:
+      "Même Crypto Style ne peut pas bloquer votre compte. Seul le propriétaire du portefeuille contrôle l'accès aux fonds.",
+    caption: "Passeport NFT Crypto Style",
+  },
+  ton: {
+    eyebrow: "PROPULSÉ PAR TON",
+    title: "Pourquoi TON ?",
+    intro:
+      "TON (The Open Network) est l'une des blockchains à la croissance la plus rapide au monde, parfaitement intégrée à Telegram. Tout l'écosystème Crypto Style repose sur TON.",
+    items: [
+      { title: "Haute vitesse", desc: "Les transactions sont confirmées en quelques secondes et les paiements arrivent presque instantanément sur votre portefeuille." },
+      { title: "Frais réduits", desc: "Les frais de transaction ne représentent qu'une fraction de centime, ce qui vous permet de conserver presque l'intégralité de vos récompenses." },
+      { title: "Intégration à Telegram", desc: "TON est étroitement intégré à Telegram, rendant les services blockchain facilement accessibles via les Mini Apps." },
+      { title: "Réseau mondial", desc: "Un réseau mondial offrant aux utilisateurs un accès fluide aux actifs numériques, sans aucune restriction géographique." },
+    ],
+  },
+  roadmap: {
+    eyebrow: "FEUILLE DE ROUTE",
+    title: "Des programmes d'affiliation à un écosystème complet",
+    intro:
+      "Crypto Style est un écosystème en constante évolution, qui se développe étape par étape et récompense les premiers participants.",
+    stages: [
+      { name: "ÉTAPE 1", title: "Simplicité", desc: "Mini App Telegram. Profils NFT. Domaine .TON. Un service conçu pour un usage quotidien, sans sites complexes ni connexions multiples." },
+      { name: "ÉTAPE 2", title: "Stabilité", desc: "Notre CS Coin, adossé à des actifs réels. Une large gamme de programmes d'affiliation. Une exposition réduite à la volatilité des marchés." },
+      { name: "ÉTAPE 3", title: "Économie", desc: "CS USD avec une véritable utilité. Marketplace intégré. Modèles de commerce. Conversion partielle en monnaie fiduciaire." },
+      { name: "ÉTAPE 4", title: "Décentralisation", desc: "Gouvernance DAO. Cotation sur les principales plateformes DEX et CEX. Staking via les Nominator Pools. Propres validateurs du réseau." },
+      { name: "ÉTAPE 5", title: "Intelligence", desc: "Une plateforme permettant de créer des stratégies marketing personnalisées. Une IA qui adapte votre activité aux objectifs de chaque utilisateur." },
+    ],
+  },
+  cta: {
+    title: "Commencez dès aujourd'hui",
+    intro:
+      "Crypto Style est conçu pour une croissance à long terme. Chaque nouvelle étape crée davantage de valeur pour les premiers participants.",
+    stats: [
+      { value: "0", label: "intermédiaire", desc: "Paiements directs par smart contract, de portefeuille à portefeuille." },
+      { value: "5", label: "étapes de développement", desc: "D'une Mini App Telegram à un écosystème entièrement décentralisé." },
+      { value: "TON", label: "Construit sur TON", desc: "Basé sur l'un des réseaux blockchain connaissant la croissance la plus rapide au monde." },
+    ],
+    btn1: "Connecter votre portefeuille TON",
+    btn1Link: en.cta.btn1Link,
+    btn2: "Ouvrir dans Telegram",
+    btn2Link: en.cta.btn2Link,
+    tagline: "Votre argent. Vos règles. Votre avenir.",
+  },
+  footer: "© Crypto Style. Tous droits réservés.",
 };
 const it: Dict = {
   ...en,
