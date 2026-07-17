@@ -209,7 +209,7 @@ const en: Dict = {
       "Crypto Style is an evolving ecosystem that grows step by step, rewarding early participants.",
     stages: [
       { name: "Stage 1", title: "Convenience", desc: "Telegram Mini App with NFT profiles. A seamless experience designed for everyday use—no complicated websites or separate logins." },
-      { name: "Stage 2", title: "Stability", desc: "CS USD backed by real-world assets. A diverse range of affiliate programs. Reduced exposure to market volatility." },
+      { name: "Stage 2", title: "Stability", desc: "CS Coin backed by real-world assets. A diverse range of affiliate programs. Reduced exposure to market volatility." },
       { name: "Stage 3", title: "Economy", desc: "CS USD with real-world utility. Integrated marketplace. Multiple commerce models. Seamless fiat conversion." },
       { name: "Stage 4", title: "Decentralization", desc: "DAO governance. Listings on major DEXs and CEXs. Staking through Nominator Pools. Dedicated network validators." },
       { name: "Stage 5", title: "Intelligence", desc: "Build personalized marketing strategies with AI that adapt to every user's objectives." },
