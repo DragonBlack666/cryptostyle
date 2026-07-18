@@ -945,10 +945,142 @@ const pl: Dict = {
   footer: "© Crypto Style. Wszystkie prawa zastrzeżone.",
 };
 const hu: Dict = {
-  ...en,
-  nav: { features: "Funkciók", nft: "NFT profil", ton: "TON", roadmap: "Ütemterv" },
-  hero: { ...en.hero, title2: "Az új generációs platform", cta1: "Tárca csatlakoztatása", cta2: "Tudj meg többet" },
+  nav: { features: "Funkciók", nft: "NFT-profil", ton: "TON", roadmap: "Ütemterv" },
+  hero: {
+    title1: "Crypto Style",
+    title2: "A következő generáció platformja",
+    subtitle:
+      "Partnerprogramok adminisztrátorok és közvetítők nélkül. Azonnali kifizetések közvetlenül a pénztárcádba, a résztvevők NFT-útlevelei és 100%-os átláthatóság a TON blokkláncon.",
+    cta1: "TON pénztárca csatlakoztatása",
+    cta2: "További információ",
+    cta1Link: en.hero.cta1Link,
+  },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-HU" },
+  why: {
+    eyebrow: "MIÉRT A CRYPTO STYLE?",
+    title: "Platform, ahol a szabályokat nem lehet megváltoztatni",
+    intro:
+      "A Crypto Style nem egy újabb hálózatépítő projekt ígéretekkel. Ez egy, a TON blokkláncra épülő infrastruktúra, ahol minden tranzakciót okosszerződés rögzít, és a pénzeszközeidhez kizárólag te férhetsz hozzá.",
+    items: [
+      {
+        title: "Átláthatóság",
+        desc: "Minden tranzakció rögzítve van a blokkláncon. Nincs csalás, nincsenek rejtett feltételek – csak a nyílt forráskódú okosszerződés.",
+      },
+      {
+        title: "Azonnali kifizetések",
+        desc: "A jutalmak automatikusan kerülnek jóváírásra, és azonnal megérkeznek a pénztárcádba. Nincs várakozás, nincs manuális utalás.",
+      },
+      {
+        title: "Decentralizáció",
+        desc: "Nincsenek adminisztrátorok, akik visszatarthatják a kifizetéseket. Az okosszerződés mindig az előre meghatározott szabályok szerint működik.",
+      },
+      {
+        title: "NFT-profil",
+        desc: "A fiókod egy NFT a TON blokkláncon. Nem hamisítható, nem törölhető és nem fagyasztható be – még az adminisztrátorok számára sem.",
+      },
+    ],
+  },
+  nft: {
+    eyebrow: "AZ ÖN DIGITÁLIS SZEMÉLYAZONOSSÁGA",
+    title: "NFT-profil a TON blokkláncon",
+    intro:
+      "A Crypto Style rendszerében a profilod nem csupán egy fiók. Ez egy NFT, amely véglegesen rögzítve van a TON blokkláncon. Ez a te digitális útleveled az ökoszisztémában.",
+    points: [
+      "Nem hamisítható és nem másolható.",
+      "Nem törölhető és nem fagyasztható be.",
+      "Az adminisztrátoroknak nincs hozzáférésük a pénzeszközeidhez.",
+      "A teljes irányítás kizárólag a pénztárcádon keresztül történik.",
+      "Örökölhető vagy értékesíthető.",
+    ],
+    quote:
+      "Még a Crypto Style sem tudja zárolni a fiókodat. A pénzeszközeidhez kizárólag a pénztárca tulajdonosa férhet hozzá.",
+    caption: "Crypto Style NFT-kártya",
+  },
+  ton: {
+    eyebrow: "KRIPTOPÉNZES ELSZÁMOLÁS",
+    title: "Miért a TON?",
+    intro:
+      "A TON (The Open Network) a világ egyik leggyorsabban fejlődő blokklánca, amely szorosan integrálódik a Telegrammal. A Crypto Style teljes infrastruktúrája erre a hálózatra épül.",
+    items: [
+      {
+        title: "Nagy sebesség",
+        desc: "A tranzakciók másodpercek alatt feldolgozásra kerülnek. A kifizetések szinte azonnal megérkeznek a pénztárcádba.",
+      },
+      {
+        title: "Alacsony tranzakciós díjak",
+        desc: "A TON hálózaton a tranzakciós díjak csak a cent töredékét teszik ki. A jutalmad szinte teljes összegét megkapod, veszteség nélkül.",
+      },
+      {
+        title: "Telegram-integráció",
+        desc: "A TON a Telegram natív blokklánca. Felhasználók milliárdjai férnek már hozzá a pénztárcához és a Mini Appokhoz.",
+      },
+      {
+        title: "Globális hálózat",
+        desc: "Világszerte összeköti a felhasználókat, és lehetővé teszi a digitális eszközök kényelmes használatát földrajzi korlátozások nélkül.",
+      },
+    ],
+  },
+  roadmap: {
+    eyebrow: "ÜTEMTERV",
+    title: "A partnerprogramoktól az infrastruktúráig",
+    intro:
+      "A Crypto Style egy folyamatosan fejlődő ökoszisztéma, amely lépésről lépésre épül, és előnyt biztosít azoknak, akik korábban csatlakoznak.",
+    stages: [
+      {
+        name: "1. SZAKASZ",
+        title: "Kényelem",
+        desc: "Mini App a Telegramban. NFT-profilok. Mindennapi használatra tervezett szolgáltatás bonyolult weboldalak és bejelentkezések nélkül.",
+      },
+      {
+        name: "2. SZAKASZ",
+        title: "Stabilitás",
+        desc: "Saját CS Coin, valódi fedezettel. Sokszínű partnerprogramok. Csökkentett függőség a piaci volatilitástól.",
+      },
+      {
+        name: "3. SZAKASZ",
+        title: "Gazdaság",
+        desc: "CS USD valós felhasználási lehetőségekkel. Piactér. Termékalapú üzleti modellek. Részleges átváltás fiat pénznemre.",
+      },
+      {
+        name: "4. SZAKASZ",
+        title: "Decentralizáció",
+        desc: "DAO-alapú közösségi irányítás. A Coin bevezetése DEX-re és CEX-re. Staking a Nominator Poolon keresztül. Saját validátorok.",
+      },
+      {
+        name: "5. SZAKASZ",
+        title: "Mesterséges intelligencia",
+        desc: "Platform saját marketingrendszerek létrehozásához. Olyan AI-modell, amely minden felhasználó céljaihoz igazodva építi fel az üzletet.",
+      },
+    ],
+  },
+  cta: {
+    title: "Kezdje el még ma",
+    intro:
+      "A Crypto Style nem a „belépni és kilépni” története. Ez egy olyan rendszer, amely idővel egyre erősebbé válik. A fejlődés minden szakasza előnyt biztosít azoknak, akik korábban csatlakoztak.",
+    stats: [
+      {
+        value: "0",
+        label: "Közvetítő",
+        desc: "Közvetlen kifizetések okosszerződésen keresztül\npénztárca → pénztárca",
+      },
+      {
+        value: "5",
+        label: "Fejlődési szakasz",
+        desc: "A Telegram Mini Apptól a decentralizált infrastruktúráig.",
+      },
+      {
+        value: "TON",
+        label: "A blokklánc alapja",
+        desc: "A világ egyik leggyorsabb blokkláncára épül.",
+      },
+    ],
+    btn1: "TON pénztárca csatlakoztatása",
+    btn1Link: en.cta.btn1Link,
+    btn2: "Megnyitás a Telegramban",
+    btn2Link: en.cta.btn2Link,
+    tagline: "*A pénzed. A szabályaid. A blokkláncod.*",
+  },
+  footer: "© Crypto Style. Minden jog fenntartva.",
 };
 
 export const DICTS: Record<LangCode, Dict> = {
