@@ -10,7 +10,7 @@ import nftCard from "@/assets/nft-card.png.asset.json";
 import logoAsset from "@/assets/logo.png.asset.json";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
-  Rocket, DollarSign, Send, ShieldAlert, Wallet, MessageCircle,
+  Rocket, DollarSign, Send, Wallet, MessageCircle,
 } from "lucide-react";
 
 export const Route = createFileRoute("/")({ component: Index });
@@ -19,7 +19,7 @@ function Index() {
   const { t } = useI18n();
 
   const whyIcons = [ShieldCheck, Zap, Globe2, Gem];
-  const tonIcons = [Rocket, DollarSign, Send, ShieldAlert];
+  const tonIcons = [Rocket, DollarSign, Send, Globe2];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
