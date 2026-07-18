@@ -19,7 +19,7 @@ function Index() {
   const { t } = useI18n();
 
   const whyIcons = [ShieldCheck, Zap, Globe2, Gem];
-  const tonIcons = [Rocket, DollarSign, Send, ShieldAlert];
+  const tonIcons = [Rocket, DollarSign, Send, Globe2];
 
   return (
     <div className="min-h-screen bg-background text-foreground">
