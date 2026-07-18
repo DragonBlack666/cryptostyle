@@ -67,7 +67,7 @@ const ru: Dict = {
     subtitle:
       "Партнёрские программы без админов и посредников. Мгновенные выплаты прямо на ваш кошелёк, NFT-паспорта участников и 100% прозрачность на блокчейне TON.",
     cta1: "Подключить кошелёк",
-    cta2: "Узнать больше",
+    cta2: "Посмотреть возможности",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
   social: {
@@ -154,7 +154,7 @@ const en: Dict = {
     subtitle:
       "A decentralized affiliate platform with instant payouts, NFT membership passports, and complete transparency secured by the TON blockchain.",
     cta1: "Connect wallet",
-    cta2: "Learn more",
+    cta2: "Explore features",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
   social: {
@@ -244,7 +244,7 @@ const de: Dict = {
     subtitle:
       "Eine dezentrale Affiliate-Plattform mit sofortigen Auszahlungen, NFT-Mitgliedspässen und vollständiger Transparenz durch die TON-Blockchain.",
     cta1: "Wallet verbinden",
-    cta2: "Mehr erfahren",
+    cta2: "Funktionen entdecken",
     cta1Link: en.hero.cta1Link,
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-DE" },
@@ -326,7 +326,7 @@ const fr: Dict = {
     subtitle:
       "Une plateforme d'affiliation décentralisée avec des paiements instantanés, des passeports NFT et une transparence totale garantie par la blockchain TON.",
     cta1: "Connecter votre portefeuille",
-    cta2: "En savoir plus",
+    cta2: "Découvrir les fonctionnalités",
     cta1Link: en.hero.cta1Link,
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-FR" },
@@ -408,7 +408,7 @@ const it: Dict = {
     subtitle:
       "Una piattaforma di affiliazione decentralizzata con pagamenti istantanei, passaporti NFT e totale trasparenza garantita dalla blockchain TON.",
     cta1: "Connetti il wallet",
-    cta2: "Scopri di più",
+    cta2: "Esplora le funzionalità",
     cta1Link: en.hero.cta1Link,
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-IT" },
@@ -490,7 +490,7 @@ const es: Dict = {
     subtitle:
       "Una plataforma de afiliación descentralizada con pagos instantáneos, pasaportes NFT y total transparencia garantizada por la blockchain TON.",
     cta1: "Conectar billetera",
-    cta2: "Descubre más",
+    cta2: "Explorar funciones",
     cta1Link: en.hero.cta1Link,
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-ES" },
@@ -616,7 +616,7 @@ const pt: Dict = {
     subtitle:
       "Uma plataforma de afiliados descentralizada com pagamentos instantâneos, passaportes NFT e total transparência garantida pela blockchain TON.",
     cta1: "Conectar carteira",
-    cta2: "Saiba mais",
+    cta2: "Explorar recursos",
     cta1Link: en.hero.cta1Link,
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-PT" },
@@ -698,7 +698,7 @@ const uk: Dict = {
     subtitle:
       "Партнерські програми без адміністраторів і посередників. Миттєві виплати прямо на ваш гаманець, NFT-паспорти учасників та 100% прозорість на блокчейні TON.",
     cta1: "Підключити гаманець",
-    cta2: "Дізнатися більше",
+    cta2: "Переглянути можливості",
     cta1Link: ru.hero.cta1Link,
   },
   social: { ...ru.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-UA" },
@@ -780,7 +780,7 @@ const kk: Dict = {
     subtitle:
       "Әкімшілерсіз және делдалдарсыз серіктестік бағдарламалар. Төлемдер бірден әмияныңызға түседі, қатысушыларға арналған NFT-паспорттар және TON блокчейніндегі 100% ашықтық.",
     cta1: "Әмиянды қосу",
-    cta2: "Толығырақ білу",
+    cta2: "Мүмкіндіктерді қарау",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
   },
   social: {
@@ -866,7 +866,7 @@ const pl: Dict = {
     subtitle:
       "Programy partnerskie bez administratorów i pośredników. Natychmiastowe wypłaty bezpośrednio do Twojego portfela, paszporty NFT uczestników oraz pełna przejrzystość dzięki blockchainowi TON.",
     cta1: "Podłącz portfel",
-    cta2: "Dowiedz się więcej",
+    cta2: "Poznaj funkcje",
     cta1Link: ru.hero.cta1Link,
   },
   social: {
@@ -952,7 +952,7 @@ const hu: Dict = {
     subtitle:
       "Partnerprogramok adminisztrátorok és közvetítők nélkül. Azonnali kifizetések közvetlenül a pénztárcádba, a résztvevők NFT-útlevelei és 100%-os átláthatóság a TON blokkláncon.",
     cta1: "TON pénztárca csatlakoztatása",
-    cta2: "További információ",
+    cta2: "Funkciók felfedezése",
     cta1Link: en.hero.cta1Link,
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-HU" },
