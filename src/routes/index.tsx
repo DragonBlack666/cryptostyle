@@ -27,7 +27,7 @@ function Index() {
       <header className="fixed top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
         <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
           <a href="#top" className="flex items-center">
-            <img src={logoAsset.url} alt="Crypto Style" className="h-10 w-auto" />
+            <img src={logoAsset.url} alt="Crypto Style logo" className="h-10 w-auto" />
           </a>
           <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
             <a href="#why" className="transition hover:text-gold">{t.nav.features}</a>
@@ -143,7 +143,7 @@ function Index() {
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-[var(--gradient-gold)] opacity-30 blur-2xl" />
             <img
               src={nftCard.url}
-              alt={t.nft.caption}
+              alt={`${t.nft.caption} — ${t.nft.title}`}
               loading="lazy"
               width={1024}
               height={1280}
