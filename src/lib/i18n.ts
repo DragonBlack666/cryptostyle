@@ -297,7 +297,7 @@ const de: Dict = {
       { name: "PHASE 1", title: "Komfort", desc: "Telegram Mini App mit NFT-Profilen. Ein nahtloses Nutzererlebnis für den Alltag – ohne komplizierte Websites oder zusätzliche Anmeldungen." },
       { name: "PHASE 2", title: "Stabilität", desc: "CS Coin, gedeckt durch reale Vermögenswerte. Vielfältige Affiliate-Programme. Geringere Abhängigkeit von Marktschwankungen." },
       { name: "PHASE 3", title: "Wirtschaft", desc: "CS USD mit echtem Nutzen. Integrierter Marktplatz. Vielfältige Geschäftsmodelle. Nahtlose Fiat-Konvertierung." },
-      { name: "PHASE 4", title: "Dezentralisierung", desc: "DAO governance. Listings on major DEXs and CEXs. Staking through Nominator Pools. Dedicated network validators." },
+      { name: "PHASE 4", title: "Dezentralisierung", desc: "DAO-Governance. Listings an führenden DEX- und CEX-Börsen. Staking über Nominator Pools. Eigene Netzwerk-Validatoren." },
       { name: "PHASE 5", title: "Intelligenz", desc: "KI-gestützte Marketingstrategien, die sich automatisch an die Ziele jedes Nutzers anpassen." },
     ],
   },
