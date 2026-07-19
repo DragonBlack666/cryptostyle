@@ -624,7 +624,7 @@ const pt: Dict = {
     eyebrow: "POR QUE A CRYPTO STYLE?",
     title: "Uma plataforma onde as regras nunca mudam",
     intro:
-      "A Crypto Style não é apenas mais uma plataforma de afiliados baseada em promessas. \nÉ um ecossistema descentralizado construído sobre a blockchain TON, onde cada transação é protegida por contratos inteligentes e apenas você tem controle sobre os seus fundos.",
+      "A Crypto Style não é apenas mais uma plataforma de afiliados baseada em promessas. É um ecossistema descentralizado construído sobre a blockchain TON, onde cada transação é protegida por contratos inteligentes e apenas você tem controle sobre os seus fundos.",
     items: [
       { title: "Transparência", desc: "Todas as transações são registradas permanentemente na blockchain. Sem condições ocultas. Sem manipulação. Apenas contratos inteligentes transparentes." },
       { title: "Pagamentos instantâneos", desc: "As recompensas são calculadas automaticamente e enviadas diretamente para a sua carteira. Sem espera. Sem transferências manuais." },
@@ -680,13 +680,13 @@ const pt: Dict = {
     stats: [
       { value: "0", label: "Intermediários", desc: "Pagamentos diretos por smart contract, de carteira para carteira." },
       { value: "5", label: "Etapas de crescimento", desc: "De um Mini App no Telegram a uma infraestrutura descentralizada completa." },
-      { value: "TON", label: "Baseado na blockchain TON\n", desc: "Construído sobre uma das blockchains de crescimento mais rápido do mundo." },
+      { value: "TON", label: "Baseado na blockchain TON", desc: "Construído sobre uma das blockchains de crescimento mais rápido do mundo." },
     ],
     btn1: "Conectar carteira TON",
     btn1Link: en.cta.btn1Link,
     btn2: "Abrir no Telegram",
     btn2Link: en.cta.btn2Link,
-    tagline: "*Seu dinheiro. Suas regras. Sua blockchain.*",
+    tagline: "Seu dinheiro. Suas regras. Sua blockchain.",
   },
   footer: "© Crypto Style. Todos os direitos reservados.",
 };
@@ -846,9 +846,9 @@ const kk: Dict = {
     intro:
       "Crypto Style — «кіріп, шығып кететін» жоба емес. Бұл уақыт өте келе күшейе түсетін жүйе. Дамудың әрбір кезеңі ертерек қосылған қатысушыларға артықшылық береді.",
     stats: [
-      { value: "0", label: "Делдалдар жоқ", desc: "Төлемдер смарт-келісімшарт арқылы\nәмияннан әмиянға тікелей жіберіледі." },
-      { value: "5", label: "Даму кезеңі", desc: "Telegram-дағы Mini App-тен\nтолық орталықтандырылмаған инфрақұрылымға дейін." },
-      { value: "TON", label: "Негізгі блокчейн", desc: "Әлемдегі ең жылдам блокчейндердің\nбірінің негізінде құрылған." },
+      { value: "0", label: "Делдалдар жоқ", desc: "Төлемдер смарт-келісімшарт арқылы әмияннан әмиянға тікелей жіберіледі." },
+      { value: "5", label: "Даму кезеңі", desc: "Telegram-дағы Mini App-тен толық орталықтандырылмаған инфрақұрылымға дейін." },
+      { value: "TON", label: "Негізгі блокчейн", desc: "Әлемдегі ең жылдам блокчейндердің бірінің негізінде құрылған." },
     ],
     btn1: "TON әмиянын қосу",
     btn1Link: "https://cryptostylematrix.github.io/frontend/",
@@ -932,7 +932,7 @@ const pl: Dict = {
     intro:
       "Crypto Style to nie historia typu „wejść i wyjść”. To system, który z czasem staje się coraz silniejszy. Każdy etap rozwoju daje przewagę tym, którzy dołączyli wcześniej.",
     stats: [
-      { value: "0", label: "Pośredników", desc: "Bezpośrednie wypłaty za pośrednictwem smart kontraktu\nportfel → portfel" },
+      { value: "0", label: "Pośredników", desc: "Bezpośrednie wypłaty za pośrednictwem smart kontraktu portfel → portfel" },
       { value: "5", label: "Etapów rozwoju", desc: "Od Mini App w Telegramie do zdecentralizowanej infrastruktury." },
       { value: "TON", label: "Blockchain jako fundament", desc: "Zbudowany na jednym z najszybszych blockchainów na świecie." },
     ],
@@ -940,7 +940,7 @@ const pl: Dict = {
     btn1Link: ru.cta.btn1Link,
     btn2: "Otwórz w Telegramie",
     btn2Link: ru.cta.btn2Link,
-    tagline: "*YTwoje pieniądze. Twoje zasady. Twój blockchain.*",
+    tagline: "Twoje pieniądze. Twoje zasady. Twój blockchain.",
   },
   footer: "© Crypto Style. Wszystkie prawa zastrzeżone.",
 };
@@ -1061,7 +1061,7 @@ const hu: Dict = {
       {
         value: "0",
         label: "Közvetítő",
-        desc: "Közvetlen kifizetések okosszerződésen keresztül\npénztárca → pénztárca",
+        desc: "Közvetlen kifizetések okosszerződésen keresztül pénztárca → pénztárca",
       },
       {
         value: "5",
@@ -1078,7 +1078,7 @@ const hu: Dict = {
     btn1Link: en.cta.btn1Link,
     btn2: "Megnyitás a Telegramban",
     btn2Link: en.cta.btn2Link,
-    tagline: "*A pénzed. A szabályaid. A blokkláncod.*",
+    tagline: "A pénzed. A szabályaid. A blokkláncod.",
   },
   footer: "© Crypto Style. Minden jog fenntartva.",
 };
