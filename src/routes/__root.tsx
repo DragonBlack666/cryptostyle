@@ -59,6 +59,33 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   );
 }
 
+const BASE_URL = "https://cryptostyle.lovable.app";
+
+const organizationSchema = {
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  name: "Crypto Style",
+  url: BASE_URL,
+  logo: `${BASE_URL}${logoAsset.url}`,
+  sameAs: [
+    "https://t.me/CryptoStyleMatrix",
+    "https://x.com/CryptoStyleTON",
+    "https://www.youtube.com/@CryptoStyleOfficial",
+  ],
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  name: "Crypto Style",
+  url: BASE_URL,
+  potentialAction: {
+    "@type": "SearchAction",
+    target: `${BASE_URL}/?search={search_term_string}`,
+    "query-input": "required name=search_term_string",
+  },
+};
+
 export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()({
   head: () => ({
     meta: [
@@ -77,6 +104,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
       { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" },
+    ],
+    scripts: [
+      { type: "application/ld+json", children: JSON.stringify(organizationSchema) },
+      { type: "application/ld+json", children: JSON.stringify(websiteSchema) },
     ],
   }),
   shellComponent: RootShell,
