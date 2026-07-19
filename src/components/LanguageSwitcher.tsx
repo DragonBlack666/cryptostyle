@@ -23,6 +23,7 @@ export function LanguageSwitcher() {
         className="flex items-center gap-2 rounded-full border border-gold/30 bg-surface/60 px-3 py-1.5 text-sm text-foreground/90 backdrop-blur transition hover:border-gold hover:text-gold"
         aria-haspopup="listbox"
         aria-expanded={open}
+        aria-label={`Current language: ${current.label}. Change language.`}
       >
         <span className="text-base leading-none">{current.flag}</span>
         <span className="hidden sm:inline">{current.label}</span>
