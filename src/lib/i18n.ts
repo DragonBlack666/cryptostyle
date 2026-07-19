@@ -316,7 +316,7 @@ const de: Dict = {
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Ihr Geld. Ihre Regeln. Ihre Zukunft.",
   },
-  footer: en.footer,
+  footer: "© Crypto Style. Alle Rechte vorbehalten.",
 };
 const fr: Dict = {
   nav: { features: "Fonctionnalités", nft: "Profil NFT", ton: "TON", roadmap: "Feuille de route" },
