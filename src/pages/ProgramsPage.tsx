@@ -48,14 +48,14 @@ type Program = {
 
 const PROGRAMS: Program[] = [
   {
-    name: "NEO Matrix",
+    name: "Neo Club",
     features: ["8 площадок", "Линейка", "Тетра", "Клоны", "Управление структурой"],
     minEntry: "от $155",
     maxPotential: "до $72 100",
     href: "/programs/neo",
   },
   {
-    name: "MULTI Matrix",
+    name: "Multi Matrix",
     features: ["6 площадок", "Реинвест", "Клоны", "Управление структурой"],
     minEntry: "15 TON",
     maxPotential: "до 3500 TON",
