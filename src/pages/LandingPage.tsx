@@ -1,4 +1,3 @@
-import { createFileRoute } from "@tanstack/react-router";
 import { useI18n } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { SocialLinks } from "@/components/SocialLinks";
@@ -13,10 +12,9 @@ import {
   Rocket, DollarSign, Send, Wallet, MessageCircle,
 } from "lucide-react";
 
-export const Route = createFileRoute("/")({ component: Index });
-
-function Index() {
+export default function LandingPage() {
   const { t } = useI18n();
+
 
   const whyIcons = [ShieldCheck, Zap, Globe2, Gem];
   const tonIcons = [Rocket, DollarSign, Send, Globe2];
