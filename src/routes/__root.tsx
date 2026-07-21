@@ -10,7 +10,7 @@ import {
 import { useEffect, useState, type ReactNode } from "react";
 
 import appCss from "../styles.css?url";
-import logoAsset from "@/assets/logo.png.asset.json";
+import logo from "@/assets/logo.png";
 import { reportLovableError } from "../lib/lovable-error-reporting";
 import { DICTS, I18nContext, type LangCode } from "@/lib/i18n";
 
@@ -66,7 +66,7 @@ const organizationSchema = {
   "@type": "Organization",
   name: "Crypto Style",
   url: BASE_URL,
-  logo: `${BASE_URL}${logoAsset.url}`,
+  logo: `${BASE_URL}${logo}`,
   sameAs: [
     "https://t.me/CryptoStyleMatrix",
     "https://x.com/CryptoStyleTON",
