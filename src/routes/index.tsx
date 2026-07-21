@@ -6,8 +6,8 @@ import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
 import roadmapBg from "@/assets/bg-roadmap-light.jpg";
-import nftCard from "@/assets/nft-card.png.asset.json";
-import logoAsset from "@/assets/logo.png.asset.json";
+import nftCard from "@/assets/nft-card.png";
+import logo from "@/assets/logo.png";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
   Rocket, DollarSign, Send, Wallet, MessageCircle,
