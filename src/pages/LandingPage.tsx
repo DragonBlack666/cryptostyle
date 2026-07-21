@@ -1,12 +1,10 @@
 import { useI18n } from "@/lib/i18n";
-import { LanguageSwitcher } from "@/components/LanguageSwitcher";
-import { SocialLinks } from "@/components/SocialLinks";
+import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
 import roadmapBg from "@/assets/bg-roadmap-light.jpg";
 import nftCard from "@/assets/nft-card.png";
-import logo from "@/assets/logo.png";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
   Rocket, DollarSign, Send, Wallet, MessageCircle,
@@ -21,24 +19,7 @@ export default function LandingPage() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
-      {/* NAV */}
-      <header className="fixed top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6">
-          <a href="#top" className="flex items-center">
-            <img src={logo} alt="Crypto Style logo" className="h-10 w-auto" />
-          </a>
-          <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
-            <a href="#why" className="transition hover:text-gold">{t.nav.features}</a>
-            <a href="#nft" className="transition hover:text-gold">{t.nav.nft}</a>
-            <a href="#ton" className="transition hover:text-gold">{t.nav.ton}</a>
-            <a href="#roadmap" className="transition hover:text-gold">{t.nav.roadmap}</a>
-          </nav>
-          <div className="flex items-center gap-3">
-            <SocialLinks />
-            <LanguageSwitcher />
-          </div>
-        </div>
-      </header>
+      <SiteHeader />
 
       {/* HERO */}
       <section id="top" className="relative isolate overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
