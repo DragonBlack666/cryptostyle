@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DICTS, I18nContext, type LangCode } from "@/lib/i18n";
 import LandingPage from "./pages/LandingPage";
+import ProgramsPage from "./pages/ProgramsPage";
 
 export default function App() {
   const [lang, setLangState] = useState<LangCode>("ru");
@@ -18,7 +20,12 @@ export default function App() {
 
   return (
     <I18nContext.Provider value={{ lang, setLang, t: DICTS[lang] }}>
-      <LandingPage />
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/programs" element={<ProgramsPage />} />
+        </Routes>
+      </BrowserRouter>
     </I18nContext.Provider>
   );
 }
