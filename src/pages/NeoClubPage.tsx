@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
-import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { useI18n } from "@/lib/i18n";
+import { NEO_CLUB_DICTS, type NeoClubDict } from "@/lib/neo-club-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
@@ -41,246 +42,203 @@ const iconMap = {
   repeat: Repeat,
 };
 
-/* ---------- Data (from Neo_Club.pptx) ---------- */
+const FEATURE_ICONS = [LayoutGrid, Copy, Settings2, Sparkles];
 
-const NEO_LINE_SEATS: Seat[] = [
-  { kind: "wallet", lines: [{ icon: "wallet", text: "150$ на кошелёк" }] },
-  { kind: "transition", lines: [{ icon: "repeat", text: "150$ — переход в Neo Start" }] },
-  { kind: "wallet", lines: [{ icon: "wallet", text: "150$ на кошелёк" }] },
-  { kind: "wallet", lines: [{ icon: "wallet", text: "150$ на кошелёк" }] },
-];
+/* ---------- Data builders (per language) ---------- */
 
-const NEO_START: Platform[] = [
-  {
-    id: "ns1",
-    title: "Neo Start · Площадка 1",
-    cost: "150$",
-    income: "200$",
-    seats: Array(4).fill(0).map(() => ({
-      kind: "wallet",
-      lines: [
-        { icon: "wallet", text: "50$ на кошелёк" },
-        { icon: "piggy", text: "100$ накопление" },
+function buildData(d: NeoClubDict) {
+  const s = d.seat;
+
+  const NEO_LINE_SEATS: Seat[] = [
+    { kind: "wallet", lines: [{ icon: "wallet", text: d.neoLine.walletLine }] },
+    { kind: "transition", lines: [{ icon: "repeat", text: d.neoLine.transitionLine }] },
+    { kind: "wallet", lines: [{ icon: "wallet", text: d.neoLine.walletLine }] },
+    { kind: "wallet", lines: [{ icon: "wallet", text: d.neoLine.walletLine }] },
+  ];
+
+  const NEO_START: Platform[] = [
+    {
+      id: "ns1",
+      title: d.platform.titleNs(0),
+      cost: "150$", income: "200$",
+      seats: Array(4).fill(0).map(() => ({
+        kind: "wallet",
+        lines: [
+          { icon: "wallet", text: s.wallet("50$") },
+          { icon: "piggy", text: s.piggy("100$") },
+        ],
+      })),
+      incomeNote: d.incomeNotes.ns1,
+      transitionAmount: "400$",
+      transitionTo: d.platform.titleNs(1),
+      transitionText: d.transitions.ns1,
+    },
+    {
+      id: "ns2",
+      title: d.platform.titleNs(1),
+      cost: "400$", income: "600$",
+      seats: Array(4).fill(0).map(() => ({
+        kind: "wallet",
+        lines: [
+          { icon: "wallet", text: s.wallet("150$") },
+          { icon: "piggy", text: s.piggy("250$") },
+        ],
+      })),
+      incomeNote: d.incomeNotes.ns2,
+      transitionAmount: "1000$",
+      transitionTo: d.platform.titleNs(2),
+      transitionText: d.transitions.ns2,
+    },
+    {
+      id: "ns3",
+      title: d.platform.titleNs(2),
+      cost: "1000$", income: "1500$",
+      seats: [
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("350$") },
+          { icon: "copy", text: s.clonesToStart1(1) },
+          { icon: "piggy", text: s.piggy("500$") },
+        ]},
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("400$") },
+          { icon: "curator", text: s.curator("100$") },
+          { icon: "piggy", text: s.piggy("500$") },
+        ]},
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("350$") },
+          { icon: "copy", text: s.clonesToStart1(1) },
+          { icon: "piggy", text: s.piggy("500$") },
+        ]},
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("400$") },
+          { icon: "curator", text: s.curator("100$") },
+          { icon: "piggy", text: s.piggy("500$") },
+        ]},
       ],
-    })),
-    incomeNote: ["За каждое закрытое место вы получаете 50$ на кошелёк."],
-    transitionAmount: "400$",
-    transitionTo: "Neo Start · Площадка 2",
-    transitionText:
-      "Полное закрытие мест второй линии суммарно приносит 400$, которые автоматически направляются на открытие вашей второй бизнес-площадки.",
-  },
-  {
-    id: "ns2",
-    title: "Neo Start · Площадка 2",
-    cost: "400$",
-    income: "600$",
-    seats: Array(4).fill(0).map(() => ({
-      kind: "wallet",
-      lines: [
-        { icon: "wallet", text: "150$ на кошелёк" },
-        { icon: "piggy", text: "250$ накопление" },
+      incomeNote: d.incomeNotes.ns3,
+      transitionAmount: "2000$",
+      transitionTo: d.platform.titleNs(3),
+      transitionText: d.transitions.ns3,
+    },
+    {
+      id: "ns4",
+      title: d.platform.titleNs(3),
+      cost: "2000$", income: "2800$",
+      seats: [
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("750$") },
+          { icon: "copy", text: s.clonesToStart1(1) },
+          { icon: "grow", text: s.grow("100$") },
+          { icon: "piggy", text: s.piggy("1000$") },
+        ]},
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("650$") },
+          { icon: "copy", text: s.clonesToStart1(1) },
+          { icon: "curator", text: s.curator("100$") },
+          { icon: "piggy", text: s.piggy("1100$") },
+        ]},
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("750$") },
+          { icon: "copy", text: s.clonesToStart1(1) },
+          { icon: "grow", text: s.grow("100$") },
+          { icon: "piggy", text: s.piggy("1000$") },
+        ]},
+        { kind: "wallet", lines: [
+          { icon: "wallet", text: s.wallet("650$") },
+          { icon: "copy", text: s.clonesToStart1(1) },
+          { icon: "curator", text: s.curator("100$") },
+          { icon: "piggy", text: s.piggy("1100$") },
+        ]},
       ],
-    })),
-    incomeNote: ["За каждое закрытое место вы получаете 150$ на кошелёк."],
-    transitionAmount: "1000$",
-    transitionTo: "Neo Start · Площадка 3",
-    transitionText:
-      "Полное закрытие мест второй линии суммарно приносит 1000$, которые автоматически направляются на открытие вашей третьей бизнес-площадки.",
-  },
-  {
-    id: "ns3",
-    title: "Neo Start · Площадка 3",
-    cost: "1000$",
-    income: "1500$",
-    seats: [
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "350$ на кошелёк" },
-        { icon: "copy", text: "1 клон в Neo Start · Площадка 1" },
-        { icon: "piggy", text: "500$ накопление" },
-      ]},
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "400$ на кошелёк" },
-        { icon: "curator", text: "100$ куратору" },
-        { icon: "piggy", text: "500$ накопление" },
-      ]},
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "350$ на кошелёк" },
-        { icon: "copy", text: "1 клон в Neo Start · Площадка 1" },
-        { icon: "piggy", text: "500$ накопление" },
-      ]},
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "400$ на кошелёк" },
-        { icon: "curator", text: "100$ куратору" },
-        { icon: "piggy", text: "500$ накопление" },
-      ]},
-    ],
-    incomeNote: [
-      "Закрытие 1-го и 3-го места приносит 350$ на кошелёк и 1 клона в первую площадку Neo Start.",
-      "Закрытие 2-го и 4-го места приносит 400$ на кошелёк и 100$ вашему куратору.",
-    ],
-    transitionAmount: "2000$",
-    transitionTo: "Neo Start · Площадка 4",
-    transitionText:
-      "Полное закрытие мест второй линии суммарно приносит 2000$, которые автоматически направляются на открытие вашей четвёртой бизнес-площадки.",
-  },
-  {
-    id: "ns4",
-    title: "Neo Start · Площадка 4",
-    cost: "2000$",
-    income: "2800$",
-    seats: [
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "750$ на кошелёк" },
-        { icon: "copy", text: "1 клон в Neo Start · Площадка 1" },
-        { icon: "grow", text: "100$ на развитие" },
-        { icon: "piggy", text: "1000$ накопление" },
-      ]},
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "650$ на кошелёк" },
-        { icon: "copy", text: "1 клон в Neo Start · Площадка 1" },
-        { icon: "curator", text: "100$ куратору" },
-        { icon: "piggy", text: "1100$ накопление" },
-      ]},
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "750$ на кошелёк" },
-        { icon: "copy", text: "1 клон в Neo Start · Площадка 1" },
-        { icon: "grow", text: "100$ на развитие" },
-        { icon: "piggy", text: "1000$ накопление" },
-      ]},
-      { kind: "wallet", lines: [
-        { icon: "wallet", text: "650$ на кошелёк" },
-        { icon: "copy", text: "1 клон в Neo Start · Площадка 1" },
-        { icon: "curator", text: "100$ куратору" },
-        { icon: "piggy", text: "1100$ накопление" },
-      ]},
-    ],
-    incomeNote: [
-      "Закрытие 1-го и 3-го места приносит 750$ на кошелёк, 1 клона в первую площадку Neo Start и 100$ идёт на развитие системы.",
-      "Закрытие 2-го и 4-го места приносит 650$ на кошелёк и 100$ вашему куратору.",
-    ],
-    transitionAmount: "4200$",
-    transitionTo: "Neo VIP · Площадка 1",
-    transitionText:
-      "Полное закрытие мест второй линии суммарно приносит 4200$, которые автоматически направляются на открытие бизнес-площадки Neo VIP.",
-  },
-];
+      incomeNote: d.incomeNotes.ns4,
+      transitionAmount: "4200$",
+      transitionTo: d.platform.titleNv(0),
+      transitionText: d.transitions.ns4,
+    },
+  ];
 
-const NEO_VIP: Platform[] = [
-  {
-    id: "nv1",
-    title: "Neo VIP · Площадка 1",
-    cost: "4 200$",
-    income: "6 000$",
-    seats: [
-      { kind: "vip", lines: [
-        { icon: "wallet", text: "1500$ на кошелёк" },
-        { icon: "copy", text: "2 клона в Neo Start · Площадка 1" },
-        { icon: "grow", text: "200$ на развитие" },
-        { icon: "piggy", text: "2200$ накопление" },
-      ]},
-      { kind: "vip", lines: [
-        { icon: "wallet", text: "1500$ на кошелёк" },
-        { icon: "copy", text: "2 клона в Neo Start · Площадка 1" },
-        { icon: "curator", text: "200$ куратору" },
-        { icon: "piggy", text: "2200$ накопление" },
-      ]},
-      { kind: "vip", lines: [
-        { icon: "wallet", text: "1500$ на кошелёк" },
-        { icon: "copy", text: "2 клона в Neo Start · Площадка 1" },
-        { icon: "grow", text: "200$ на развитие" },
-        { icon: "piggy", text: "2200$ накопление" },
-      ]},
-      { kind: "vip", lines: [
-        { icon: "wallet", text: "1500$ на кошелёк" },
-        { icon: "copy", text: "2 клона в Neo Start · Площадка 1" },
-        { icon: "curator", text: "200$ куратору" },
-        { icon: "piggy", text: "2200$ накопление" },
-      ]},
-    ],
-    incomeNote: [
-      "Закрытие 1-го и 3-го места приносит 1500$ на кошелёк, 2 клона в первую площадку Neo Start и 200$ идёт на развитие системы.",
-      "Закрытие 2-го и 4-го места приносит 1500$ на кошелёк, 2 клона в первую площадку Neo Start и 200$ вашему куратору.",
-    ],
-    transitionAmount: "8 800$",
-    transitionTo: "Neo VIP · Площадка 2",
-    transitionText:
-      "Полное закрытие мест второй линии суммарно приносит 8 800$, которые автоматически направляются на открытие второй бизнес-площадки Neo VIP.",
-  },
-  {
-    id: "nv2",
-    title: "Neo VIP · Площадка 2",
-    cost: "8 800$",
-    income: "16 000$",
-    seats: Array(4).fill(0).map(() => ({
-      kind: "vip",
-      lines: [
-        { icon: "wallet", text: "4000$ на кошелёк" },
-        { icon: "copy", text: "3 клона в Neo Start · Площадка 1" },
-        { icon: "curator", text: "300$ куратору" },
-        { icon: "grow", text: "300$ на развитие" },
-        { icon: "piggy", text: "3750$ накопление" },
+  const NEO_VIP: Platform[] = [
+    {
+      id: "nv1",
+      title: d.platform.titleNv(0),
+      cost: "4 200$", income: "6 000$",
+      seats: [
+        { kind: "vip", lines: [
+          { icon: "wallet", text: s.wallet("1500$") },
+          { icon: "copy", text: s.clonesToStart1(2) },
+          { icon: "grow", text: s.grow("200$") },
+          { icon: "piggy", text: s.piggy("2200$") },
+        ]},
+        { kind: "vip", lines: [
+          { icon: "wallet", text: s.wallet("1500$") },
+          { icon: "copy", text: s.clonesToStart1(2) },
+          { icon: "curator", text: s.curator("200$") },
+          { icon: "piggy", text: s.piggy("2200$") },
+        ]},
+        { kind: "vip", lines: [
+          { icon: "wallet", text: s.wallet("1500$") },
+          { icon: "copy", text: s.clonesToStart1(2) },
+          { icon: "grow", text: s.grow("200$") },
+          { icon: "piggy", text: s.piggy("2200$") },
+        ]},
+        { kind: "vip", lines: [
+          { icon: "wallet", text: s.wallet("1500$") },
+          { icon: "copy", text: s.clonesToStart1(2) },
+          { icon: "curator", text: s.curator("200$") },
+          { icon: "piggy", text: s.piggy("2200$") },
+        ]},
       ],
-    })),
-    incomeNote: [
-      "За каждое закрытое место вы получаете 4000$ на кошелёк, 3 клона в первую площадку Neo Start; 300$ идёт на развитие системы и 300$ вашему куратору.",
-    ],
-    transitionAmount: "15 000$",
-    transitionTo: "Neo VIP · Площадка 3",
-    transitionText:
-      "Полное закрытие мест второй линии суммарно приносит 15 000$, которые автоматически направляются на открытие третьей бизнес-площадки Neo VIP.",
-  },
-  {
-    id: "nv3",
-    title: "Neo VIP · Площадка 3",
-    cost: "15 000$",
-    income: "45 000$",
-    seats: Array(3).fill(0).map(() => ({
-      kind: "vip",
-      lines: [{ icon: "wallet", text: "15 000$ на кошелёк" }],
-    })),
-    incomeNote: [
-      "Это последняя площадка маркетинга. За каждое закрытое место вы получаете 15 000$ на кошелёк.",
-    ],
-  },
-];
+      incomeNote: d.incomeNotes.nv1,
+      transitionAmount: "8 800$",
+      transitionTo: d.platform.titleNv(1),
+      transitionText: d.transitions.nv1,
+    },
+    {
+      id: "nv2",
+      title: d.platform.titleNv(1),
+      cost: "8 800$", income: "16 000$",
+      seats: Array(4).fill(0).map(() => ({
+        kind: "vip",
+        lines: [
+          { icon: "wallet", text: s.wallet("4000$") },
+          { icon: "copy", text: s.clonesToStart1(3) },
+          { icon: "curator", text: s.curator("300$") },
+          { icon: "grow", text: s.grow("300$") },
+          { icon: "piggy", text: s.piggy("3750$") },
+        ],
+      })),
+      incomeNote: d.incomeNotes.nv2,
+      transitionAmount: "15 000$",
+      transitionTo: d.platform.titleNv(2),
+      transitionText: d.transitions.nv2,
+    },
+    {
+      id: "nv3",
+      title: d.platform.titleNv(2),
+      cost: "15 000$", income: "45 000$",
+      seats: Array(3).fill(0).map(() => ({
+        kind: "vip",
+        lines: [{ icon: "wallet", text: s.wallet("15 000$") }],
+      })),
+      incomeNote: d.incomeNotes.nv3,
+    },
+  ];
 
-const SUMMARY = [
-  { platform: "Neo Start · 1", income: "200$", clones: "—", ref: "—" },
-  { platform: "Neo Start · 2", income: "600$", clones: "—", ref: "—" },
-  { platform: "Neo Start · 3", income: "1 500$", clones: "2", ref: "200$" },
-  { platform: "Neo Start · 4", income: "2 800$", clones: "4", ref: "200$" },
-  { platform: "Neo VIP · 1", income: "6 000$", clones: "8", ref: "400$" },
-  { platform: "Neo VIP · 2", income: "16 000$", clones: "12", ref: "1 200$" },
-  { platform: "Neo VIP · 3", income: "45 000$", clones: "—", ref: "—" },
-];
-
-const FEATURES = [
-  { icon: LayoutGrid, title: "Матричная модель", text: "Основа системы, обеспечивающая чёткую структуру и прогнозируемый рост." },
-  { icon: Copy, title: "Автоматическая дубликация", text: "«Клоны» расширяют вашу структуру и генерируют дополнительный доход без новых вложений." },
-  { icon: Settings2, title: "Управление структурой", text: "Инструменты для эффективного контроля и оптимизации вашей команды и площадок." },
-  { icon: Sparkles, title: "Линейка + Тетра", text: "Сочетание линейного и классического матричного маркетинга в одной системе." },
-];
-
-const EXTRAS = [
-  { title: "Управление структурой", text: "Встроенная функция позволяет стратегически направлять потоки партнёров и клонов для закрытия наиболее приоритетных позиций на площадках." },
-  { title: "Дополнительные бизнес-места", text: "Возможность приобретать дополнительные бизнес-места на любой площадке по вашему усмотрению." },
-  { title: "Старт с любой площадки", text: "Вы можете начать работу с любой площадки маркетинга, которая соответствует вашим целям." },
-  { title: "Функция «Следующее место»", text: "Автоматизирует выбор оптимальной позиции для быстрого роста структуры." },
-  { title: "Взнос на развитие", text: "Единоразовый взнос 5$ на развитие системы при активации." },
-];
+  return { NEO_LINE_SEATS, NEO_START, NEO_VIP };
+}
 
 /* ---------- UI blocks ---------- */
 
-function SectionNav() {
+function SectionNav({ d }: { d: NeoClubDict }) {
   const items = [
-    { id: "intro", label: "О программе" },
-    { id: "neo-line", label: "Neo Line" },
-    { id: "neo-start", label: "Neo Start" },
-    { id: "neo-vip", label: "Neo VIP" },
-    { id: "summary", label: "Сводка" },
-    { id: "features", label: "Особенности" },
-    { id: "extras", label: "Управление" },
-    { id: "cta", label: "Старт" },
+    { id: "intro", label: d.nav.about },
+    { id: "neo-line", label: d.nav.neoLine },
+    { id: "neo-start", label: d.nav.neoStart },
+    { id: "neo-vip", label: d.nav.neoVip },
+    { id: "summary", label: d.nav.summary },
+    { id: "features", label: d.nav.features },
+    { id: "extras", label: d.nav.extras },
+    { id: "cta", label: d.nav.cta },
   ];
   return (
     <div className="sticky top-16 z-30 border-b border-border/40 bg-background/80 backdrop-blur-xl">
@@ -289,7 +247,7 @@ function SectionNav() {
           to="/programs"
           className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border/60 bg-surface/60 px-3 py-1.5 text-xs font-medium text-foreground/80 transition hover:border-gold/60 hover:text-gold"
         >
-          <ArrowLeft className="h-3.5 w-3.5" /> Все партнёрские программы
+          <ArrowLeft className="h-3.5 w-3.5" /> {d.nav.backAll}
         </Link>
         <div className="mx-2 h-4 w-px bg-border/60" />
         <nav className="flex items-center gap-1.5">
@@ -332,12 +290,6 @@ function SeatCard({ seat }: { seat: Seat }) {
   );
 }
 
-/**
- * Renders children inside an <svg><foreignObject> with a fixed viewBox.
- * Behaves like a static image: the whole schema is scaled proportionally
- * to the container width via SVG viewBox, so text stays crisp at any size
- * and the layout geometry is preserved 1:1 from the desktop reference.
- */
 function ScaleToFit({ children, width = 780 }: { children: ReactNode; width?: number }) {
   const measureRef = useRef<HTMLDivElement>(null);
   const [height, setHeight] = useState<number>(400);
@@ -357,23 +309,12 @@ function ScaleToFit({ children, width = 780 }: { children: ReactNode; width?: nu
 
   return (
     <>
-      {/* Off-screen measurement copy (kept in the DOM so fonts/resize updates are observed). */}
       <div
         aria-hidden
-        style={{
-          position: "absolute",
-          left: -99999,
-          top: 0,
-          width,
-          visibility: "hidden",
-          pointerEvents: "none",
-        }}
+        style={{ position: "absolute", left: -99999, top: 0, width, visibility: "hidden", pointerEvents: "none" }}
       >
-        <div ref={measureRef} style={{ width }}>
-          {children}
-        </div>
+        <div ref={measureRef} style={{ width }}>{children}</div>
       </div>
-
       <svg
         viewBox={`0 0 ${width} ${height}`}
         width="100%"
@@ -395,29 +336,24 @@ function ScaleToFit({ children, width = 780 }: { children: ReactNode; width?: nu
   );
 }
 
-function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
+function StructureDiagram({ seats, ownerAmount, youLabel }: { seats: Seat[]; ownerAmount: string; youLabel: string }) {
   const minCol = seats.length === 3 ? "min-w-[210px]" : "min-w-[180px]";
   return (
     <div className="mx-auto rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur md:max-w-[780px]">
       <ScaleToFit>
         <div className="min-w-[780px]">
-          {/* Owner */}
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
               <User className="h-6 w-6 text-gold" />
-              <span className="whitespace-nowrap text-lg sm:text-xl font-semibold text-gold">Вы · {ownerAmount}</span>
+              <span className="whitespace-nowrap text-lg sm:text-xl font-semibold text-gold">{youLabel} · {ownerAmount}</span>
             </div>
           </div>
-
-          {/* Fan-out connector */}
           <div className="relative mx-auto my-3 h-6 w-[92%]">
             <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
             <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
             <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
             <div className="absolute right-0 top-3 h-3 w-px bg-gold/40" />
           </div>
-
-          {/* Columns: partner → arrow → distribution */}
           <div className="flex gap-3">
             {seats.map((s, i) => (
               <div key={`col-${i}`} className={`flex ${minCol} flex-1 flex-col`}>
@@ -441,39 +377,41 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
   );
 }
 
-function PlatformBlock({ p, index, total, tone }: { p: Platform; index: number; total: number; tone: "start" | "vip" }) {
+function PlatformBlock({
+  p, index, total, tone, d,
+}: { p: Platform; index: number; total: number; tone: "start" | "vip"; d: NeoClubDict }) {
   const accent = tone === "vip" ? "from-gold/25 via-gold/10 to-transparent" : "from-gold/15 via-gold/5 to-transparent";
   return (
     <article className={`rounded-3xl border border-border/60 bg-gradient-to-br ${accent} p-6 sm:p-8 backdrop-blur`}>
       <header className="flex flex-wrap items-baseline justify-between gap-4">
         <div>
-          <p className="text-xs uppercase tracking-[0.2em] text-gold/80">Площадка {index + 1} из {total}</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold/80">{d.platform.label(index, total)}</p>
           <h3 className="mt-1 font-display text-3xl text-gradient-gold sm:text-4xl">{p.title}</h3>
         </div>
         <div className="flex flex-wrap gap-2 text-sm">
           <span className="rounded-full border border-border/60 bg-surface/60 px-3 py-1 text-foreground/80">
-            Стоимость места · <b className="text-foreground">{p.cost}</b>
+            {d.platform.costLabel} · <b className="text-foreground">{p.cost}</b>
           </span>
           <span className="rounded-full border border-gold/40 bg-gold/10 px-3 py-1 text-gold">
-            Доход · <b>{p.income}</b>
+            {d.platform.incomeLabel} · <b>{p.income}</b>
           </span>
         </div>
       </header>
 
       <div className="mt-6">
-        <StructureDiagram seats={p.seats} ownerAmount={p.cost} />
+        <StructureDiagram seats={p.seats} ownerAmount={p.cost} youLabel={d.neoLine.you} />
       </div>
 
       <div className="mt-6 grid gap-4 md:grid-cols-2">
         <div className="rounded-2xl border border-border/60 bg-surface/50 p-5">
-          <p className="text-xs uppercase tracking-[0.2em] text-gold/80">Распределение</p>
+          <p className="text-xs uppercase tracking-[0.2em] text-gold/80">{d.platform.distributionEyebrow}</p>
           <ul className="mt-3 space-y-2 text-sm text-foreground/85">
             {p.incomeNote.map((n, i) => <li key={i} className="flex gap-2"><Trophy className="mt-0.5 h-4 w-4 shrink-0 text-gold" /><span>{n}</span></li>)}
           </ul>
         </div>
         {p.transitionText && (
           <div className="rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-5">
-            <p className="text-xs uppercase tracking-[0.2em] text-gold">Переход · {p.transitionAmount}</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-gold">{d.platform.transitionEyebrow(p.transitionAmount ?? "")}</p>
             <p className="mt-2 text-sm text-foreground/85">{p.transitionText}</p>
             {p.transitionTo && (
               <p className="mt-3 inline-flex items-center gap-2 text-sm font-semibold text-gold">
@@ -490,42 +428,44 @@ function PlatformBlock({ p, index, total, tone }: { p: Platform; index: number; 
 /* ---------- Page ---------- */
 
 export default function NeoClubPage() {
-  useEffect(() => {
-    document.title = "Neo Club — Партнёрская программа · Crypto Style";
-  }, []);
-
   const { lang } = useI18n();
+  const d = NEO_CLUB_DICTS[lang];
+
+  useEffect(() => {
+    document.title = d.meta.docTitle;
+  }, [d.meta.docTitle]);
+
+  const { NEO_LINE_SEATS, NEO_START, NEO_VIP } = useMemo(() => buildData(d), [d]);
   const [ruVideoSource, setRuVideoSource] = useState<"youtube" | "rutube">("youtube");
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
-      <SectionNav />
+      <SectionNav d={d} />
 
       {/* HERO */}
       <section id="intro" className="relative isolate overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-28">
         <img src={heroBg} alt="" aria-hidden className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-gold">Партнёрская программа</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.hero.eyebrow}</p>
           <h1 className="mt-4 font-display text-5xl leading-[1.05] tracking-tight sm:text-6xl md:text-7xl">
-            <span className="text-gradient-gold block uppercase">Neo Club</span>
-            <span className="block text-foreground">Бизнес-система для предпринимателей</span>
+            <span className="text-gradient-gold block uppercase">{d.hero.titleTop}</span>
+            <span className="block text-foreground">{d.hero.titleBottom}</span>
           </h1>
           <p className="mx-auto mt-6 max-w-3xl text-lg text-foreground/75 sm:text-xl">
-            Neo Club — система, разработанная для масштабирования вашего дела и увеличения дохода.
-            Рассмотрим ключевые особенности, преимущества и механизмы работы этой модели.
+            {d.hero.subtitle}
           </p>
           <div className="mx-auto mt-10 grid max-w-4xl grid-cols-2 gap-4 sm:grid-cols-4">
             {[
-              { k: "Площадок", v: "8" },
-              { k: "Мин. вход", v: "150$" },
-              { k: "Прямой доход", v: "72 100$" },
-              { k: "Новых клонов", v: "26" },
-            ].map((s) => (
-              <div key={s.k} className="rounded-2xl border border-border/60 bg-surface/50 p-4 backdrop-blur">
-                <div className="font-display text-3xl text-gradient-gold">{s.v}</div>
-                <div className="mt-1 text-xs uppercase tracking-widest text-foreground/60">{s.k}</div>
+              { k: d.hero.statPlatforms, v: "8" },
+              { k: d.hero.statMinEntry, v: "150$" },
+              { k: d.hero.statDirect, v: "72 100$" },
+              { k: d.hero.statClones, v: "26" },
+            ].map((st) => (
+              <div key={st.k} className="rounded-2xl border border-border/60 bg-surface/50 p-4 backdrop-blur">
+                <div className="font-display text-3xl text-gradient-gold">{st.v}</div>
+                <div className="mt-1 text-xs uppercase tracking-widest text-foreground/60">{st.k}</div>
               </div>
             ))}
           </div>
@@ -540,7 +480,7 @@ export default function NeoClubPage() {
                       ? "https://www.youtube.com/embed/SRANvbu9Xlw"
                       : "https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17"
                   }
-                  title="Видео презентация Neo Club"
+                  title={d.hero.videoTitle}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
@@ -550,7 +490,7 @@ export default function NeoClubPage() {
                 />
               </div>
               <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <span className="text-sm text-foreground/70">Видео не открывается? Выберите другой источник:</span>
+                <span className="text-sm text-foreground/70">{d.hero.videoFallback}</span>
                 <div className="flex items-center gap-2">
                   <button
                     type="button"
@@ -587,11 +527,10 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/75 to-background/90" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO LINE</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Neo Line — линейный маркетинг</h2>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.neoLine.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">{d.neoLine.title}</h2>
             <p className="mt-4 text-foreground/75">
-              Начало маркетинга Neo Club — это Neo Line: одна площадка с линейным маркетингом, без ограничений в первой линии.
-              Стоимость бизнес-места составляет <b className="text-gold">150$</b>.
+              {d.neoLine.subtitleBefore}<b className="text-gold">150$</b>{d.neoLine.subtitleAfter}
             </p>
           </header>
 
@@ -601,7 +540,7 @@ export default function NeoClubPage() {
                 <div className="flex justify-center">
                   <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
                     <User className="h-6 w-6 text-gold" />
-                    <span className="whitespace-nowrap text-lg sm:text-xl font-semibold text-gold">Вы · 150$</span>
+                    <span className="whitespace-nowrap text-lg sm:text-xl font-semibold text-gold">{d.neoLine.you} · 150$</span>
                   </div>
                 </div>
                 <div className="relative mx-auto my-3 h-6 w-[92%]">
@@ -631,18 +570,16 @@ export default function NeoClubPage() {
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
             <div className="rounded-2xl border border-gold/40 bg-gold/10 p-5">
-              <p className="text-xs uppercase tracking-[0.2em] text-gold">Доход · от 150$</p>
+              <p className="text-xs uppercase tracking-[0.2em] text-gold">{d.neoLine.incomeEyebrow}</p>
               <ul className="mt-3 space-y-2 text-sm text-foreground/85">
-                <li className="flex gap-2"><Trophy className="mt-0.5 h-4 w-4 shrink-0 text-gold" />За первое закрытое место вы получаете 150$ на кошелёк.</li>
-                <li className="flex gap-2"><Trophy className="mt-0.5 h-4 w-4 shrink-0 text-gold" />Закрыв второе место, вы автоматически попадаете во вторую часть программы — Neo Start за 150$.</li>
-                <li className="flex gap-2"><Trophy className="mt-0.5 h-4 w-4 shrink-0 text-gold" />За каждые последующие закрытые места вы получаете по 150$ на кошелёк.</li>
+                {d.neoLine.incomeItems.map((t, i) => (
+                  <li key={i} className="flex gap-2"><Trophy className="mt-0.5 h-4 w-4 shrink-0 text-gold" />{t}</li>
+                ))}
               </ul>
             </div>
             <div className="rounded-2xl border border-border/60 bg-surface/50 p-5">
-              <p className="text-xs uppercase tracking-[0.2em] text-gold">Примечание</p>
-              <p className="mt-3 text-sm text-foreground/85">
-                Если у вас уже есть место в первой площадке Neo Start, закрыв второе место, вы получаете деньги на кошелёк.
-              </p>
+              <p className="text-xs uppercase tracking-[0.2em] text-gold">{d.neoLine.noteEyebrow}</p>
+              <p className="mt-3 text-sm text-foreground/85">{d.neoLine.noteText}</p>
             </div>
           </div>
         </div>
@@ -655,17 +592,14 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO START</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Neo Start — 4 бизнес-площадки</h2>
-            <p className="mt-4 text-foreground/75">
-              Вторая часть программы Neo Club. Каждая площадка имеет собственную стоимость, доход, накопление и клонов.
-              Полное закрытие второй линии автоматически открывает следующую площадку.
-            </p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.neoStart.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">{d.neoStart.title}</h2>
+            <p className="mt-4 text-foreground/75">{d.neoStart.subtitle}</p>
           </header>
 
           <div className="mt-12 space-y-8">
             {NEO_START.map((p, i) => (
-              <PlatformBlock key={p.id} p={p} index={i} total={NEO_START.length} tone="start" />
+              <PlatformBlock key={p.id} p={p} index={i} total={NEO_START.length} tone="start" d={d} />
             ))}
           </div>
         </div>
@@ -677,16 +611,14 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO VIP</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl text-gradient-gold">Neo VIP — 3 бизнес-площадки</h2>
-            <p className="mt-4 text-foreground/75">
-              Финальные площадки маркетинга с максимальным доходом. Переход между ними полностью автоматизирован.
-            </p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.neoVip.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl text-gradient-gold">{d.neoVip.title}</h2>
+            <p className="mt-4 text-foreground/75">{d.neoVip.subtitle}</p>
           </header>
 
           <div className="mt-12 space-y-8">
             {NEO_VIP.map((p, i) => (
-              <PlatformBlock key={p.id} p={p} index={i} total={NEO_VIP.length} tone="vip" />
+              <PlatformBlock key={p.id} p={p} index={i} total={NEO_VIP.length} tone="vip" d={d} />
             ))}
           </div>
         </div>
@@ -699,11 +631,9 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Общая сводка</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Доходы с одного бизнес-места</h2>
-            <p className="mt-4 text-foreground/75">
-              Потенциал заработка и развития структуры с одного основного бизнес-места при прохождении всех площадок.
-            </p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.summary.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">{d.summary.title}</h2>
+            <p className="mt-4 text-foreground/75">{d.summary.subtitle}</p>
           </header>
 
           {/* Desktop table */}
@@ -711,23 +641,23 @@ export default function NeoClubPage() {
             <table className="w-full text-left">
               <thead className="bg-gold/10 text-gold">
                 <tr>
-                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">Площадка</th>
-                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">Доход</th>
-                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">Клоны</th>
-                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">Реферальные</th>
+                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">{d.summary.cols.platform}</th>
+                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">{d.summary.cols.income}</th>
+                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">{d.summary.cols.clones}</th>
+                  <th className="px-6 py-4 text-sm font-semibold uppercase tracking-widest">{d.summary.cols.ref}</th>
                 </tr>
               </thead>
               <tbody className="divide-y divide-border/40">
-                {SUMMARY.map((r) => (
+                {d.summary.rows.map((r, i) => (
                   <tr key={r.platform} className="transition hover:bg-surface/60">
                     <td className="px-6 py-4 font-medium">{r.platform}</td>
-                    <td className="px-6 py-4 text-gold">{r.income}</td>
+                    <td className="px-6 py-4 text-gold">{d.summary.incomeValues[i]}</td>
                     <td className="px-6 py-4 text-foreground/80">{r.clones}</td>
                     <td className="px-6 py-4 text-foreground/80">{r.ref}</td>
                   </tr>
                 ))}
                 <tr className="bg-gold/10 font-semibold">
-                  <td className="px-6 py-5 text-gold">Итого</td>
+                  <td className="px-6 py-5 text-gold">{d.summary.totalLabel}</td>
                   <td className="px-6 py-5 text-gold">72 100$</td>
                   <td className="px-6 py-5 text-gold">26</td>
                   <td className="px-6 py-5 text-gold">2 000$</td>
@@ -738,32 +668,28 @@ export default function NeoClubPage() {
 
           {/* Mobile cards */}
           <div className="mt-10 grid gap-4 md:hidden">
-            {SUMMARY.map((r) => (
+            {d.summary.rows.map((r, i) => (
               <div key={r.platform} className="rounded-2xl border border-border/60 bg-surface/50 p-4">
                 <div className="font-semibold text-gold">{r.platform}</div>
                 <div className="mt-3 grid grid-cols-3 gap-2 text-sm">
-                  <div><div className="text-xs text-foreground/60">Доход</div><div className="text-gold">{r.income}</div></div>
-                  <div><div className="text-xs text-foreground/60">Клоны</div><div>{r.clones}</div></div>
-                  <div><div className="text-xs text-foreground/60">Реф.</div><div>{r.ref}</div></div>
+                  <div><div className="text-xs text-foreground/60">{d.summary.cols.income}</div><div className="text-gold">{d.summary.incomeValues[i]}</div></div>
+                  <div><div className="text-xs text-foreground/60">{d.summary.cols.clones}</div><div>{r.clones}</div></div>
+                  <div><div className="text-xs text-foreground/60">{d.summary.cols.refShort}</div><div>{r.ref}</div></div>
                 </div>
               </div>
             ))}
             <div className="rounded-2xl border border-gold/40 bg-gold/10 p-4">
-              <div className="font-semibold text-gold">Итого</div>
+              <div className="font-semibold text-gold">{d.summary.totalLabel}</div>
               <div className="mt-3 grid grid-cols-3 gap-2 text-sm text-gold">
-                <div><div className="text-xs opacity-80">Доход</div><div>72 100$</div></div>
-                <div><div className="text-xs opacity-80">Клоны</div><div>26</div></div>
-                <div><div className="text-xs opacity-80">Реф.</div><div>2 000$</div></div>
+                <div><div className="text-xs opacity-80">{d.summary.cols.income}</div><div>72 100$</div></div>
+                <div><div className="text-xs opacity-80">{d.summary.cols.clones}</div><div>26</div></div>
+                <div><div className="text-xs opacity-80">{d.summary.cols.refShort}</div><div>2 000$</div></div>
               </div>
             </div>
           </div>
 
           <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-gold/40 bg-surface/80 p-6 text-center shadow-lg shadow-black/20 backdrop-blur">
-            <p className="text-foreground/95">
-              <b className="text-gold">72 100$</b> прямого дохода, <b className="text-gold">26</b> новых «клонов»
-              для усиления структуры и <b className="text-gold">2 000$</b> реферального вознаграждения —
-              это ваш результат с одного основного бизнес-места, не считая клонов.
-            </p>
+            <p className="text-foreground/95" dangerouslySetInnerHTML={{ __html: d.summary.finalNoteHtml }} />
           </div>
         </div>
       </section>
@@ -775,22 +701,23 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Ключевые преимущества</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Особенности маркетинга Neo Club</h2>
-            <p className="mt-4 text-foreground/75">
-              Neo Club предлагает уникальный подход к ведению бизнеса. Ключевые особенности, которые отличают нашу систему.
-            </p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.features.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">{d.features.title}</h2>
+            <p className="mt-4 text-foreground/75">{d.features.subtitle}</p>
           </header>
           <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {FEATURES.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-3xl border border-border/60 bg-surface/50 p-6 backdrop-blur transition hover:border-gold/60">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/40 bg-gold/10">
-                  <Icon className="h-6 w-6 text-gold" />
+            {d.features.items.map((f, i) => {
+              const Icon = FEATURE_ICONS[i] ?? Sparkles;
+              return (
+                <div key={f.title} className="rounded-3xl border border-border/60 bg-surface/50 p-6 backdrop-blur transition hover:border-gold/60">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/40 bg-gold/10">
+                    <Icon className="h-6 w-6 text-gold" />
+                  </div>
+                  <h3 className="mt-4 font-display text-2xl">{f.title}</h3>
+                  <p className="mt-2 text-sm text-foreground/75">{f.text}</p>
                 </div>
-                <h3 className="mt-4 font-display text-2xl">{title}</h3>
-                <p className="mt-2 text-sm text-foreground/75">{text}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -802,11 +729,11 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Управление и гибкость</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Управление структурой и дополнительные возможности</h2>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.extras.eyebrow}</p>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">{d.extras.title}</h2>
           </header>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {EXTRAS.map((e) => (
+            {d.extras.items.map((e) => (
               <div key={e.title} className="rounded-3xl border border-border/60 bg-gradient-to-br from-surface/70 to-background/50 p-6 backdrop-blur">
                 <h3 className="font-display text-xl text-gold">{e.title}</h3>
                 <p className="mt-3 text-sm text-foreground/80">{e.text}</p>
@@ -821,13 +748,11 @@ export default function NeoClubPage() {
         <img src={heroBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/70 to-background" />
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
-          <p className="text-xs uppercase tracking-[0.3em] text-gold">Присоединяйтесь</p>
+          <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.cta.eyebrow}</p>
           <h2 className="mt-4 font-display text-4xl sm:text-5xl md:text-6xl">
-            <span className="text-gradient-gold uppercase">Начните с Neo Club</span>
+            <span className="text-gradient-gold uppercase">{d.cta.title}</span>
           </h2>
-          <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">
-            Восемь площадок, автоматические переходы, клоны и прогнозируемый рост — всё в одной бизнес-системе.
-          </p>
+          <p className="mx-auto mt-6 max-w-2xl text-lg text-foreground/80">{d.cta.subtitle}</p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
             <a
               href="https://cryptostylematrix.github.io/frontend/"
@@ -835,16 +760,15 @@ export default function NeoClubPage() {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 rounded-xl btn-gold px-8 py-4 font-semibold"
             >
-              Регистрация в Neo Club <ArrowRight className="h-5 w-5" />
+              {d.cta.register} <ArrowRight className="h-5 w-5" />
             </a>
             <Link
               to="/programs"
               className="inline-flex items-center gap-2 rounded-xl border border-gold/50 bg-surface/40 px-8 py-4 font-semibold backdrop-blur transition hover:border-gold hover:bg-surface/70"
             >
-              <ArrowLeft className="h-5 w-5" /> Все партнёрские программы
+              <ArrowLeft className="h-5 w-5" /> {d.cta.backAll}
             </Link>
           </div>
-          
         </div>
       </section>
     </div>
