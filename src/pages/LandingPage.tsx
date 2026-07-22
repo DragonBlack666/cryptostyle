@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -54,6 +55,15 @@ export default function LandingPage() {
               {t.hero.cta2}
             </a>
           </div>
+          <p className="mt-8 font-display text-xl text-gold/90 sm:text-2xl">
+            {t.hero.tagline}
+          </p>
+          <Link
+            to="/programs"
+            className="mt-6 inline-flex items-center gap-2 rounded-xl border border-gold/50 bg-surface/40 px-7 py-3.5 font-semibold text-foreground backdrop-blur transition hover:border-gold hover:bg-surface/70"
+          >
+            {t.hero.programsCta}
+          </Link>
         </div>
       </section>
 
