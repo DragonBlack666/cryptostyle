@@ -108,7 +108,7 @@ export default function LandingPage() {
           className="absolute inset-0 z-0 h-full w-full object-cover object-[center_70%] opacity-100 brightness-125 contrast-110 saturate-125"
         />
         <div className="absolute inset-0 z-[1] bg-section-glow" />
-        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/35 via-background/20 to-background/40" />
         <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.nft.eyebrow}</p>
