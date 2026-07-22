@@ -395,7 +395,7 @@ function ScaleToFit({ children, width = 780 }: { children: ReactNode; width?: nu
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
   const minCol = seats.length === 3 ? "min-w-[210px]" : "min-w-[180px]";
   return (
-    <div className="rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
+    <div className="mx-auto rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur md:max-w-[780px]">
       <ScaleToFit>
         <div className="min-w-[780px]">
           {/* Owner */}
