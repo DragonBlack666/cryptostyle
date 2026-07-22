@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useI18n, type LangCode } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
+import whyBg from "@/assets/bg-why-light.jpg";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 type ProgramsCopy = {
