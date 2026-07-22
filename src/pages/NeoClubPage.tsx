@@ -613,6 +613,9 @@ export default function NeoClubPage() {
 
       {/* NEO START */}
       <section id="neo-start" className="relative isolate overflow-hidden py-20 sm:py-24">
+        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
+        <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO START</p>
