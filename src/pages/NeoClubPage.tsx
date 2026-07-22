@@ -329,49 +329,66 @@ function SeatCard({ seat }: { seat: Seat }) {
   );
 }
 
-function ScaleToFit({ children }: { children: ReactNode }) {
-  const outerRef = useRef<HTMLDivElement>(null);
-  const innerRef = useRef<HTMLDivElement>(null);
-  const [scale, setScale] = useState(1);
-  const [height, setHeight] = useState<number | undefined>(undefined);
+/**
+ * Renders children inside an <svg><foreignObject> with a fixed viewBox.
+ * Behaves like a static image: the whole schema is scaled proportionally
+ * to the container width via SVG viewBox, so text stays crisp at any size
+ * and the layout geometry is preserved 1:1 from the desktop reference.
+ */
+function ScaleToFit({ children, width = 780 }: { children: ReactNode; width?: number }) {
+  const measureRef = useRef<HTMLDivElement>(null);
+  const [height, setHeight] = useState<number>(400);
 
   useLayoutEffect(() => {
+    const el = measureRef.current;
+    if (!el) return;
     const update = () => {
-      const outer = outerRef.current;
-      const inner = innerRef.current;
-      if (!outer || !inner) return;
-      const oW = outer.clientWidth;
-      const iW = inner.scrollWidth;
-      const iH = inner.scrollHeight;
-      if (!iW || !iH) return;
-      const s = Math.min(1, oW / iW);
-      setScale(s);
-      setHeight(iH * s);
+      const h = el.scrollHeight;
+      if (h) setHeight(h);
     };
     update();
     const ro = new ResizeObserver(update);
-    if (outerRef.current) ro.observe(outerRef.current);
-    if (innerRef.current) ro.observe(innerRef.current);
-    window.addEventListener("resize", update);
-    return () => {
-      ro.disconnect();
-      window.removeEventListener("resize", update);
-    };
-  }, [children]);
+    ro.observe(el);
+    return () => ro.disconnect();
+  }, [children, width]);
 
   return (
-    <div ref={outerRef} style={{ height, overflow: "hidden" }}>
+    <>
+      {/* Off-screen measurement copy (kept in the DOM so fonts/resize updates are observed). */}
       <div
-        ref={innerRef}
+        aria-hidden
         style={{
-          transform: `scale(${scale})`,
-          transformOrigin: "top left",
-          width: "max-content",
+          position: "absolute",
+          left: -99999,
+          top: 0,
+          width,
+          visibility: "hidden",
+          pointerEvents: "none",
         }}
       >
-        {children}
+        <div ref={measureRef} style={{ width }}>
+          {children}
+        </div>
       </div>
-    </div>
+
+      <svg
+        viewBox={`0 0 ${width} ${height}`}
+        width="100%"
+        preserveAspectRatio="xMidYMin meet"
+        style={{ display: "block", height: "auto", overflow: "visible" }}
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <foreignObject x={0} y={0} width={width} height={height}>
+          <div
+            // @ts-expect-error xmlns is required for foreignObject HTML in some renderers
+            xmlns="http://www.w3.org/1999/xhtml"
+            style={{ width }}
+          >
+            {children}
+          </div>
+        </foreignObject>
+      </svg>
+    </>
   );
 }
 
