@@ -829,14 +829,14 @@ export default function NeoClubPage() {
             Восемь площадок, автоматические переходы, клоны и прогнозируемый рост — всё в одной бизнес-системе.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <button
-              type="button"
-              disabled
-              title="Ссылка регистрации появится позже"
-              className="inline-flex items-center gap-2 rounded-xl btn-gold px-8 py-4 font-semibold opacity-70"
+            <a
+              href="https://cryptostylematrix.github.io/frontend/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl btn-gold px-8 py-4 font-semibold"
             >
               Регистрация в Neo Club <ArrowRight className="h-5 w-5" />
-            </button>
+            </a>
             <Link
               to="/programs"
               className="inline-flex items-center gap-2 rounded-xl border border-gold/50 bg-surface/40 px-8 py-4 font-semibold backdrop-blur transition hover:border-gold hover:bg-surface/70"
