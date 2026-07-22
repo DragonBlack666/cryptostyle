@@ -524,7 +524,7 @@ const de: MMDict = {
     eyebrow: "Einzigartige Features", title: "Marketing-Besonderheiten von MULTI Matrix",
     items: [
       { title: "Flexible Erweiterung", text: "Möglichkeit, auf jeder Plattform nach eigenem Ermessen zusätzliche Geschäftsplätze zu erwerben." },
-      { title: "Funktion „Nächster Platz"", text: "Wählt automatisch die optimale Position für ein schnelles Wachstum Ihrer Struktur." },
+      { title: "Funktion „Nächster Platz“", text: "Wählt automatisch die optimale Position für ein schnelles Wachstum Ihrer Struktur." },
       { title: "Reinvest auf Plattform 6", text: "Dauerhaftes zyklisches Einkommen: Beim Schließen des ersten Platzes wird automatisch ein neuer Klon auf derselben Plattform erzeugt." },
       { title: "Klonverwaltung", text: "Leiten Sie Klone zu den passenden Partnern und beschleunigen Sie das Schließen prioritärer Geschäftsplattformen." },
       { title: "Automatische Übergänge", text: "Ansparungen jeder Plattform öffnen automatisch die nächste — ohne manuelles Zutun." },
@@ -1353,7 +1353,7 @@ const pl: MMDict = {
     eyebrow: "Unikalne funkcje", title: "Osobliwości marketingu MULTI Matrix",
     items: [
       { title: "Elastyczne możliwości rozbudowy", text: "Możliwość zakupu dodatkowych miejsc biznesowych według uznania na dowolnej platformie." },
-      { title: "Funkcja „Następne miejsce"", text: "Automatycznie wybiera optymalną pozycję dla szybkiego wzrostu Twojej struktury." },
+      { title: "Funkcja „Następne miejsce”", text: "Automatycznie wybiera optymalną pozycję dla szybkiego wzrostu Twojej struktury." },
       { title: "Reinvest na 6. platformie", text: "Stały cykliczny dochód: zamknięcie pierwszego miejsca automatycznie tworzy nowego klona na tej samej platformie." },
       { title: "Zarządzanie klonami", text: "Kieruj klony do odpowiednich partnerów i przyspieszaj zamykanie priorytetowych platform biznesowych." },
       { title: "Automatyczne przejścia", text: "Akumulacje z każdej platformy automatycznie otwierają następną — bez ręcznych działań." },
@@ -1471,7 +1471,7 @@ const hu: MMDict = {
     eyebrow: "Egyedi funkciók", title: "A MULTI Matrix marketing sajátosságai",
     items: [
       { title: "Rugalmas bővítési lehetőségek", text: "Lehetőség további üzleti helyek megvásárlására saját belátás szerint bármely platformon." },
-      { title: "„Következő hely" funkció", text: "Automatikusan kiválasztja az optimális pozíciót a struktúra gyors növekedéséhez." },
+      { title: "„Következő hely” funkció", text: "Automatikusan kiválasztja az optimális pozíciót a struktúra gyors növekedéséhez." },
       { title: "Reinvest a 6. platformon", text: "Állandó ciklikus jövedelem: az első hely lezárása automatikusan új klónt hoz létre ugyanezen a platformon." },
       { title: "Klónok kezelése", text: "Irányítsa a klónokat a megfelelő partnerekhez, és gyorsítsa fel a prioritásos üzleti platformok lezárását." },
       { title: "Automatikus átmenetek", text: "Az egyes platformok felhalmozásai automatikusan megnyitják a következőt — kézi beavatkozás nélkül." },
