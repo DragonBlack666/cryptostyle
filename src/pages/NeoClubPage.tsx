@@ -329,17 +329,58 @@ function SeatCard({ seat }: { seat: Seat }) {
   );
 }
 
+function ScaleToFit({ children }: { children: ReactNode }) {
+  const outerRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const [height, setHeight] = useState<number | undefined>(undefined);
+
+  useLayoutEffect(() => {
+    const update = () => {
+      const outer = outerRef.current;
+      const inner = innerRef.current;
+      if (!outer || !inner) return;
+      const oW = outer.clientWidth;
+      const iW = inner.scrollWidth;
+      const iH = inner.scrollHeight;
+      if (!iW || !iH) return;
+      const s = Math.min(1, oW / iW);
+      setScale(s);
+      setHeight(iH * s);
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    if (outerRef.current) ro.observe(outerRef.current);
+    if (innerRef.current) ro.observe(innerRef.current);
+    window.addEventListener("resize", update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, [children]);
+
+  return (
+    <div ref={outerRef} style={{ height, overflow: "hidden" }}>
+      <div
+        ref={innerRef}
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
+          width: "max-content",
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
   const minCol = seats.length === 3 ? "min-w-[220px]" : "min-w-[200px]";
   return (
     <div className="rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
-      {/* Hint on mobile */}
-      <p className="mb-2 text-center text-[11px] uppercase tracking-widest text-foreground/50 lg:hidden">
-        ← прокрутите схему →
-      </p>
-
-      <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
-        <div className="mx-auto w-max min-w-full">
+      <ScaleToFit>
+        <div className="min-w-[880px]">
           {/* Owner */}
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
@@ -375,7 +416,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
             ))}
           </div>
         </div>
-      </div>
+      </ScaleToFit>
     </div>
   );
 }
