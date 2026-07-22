@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { DICTS, I18nContext, type LangCode } from "@/lib/i18n";
 import LandingPage from "./pages/LandingPage";
 import ProgramsPage from "./pages/ProgramsPage";
+import NeoClubPage from "./pages/NeoClubPage";
 
 export default function App() {
   const [lang, setLangState] = useState<LangCode>("ru");
@@ -24,6 +25,7 @@ export default function App() {
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
+          <Route path="/programs/neo" element={<NeoClubPage />} />
         </Routes>
       </BrowserRouter>
     </I18nContext.Provider>
