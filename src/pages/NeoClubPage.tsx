@@ -4,6 +4,8 @@ import { useI18n } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
+import tonBg from "@/assets/bg-ton-light.jpg";
+import roadmapBg from "@/assets/bg-roadmap-light.jpg";
 import {
   ArrowLeft, ArrowRight, User, Users, Infinity as InfinityIcon,
   Wallet, PiggyBank, Copy, UserCheck, TrendingUp, LayoutGrid,
@@ -611,6 +613,9 @@ export default function NeoClubPage() {
 
       {/* NEO START */}
       <section id="neo-start" className="relative isolate overflow-hidden py-20 sm:py-24">
+        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
+        <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO START</p>
@@ -652,6 +657,9 @@ export default function NeoClubPage() {
 
       {/* SUMMARY */}
       <section id="summary" className="relative isolate overflow-hidden py-20 sm:py-24">
+        <img src={tonBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125" />
+        <div className="absolute inset-0 -z-10 bg-section-glow" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">Общая сводка</p>
@@ -725,6 +733,9 @@ export default function NeoClubPage() {
 
       {/* FEATURES */}
       <section id="features" className="relative isolate overflow-hidden py-20 sm:py-24">
+        <img src={roadmapBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125" />
+        <div className="absolute inset-0 -z-10 bg-section-glow" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">Ключевые преимущества</p>
@@ -749,6 +760,9 @@ export default function NeoClubPage() {
 
       {/* EXTRAS */}
       <section id="extras" className="relative isolate overflow-hidden py-20 sm:py-24">
+        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
+        <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">Управление и гибкость</p>

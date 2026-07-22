@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import { useI18n, type LangCode } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
+import whyBg from "@/assets/bg-why-light.jpg";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
 type ProgramsCopy = {
@@ -73,12 +74,14 @@ export default function ProgramsPage() {
 
       <section className="relative isolate overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
         <img
-          src={heroBg}
+          src={whyBg}
           alt=""
           aria-hidden
-          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40"
+          loading="lazy"
+          className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110"
         />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/70 to-background" />
+        <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
 
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
