@@ -492,6 +492,8 @@ export default function NeoClubPage() {
     document.title = "Neo Club — Партнёрская программа · Crypto Style";
   }, []);
 
+  const { lang } = useI18n();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
