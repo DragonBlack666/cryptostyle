@@ -4,6 +4,7 @@ import { DICTS, I18nContext, type LangCode } from "@/lib/i18n";
 import LandingPage from "./pages/LandingPage";
 import ProgramsPage from "./pages/ProgramsPage";
 import NeoClubPage from "./pages/NeoClubPage";
+import MultiMatrixPage from "./pages/MultiMatrixPage";
 
 export default function App() {
   const [lang, setLangState] = useState<LangCode>("ru");
@@ -26,6 +27,7 @@ export default function App() {
           <Route path="/" element={<LandingPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
           <Route path="/programs/neo" element={<NeoClubPage />} />
+          <Route path="/programs/multi" element={<MultiMatrixPage />} />
         </Routes>
       </BrowserRouter>
     </I18nContext.Provider>
