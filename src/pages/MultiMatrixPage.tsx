@@ -7,8 +7,8 @@ import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
 import {
   ArrowLeft, ArrowRight, User, Users,
-  Wallet, PiggyBank, Copy, UserCheck, TrendingUp, LayoutGrid,
-  Repeat, Settings2, Sparkles, Trophy, ChevronDown, RotateCcw,
+  Wallet, PiggyBank, Copy, UserCheck, TrendingUp,
+  Repeat, Trophy, ChevronDown, RotateCcw,
 } from "lucide-react";
 
 /* ---------- Types ---------- */
