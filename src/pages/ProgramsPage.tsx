@@ -51,14 +51,14 @@ const PROGRAMS: Program[] = [
     name: "Neo Club",
     features: ["8 площадок", "Линейка", "Тетра", "Клоны", "Управление структурой"],
     minEntry: "от $155",
-    maxPotential: "до $72 100",
+    maxPotential: "от $72 100",
     href: "/programs/neo",
   },
   {
     name: "Multi Matrix",
     features: ["6 площадок", "Реинвест", "Клоны", "Управление структурой"],
     minEntry: "15 TON",
-    maxPotential: "до 3500 TON",
+    maxPotential: "от 3500 TON",
     href: "/programs/multi",
   },
 ];
