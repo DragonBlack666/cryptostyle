@@ -314,17 +314,17 @@ function SeatCard({ seat, dense = false }: { seat: Seat; dense?: boolean }) {
       : "border-border/60 bg-surface/50";
   // "dense" = 4-местная схема: колонка физически уже, поэтому в исходнике даём крупнее текст,
   // чтобы после CSS-масштабирования выглядело так же читаемо, как 3-местная Neo VIP · 3.
-  const textSize = dense ? "text-2xl" : "text-lg";
-  const iconSize = dense ? "h-6 w-6" : "h-5 w-5";
+  const textSize = dense ? "text-[1.55rem] leading-tight sm:text-2xl" : "text-2xl sm:text-lg";
+  const iconSize = dense ? "h-6 w-6 sm:h-6 sm:w-6" : "h-6 w-6 sm:h-5 sm:w-5";
   return (
-    <div className={`rounded-2xl border ${tone} p-4 sm:p-5 backdrop-blur transition hover:border-gold/60`}>
-      <ul className={`space-y-2 ${textSize} text-foreground/90`}>
+    <div className={`rounded-2xl border ${tone} p-2.5 sm:p-5 backdrop-blur transition hover:border-gold/60`}>
+      <ul className={`space-y-1.5 sm:space-y-2 ${textSize} text-foreground/90`}>
         {seat.lines.map((ln, i) => {
           const Icon = ln.icon ? iconMap[ln.icon] : null;
           return (
-            <li key={i} className="flex items-start gap-2.5">
+            <li key={i} className="flex items-start gap-1.5 sm:gap-2.5">
               {Icon && <Icon className={`mt-0.5 ${iconSize} shrink-0 text-gold`} />}
-              <span className="leading-snug">{ln.text}</span>
+              <span className="leading-tight">{ln.text}</span>
             </li>
           );
         })}
@@ -381,16 +381,16 @@ function ScaleToFit({ children }: { children: ReactNode }) {
 
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
   const dense = seats.length >= 4;
-  const minCol = seats.length === 3 ? "min-w-[210px]" : "min-w-[180px]";
-  const ownerText = dense ? "text-2xl" : "text-lg";
-  const ownerIcon = dense ? "h-7 w-7" : "h-6 w-6";
-  const partnerText = dense ? "text-2xl" : "text-lg";
-  const partnerIcon = dense ? "h-6 w-6" : "h-5 w-5";
-  const badge = dense ? "h-9 w-9 text-lg" : "h-7 w-7 text-sm";
+  const minCol = seats.length === 3 ? "min-w-[170px] sm:min-w-[210px]" : "min-w-[155px] sm:min-w-[180px]";
+  const ownerText = dense ? "text-[1.7rem] sm:text-2xl" : "text-2xl sm:text-lg";
+  const ownerIcon = dense ? "h-7 w-7 sm:h-7 sm:w-7" : "h-7 w-7 sm:h-6 sm:w-6";
+  const partnerText = dense ? "text-[1.45rem] sm:text-2xl" : "text-2xl sm:text-lg";
+  const partnerIcon = dense ? "h-6 w-6 sm:h-6 sm:w-6" : "h-6 w-6 sm:h-5 sm:w-5";
+  const badge = dense ? "h-8 w-8 text-lg sm:h-9 sm:w-9 sm:text-lg" : "h-8 w-8 text-base sm:h-7 sm:w-7 sm:text-sm";
   return (
     <div className="rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
       <ScaleToFit>
-        <div className="min-w-[780px]">
+        <div className="w-[330px] sm:w-[780px]">
           {/* Owner */}
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
@@ -400,7 +400,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           </div>
 
           {/* Fan-out connector */}
-          <div className="relative mx-auto my-3 h-6 w-[92%]">
+          <div className="relative mx-auto my-3 h-6 w-[92%] hidden sm:block">
             <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
             <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
             <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
@@ -408,10 +408,10 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           </div>
 
           {/* Columns: partner → arrow → distribution */}
-          <div className="flex gap-3">
+          <div className="grid grid-cols-2 gap-2 sm:flex sm:gap-3">
             {seats.map((s, i) => (
               <div key={`col-${i}`} className={`flex ${minCol} flex-1 flex-col`}>
-                <div className={`flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 ${partnerText} text-foreground/85`}>
+                <div className={`flex items-center justify-center gap-1 rounded-xl border border-border/50 bg-surface/50 px-1.5 py-2 sm:gap-2 sm:px-3 sm:py-2.5 ${partnerText} text-foreground/85`}>
                   <span className={`flex ${badge} shrink-0 items-center justify-center rounded-full bg-gold/20 font-bold text-gold`}>
                     {i + 1}
                   </span>
@@ -535,24 +535,24 @@ export default function NeoClubPage() {
 
           <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
             <ScaleToFit>
-              <div className="min-w-[780px]">
+              <div className="w-[330px] sm:w-[780px]">
                 <div className="flex justify-center">
                   <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
                     <User className="h-7 w-7 text-gold" />
-                    <span className="whitespace-nowrap text-2xl font-semibold text-gold">Вы · 150$</span>
+                    <span className="whitespace-nowrap text-[1.7rem] font-semibold text-gold sm:text-2xl">Вы · 150$</span>
                   </div>
                 </div>
-                <div className="relative mx-auto my-3 h-6 w-[92%]">
+                <div className="relative mx-auto my-3 h-6 w-[92%] hidden sm:block">
                   <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
                   <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
                   <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
                   <div className="absolute right-0 top-3 h-3 w-px bg-gold/40" />
                 </div>
-                <div className="flex gap-3">
+                <div className="grid grid-cols-2 gap-2 sm:flex sm:gap-3">
                   {NEO_LINE_SEATS.map((s, i) => (
-                    <div key={`nl-${i}`} className="flex min-w-[180px] flex-1 flex-col">
-                      <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-2xl">
-                        <span className="flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-gold/20 text-lg font-bold text-gold">
+                    <div key={`nl-${i}`} className="flex min-w-[155px] flex-1 flex-col sm:min-w-[180px]">
+                      <div className="flex items-center justify-center gap-1 rounded-xl border border-border/50 bg-surface/50 px-1.5 py-2 text-[1.45rem] sm:gap-2 sm:px-3 sm:py-2.5 sm:text-2xl">
+                        <span className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-gold/20 text-lg font-bold text-gold sm:h-9 sm:w-9 sm:text-lg">
                           {i + 1}
                         </span>
                         {i === 3 ? <InfinityIcon className="h-6 w-6 text-gold" /> : <Users className="h-6 w-6 text-gold/80" />}
