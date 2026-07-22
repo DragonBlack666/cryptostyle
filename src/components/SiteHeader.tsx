@@ -64,9 +64,7 @@ export function SiteHeader() {
             >
               {t.nav.programs}
             </Link>
-            <div className="mt-2 flex items-center justify-center border-t border-border/40 pt-4">
-              <SocialLinks />
-            </div>
+
           </nav>
         </div>
       )}
