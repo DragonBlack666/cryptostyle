@@ -738,14 +738,14 @@ export default function MultiMatrixPage() {
             Шесть площадок, автоматические переходы, клоны, реинвест и прогнозируемый рост — всё в одной бизнес-системе на TON.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-4">
-            <button
-              type="button"
-              disabled
-              title="Ссылка регистрации появится позже"
-              className="inline-flex items-center gap-2 rounded-xl btn-gold px-8 py-4 font-semibold opacity-70"
+            <a
+              href="https://cryptostylematrix.github.io/frontend/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-xl btn-gold px-8 py-4 font-semibold transition hover:opacity-90"
             >
               Регистрация в MULTI Matrix <ArrowRight className="h-5 w-5" />
-            </button>
+            </a>
             <Link
               to="/programs"
               className="inline-flex items-center gap-2 rounded-xl border border-gold/50 bg-surface/40 px-8 py-4 font-semibold backdrop-blur transition hover:border-gold hover:bg-surface/70"
@@ -753,7 +753,6 @@ export default function MultiMatrixPage() {
               <ArrowLeft className="h-5 w-5" /> Все партнёрские программы
             </Link>
           </div>
-          
         </div>
       </section>
     </div>
