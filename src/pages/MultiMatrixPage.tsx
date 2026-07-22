@@ -753,7 +753,7 @@ export default function MultiMatrixPage() {
               <ArrowLeft className="h-5 w-5" /> Все партнёрские программы
             </Link>
           </div>
-          <p className="mt-6 text-xs text-foreground/50">Ссылка регистрации будет добавлена позже.</p>
+          
         </div>
       </section>
     </div>
