@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { useI18n } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
@@ -501,6 +502,9 @@ export default function MultiMatrixPage() {
   useEffect(() => {
     document.title = "MULTI Matrix — Партнёрская программа · Crypto Style";
   }, []);
+
+  const { lang } = useI18n();
+  const [ruVideoSource, setRuVideoSource] = useState<"youtube" | "rutube">("youtube");
 
   return (
     <div className="min-h-screen bg-background text-foreground">
