@@ -401,11 +401,11 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           <div className="flex gap-3">
             {seats.map((s, i) => (
               <div key={`col-${i}`} className={`flex ${minCol} flex-1 flex-col`}>
-                <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2 text-sm sm:text-base text-foreground/85">
-                  <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-xs font-bold text-gold">
+                <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg text-foreground/85">
+                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-gold">
                     {i + 1}
                   </span>
-                  <Users className="h-4 w-4 text-gold/80" />
+                  <Users className="h-5 w-5 text-gold/80" />
                   <span className="whitespace-nowrap font-medium">Партнёр · {ownerAmount}</span>
                 </div>
                 <div className="my-1.5 flex justify-center">
