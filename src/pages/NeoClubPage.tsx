@@ -385,7 +385,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
               <User className="h-6 w-6 text-gold" />
-              <span className="whitespace-nowrap text-lg font-semibold text-gold">Вы · {ownerAmount}</span>
+              <span className="whitespace-nowrap text-lg sm:text-xl font-semibold text-gold">Вы · {ownerAmount}</span>
             </div>
           </div>
 
@@ -401,7 +401,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           <div className="flex gap-3">
             {seats.map((s, i) => (
               <div key={`col-${i}`} className={`flex ${minCol} flex-1 flex-col`}>
-                <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg text-foreground/85">
+                <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg sm:text-xl text-foreground/85">
                   <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-gold">
                     {i + 1}
                   </span>
@@ -529,7 +529,7 @@ export default function NeoClubPage() {
                 <div className="flex justify-center">
                   <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
                     <User className="h-6 w-6 text-gold" />
-                    <span className="whitespace-nowrap text-lg font-semibold text-gold">Вы · 150$</span>
+                    <span className="whitespace-nowrap text-lg sm:text-xl font-semibold text-gold">Вы · 150$</span>
                   </div>
                 </div>
                 <div className="relative mx-auto my-3 h-6 w-[92%]">
@@ -541,7 +541,7 @@ export default function NeoClubPage() {
                 <div className="flex gap-3">
                   {NEO_LINE_SEATS.map((s, i) => (
                     <div key={`nl-${i}`} className="flex min-w-[180px] flex-1 flex-col">
-                      <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg">
+                      <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg sm:text-xl">
                         <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-gold">
                           {i + 1}
                         </span>
