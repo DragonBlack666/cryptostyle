@@ -55,6 +55,7 @@ export type Dict = {
     btn2: string;
     btn2Link: string;
     tagline: string;
+    programsBtn: string;
   };
   footer: string;
 };
@@ -142,6 +143,7 @@ const ru: Dict = {
     btn2: "Открыть в Telegram",
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Ваши деньги. Ваши правила. Ваш блокчейн.",
+    programsBtn: "Познакомьтесь с партнёрскими программами Crypto Style",
   },
   footer: "© Crypto Style. Все права защищены.",
 };
@@ -229,6 +231,7 @@ const en: Dict = {
     btn2: "Open in Telegram",
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Your Money. Your Rules. Your Future.",
+    programsBtn: "Explore Crypto Style partner programs",
   },
   footer: "© Crypto Style. All rights reserved.",
 };
@@ -315,6 +318,7 @@ const de: Dict = {
     btn2: "In Telegram öffnen",
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Ihr Geld. Ihre Regeln. Ihre Zukunft.",
+    programsBtn: "Lernen Sie die Crypto Style Partnerprogramme kennen",
   },
   footer: "© Crypto Style. Alle Rechte vorbehalten.",
 };
@@ -397,6 +401,7 @@ const fr: Dict = {
     btn2: "Ouvrir dans Telegram",
     btn2Link: en.cta.btn2Link,
     tagline: "Votre argent. Vos règles. Votre avenir.",
+    programsBtn: "Découvrez les programmes partenaires Crypto Style",
   },
   footer: "© Crypto Style. Tous droits réservés.",
 };
@@ -479,6 +484,7 @@ const it: Dict = {
     btn2: "Apri in Telegram",
     btn2Link: en.cta.btn2Link,
     tagline: "Il tuo denaro. Le tue regole. Il tuo futuro.",
+    programsBtn: "Scopri i programmi partner di Crypto Style",
   },
   footer: "© Crypto Style. Tutti i diritti riservati.",
 };
