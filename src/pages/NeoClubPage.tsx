@@ -314,7 +314,7 @@ function SeatCard({ seat }: { seat: Seat }) {
       : "border-border/60 bg-surface/50";
   return (
     <div className={`rounded-2xl border ${tone} p-4 sm:p-5 backdrop-blur transition hover:border-gold/60`}>
-      <ul className="space-y-2 text-lg text-foreground/90">
+      <ul className="space-y-2 text-base sm:text-lg md:text-xl font-medium text-foreground/90">
         {seat.lines.map((ln, i) => {
           const Icon = ln.icon ? iconMap[ln.icon] : null;
           return (
