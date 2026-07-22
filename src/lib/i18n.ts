@@ -18,7 +18,7 @@ export type LangCode = (typeof LANGUAGES)[number]["code"];
 
 export type Dict = {
   nav: { features: string; nft: string; ton: string; roadmap: string; programs: string };
-  hero: { title1: string; title2: string; subtitle: string; cta1: string; cta2: string; cta1Link: string };
+  hero: { title1: string; title2: string; subtitle: string; cta1: string; cta2: string; cta1Link: string; tagline: string; programsCta: string };
   social: { youtube: string; twitter: string; telegram: string };
   why: {
     eyebrow: string;
@@ -69,6 +69,8 @@ const ru: Dict = {
     cta1: "Подключить кошелёк",
     cta2: "Посмотреть возможности",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
+    tagline: "Ваши деньги. Ваши правила. Ваш блокчейн.",
+    programsCta: "Познакомьтесь с партнерскими программами Crypto Style",
   },
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial",
@@ -156,6 +158,8 @@ const en: Dict = {
     cta1: "Connect wallet",
     cta2: "Explore features",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
+    tagline: "Your money. Your rules. Your blockchain.",
+    programsCta: "Explore Crypto Style partner programs",
   },
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial-EN",
@@ -246,6 +250,8 @@ const de: Dict = {
     cta1: "Wallet verbinden",
     cta2: "Funktionen entdecken",
     cta1Link: en.hero.cta1Link,
+    tagline: "Ihr Geld. Ihre Regeln. Ihre Blockchain.",
+    programsCta: "Entdecken Sie die Crypto Style Partnerprogramme",
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-DE" },
   why: {
@@ -328,6 +334,8 @@ const fr: Dict = {
     cta1: "Connecter votre portefeuille",
     cta2: "Découvrir les fonctionnalités",
     cta1Link: en.hero.cta1Link,
+    tagline: "Votre argent. Vos règles. Votre blockchain.",
+    programsCta: "Découvrez les programmes partenaires Crypto Style",
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-FR" },
   why: {
@@ -410,6 +418,8 @@ const it: Dict = {
     cta1: "Connetti il wallet",
     cta2: "Esplora le funzionalità",
     cta1Link: en.hero.cta1Link,
+    tagline: "I tuoi soldi. Le tue regole. La tua blockchain.",
+    programsCta: "Scopri i programmi partner di Crypto Style",
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-IT" },
   why: {
@@ -492,6 +502,8 @@ const es: Dict = {
     cta1: "Conectar billetera",
     cta2: "Explorar funciones",
     cta1Link: en.hero.cta1Link,
+    tagline: "Tu dinero. Tus reglas. Tu blockchain.",
+    programsCta: "Descubre los programas de socios de Crypto Style",
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-ES" },
   why: {
@@ -618,6 +630,8 @@ const pt: Dict = {
     cta1: "Conectar carteira",
     cta2: "Explorar recursos",
     cta1Link: en.hero.cta1Link,
+    tagline: "Seu dinheiro. Suas regras. Sua blockchain.",
+    programsCta: "Conheça os programas de parceiros Crypto Style",
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-PT" },
   why: {
@@ -700,6 +714,8 @@ const uk: Dict = {
     cta1: "Підключити гаманець",
     cta2: "Переглянути можливості",
     cta1Link: ru.hero.cta1Link,
+    tagline: "Ваші гроші. Ваші правила. Ваш блокчейн.",
+    programsCta: "Познайомтеся з партнерськими програмами Crypto Style",
   },
   social: { ...ru.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-UA" },
   why: {
@@ -782,6 +798,8 @@ const kk: Dict = {
     cta1: "Әмиянды қосу",
     cta2: "Мүмкіндіктерді қарау",
     cta1Link: "https://cryptostylematrix.github.io/frontend/",
+    tagline: "Сіздің қаражатыңыз. Сіздің ережелеріңіз. Сіздің блокчейніңіз.",
+    programsCta: "Crypto Style серіктестік бағдарламаларымен танысыңыз",
   },
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial-KK",
@@ -868,6 +886,8 @@ const pl: Dict = {
     cta1: "Podłącz portfel",
     cta2: "Poznaj funkcje",
     cta1Link: ru.hero.cta1Link,
+    tagline: "Twoje pieniądze. Twoje zasady. Twój blockchain.",
+    programsCta: "Poznaj programy partnerskie Crypto Style",
   },
   social: {
     youtube: "https://www.youtube.com/@CryptoStyleOfficial-PL",
@@ -954,6 +974,8 @@ const hu: Dict = {
     cta1: "TON pénztárca csatlakoztatása",
     cta2: "Funkciók felfedezése",
     cta1Link: en.hero.cta1Link,
+    tagline: "A pénzed. A szabályaid. A blokkláncod.",
+    programsCta: "Ismerje meg a Crypto Style partnerprogramokat",
   },
   social: { ...en.social, youtube: "https://www.youtube.com/@CryptoStyleOfficial-HU" },
   why: {
