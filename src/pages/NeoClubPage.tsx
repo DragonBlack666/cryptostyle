@@ -531,7 +531,7 @@ export default function NeoClubPage() {
         <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/75 to-background/90" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <header className="max-w-3xl">
+          <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO LINE</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Neo Line — линейный маркетинг</h2>
             <p className="mt-4 text-foreground/75">
