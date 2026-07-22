@@ -1,72 +1,18 @@
+import { useEffect } from "react";
 import { Link } from "react-router-dom";
-import { useI18n, type LangCode } from "@/lib/i18n";
+import { useI18n } from "@/lib/i18n";
+import { PROGRAMS_DICTS } from "@/lib/programs-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
-import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import { ArrowRight, CheckCircle2 } from "lucide-react";
 
-type ProgramsCopy = {
-  intro: string;
-  features: string;
-  minEntry: string;
-  maxPotential: string;
-  openPresentation: string;
-};
-
-const COPY: Record<LangCode, ProgramsCopy> = {
-  ru: {
-    intro: "Выберите программу и откройте её презентацию.",
-    features: "Особенности",
-    minEntry: "Минимальный вход",
-    maxPotential: "Максимальный потенциал",
-    openPresentation: "Открыть презентацию",
-  },
-  en: {
-    intro: "Choose a program and open its presentation.",
-    features: "Features",
-    minEntry: "Minimum entry",
-    maxPotential: "Maximum potential",
-    openPresentation: "Open presentation",
-  },
-  de: { intro: "Wählen Sie ein Programm und öffnen Sie die Präsentation.", features: "Merkmale", minEntry: "Mindesteinstieg", maxPotential: "Maximales Potenzial", openPresentation: "Präsentation öffnen" },
-  fr: { intro: "Choisissez un programme et ouvrez sa présentation.", features: "Caractéristiques", minEntry: "Entrée minimale", maxPotential: "Potentiel maximal", openPresentation: "Ouvrir la présentation" },
-  it: { intro: "Scegli un programma e apri la sua presentazione.", features: "Caratteristiche", minEntry: "Ingresso minimo", maxPotential: "Potenziale massimo", openPresentation: "Apri la presentazione" },
-  es: { intro: "Elige un programa y abre su presentación.", features: "Características", minEntry: "Entrada mínima", maxPotential: "Potencial máximo", openPresentation: "Abrir presentación" },
-  pt: { intro: "Escolha um programa e abra a sua apresentação.", features: "Características", minEntry: "Entrada mínima", maxPotential: "Potencial máximo", openPresentation: "Abrir apresentação" },
-  uk: { intro: "Оберіть програму та відкрийте її презентацію.", features: "Особливості", minEntry: "Мінімальний вхід", maxPotential: "Максимальний потенціал", openPresentation: "Відкрити презентацію" },
-  kk: { intro: "Бағдарламаны таңдап, презентациясын ашыңыз.", features: "Ерекшеліктері", minEntry: "Ең төменгі кіру", maxPotential: "Ең жоғары әлеует", openPresentation: "Презентацияны ашу" },
-  pl: { intro: "Wybierz program i otwórz jego prezentację.", features: "Cechy", minEntry: "Minimalne wejście", maxPotential: "Maksymalny potencjał", openPresentation: "Otwórz prezentację" },
-  hu: { intro: "Válassz programot és nyisd meg a bemutatót.", features: "Jellemzők", minEntry: "Minimális belépő", maxPotential: "Maximális potenciál", openPresentation: "Bemutató megnyitása" },
-};
-
-type Program = {
-  name: string;
-  features: string[];
-  minEntry: string;
-  maxPotential: string;
-  href: string;
-};
-
-const PROGRAMS: Program[] = [
-  {
-    name: "Neo Club",
-    features: ["8 площадок", "Линейка", "Тетра", "Клоны", "Управление структурой"],
-    minEntry: "от $155",
-    maxPotential: "от $72 100",
-    href: "/programs/neo",
-  },
-  {
-    name: "Multi Matrix",
-    features: ["6 площадок", "Реинвест", "Клоны", "Управление структурой"],
-    minEntry: "15 TON",
-    maxPotential: "от 3500 TON",
-    href: "/programs/multi",
-  },
-];
-
 export default function ProgramsPage() {
   const { t, lang } = useI18n();
-  const c = COPY[lang];
+  const c = PROGRAMS_DICTS[lang];
+
+  useEffect(() => {
+    document.title = c.documentTitle;
+  }, [c.documentTitle]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -94,7 +40,7 @@ export default function ProgramsPage() {
           </div>
 
           <div className="mt-16 grid gap-8 md:grid-cols-2">
-            {PROGRAMS.map((p) => (
+            {c.programs.map((p) => (
               <article
                 key={p.name}
                 className="group relative flex flex-col rounded-3xl border border-gold/30 bg-card/70 p-8 shadow-[var(--shadow-card)] backdrop-blur transition hover:-translate-y-1 hover:border-gold/70"
