@@ -376,11 +376,11 @@ function ScaleToFit({ children }: { children: ReactNode }) {
 }
 
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
-  const minCol = seats.length === 3 ? "min-w-[220px]" : "min-w-[200px]";
+  const minCol = seats.length === 3 ? "min-w-[210px]" : "min-w-[180px]";
   return (
-    <div className="rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
+    <div className="rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
       <ScaleToFit>
-        <div className="min-w-[880px]">
+        <div className="min-w-[780px]">
           {/* Owner */}
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
