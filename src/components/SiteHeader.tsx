@@ -1,19 +1,35 @@
 import { Link, useLocation } from "react-router-dom";
 import { useState } from "react";
-import { useI18n } from "@/lib/i18n";
+import { useI18n, type LangCode } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { SocialLinks } from "@/components/SocialLinks";
 import logo from "@/assets/logo.png";
 import { Menu, X } from "lucide-react";
 
+const MENU_LABEL: Record<LangCode, { open: string; close: string }> = {
+  ru: { open: "Открыть меню", close: "Закрыть меню" },
+  en: { open: "Open menu", close: "Close menu" },
+  de: { open: "Menü öffnen", close: "Menü schließen" },
+  fr: { open: "Ouvrir le menu", close: "Fermer le menu" },
+  it: { open: "Apri menu", close: "Chiudi menu" },
+  es: { open: "Abrir menú", close: "Cerrar menú" },
+  pt: { open: "Abrir menu", close: "Fechar menu" },
+  uk: { open: "Відкрити меню", close: "Закрити меню" },
+  kk: { open: "Мәзірді ашу", close: "Мәзірді жабу" },
+  pl: { open: "Otwórz menu", close: "Zamknij menu" },
+  hu: { open: "Menü megnyitása", close: "Menü bezárása" },
+};
+
 export function SiteHeader() {
-  const { t } = useI18n();
+  const { t, lang } = useI18n();
   const { pathname } = useLocation();
   const onHome = pathname === "/";
   const anchor = (id: string) => (onHome ? `#${id}` : `/#${id}`);
   const [menuOpen, setMenuOpen] = useState(false);
+  const menuLabel = MENU_LABEL[lang];
 
   const closeMenu = () => setMenuOpen(false);
+
 
   return (
     <header className="fixed top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
@@ -38,7 +54,7 @@ export function SiteHeader() {
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center rounded-xl border border-border bg-surface/60 p-2 text-foreground/80 transition hover:border-gold/60 hover:text-gold"
-            aria-label="Открыть меню"
+            aria-label={menuOpen ? menuLabel.close : menuLabel.open}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
           >
