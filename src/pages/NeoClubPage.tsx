@@ -330,7 +330,10 @@ function SeatCard({ seat }: { seat: Seat }) {
 }
 
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
-  const cols = seats.length === 3 ? "lg:grid-cols-3" : "lg:grid-cols-4";
+  const cols =
+    seats.length === 3
+      ? "grid-cols-1 sm:grid-cols-3"
+      : "grid-cols-2 lg:grid-cols-4";
   return (
     <div className="rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
       {/* Owner */}
@@ -340,47 +343,30 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           <span className="font-semibold text-gold">Вы · {ownerAmount}</span>
         </div>
       </div>
-      <div className="my-4 flex justify-center">
-        <ChevronDown className="h-6 w-6 text-gold/60" />
+
+      {/* Fan-out connector */}
+      <div className="relative mx-auto my-3 h-6 w-full max-w-[92%]">
+        <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
+        <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
       </div>
 
-      {/* Mobile: vertical numbered pairs — each partner directly above its distribution */}
-      <ol className="space-y-4 lg:hidden">
+      {/* Grid of partner → distribution pairs (schema on every viewport) */}
+      <div className={`grid gap-3 ${cols}`}>
         {seats.map((s, i) => (
-          <li key={`m-${i}`} className="rounded-2xl border border-border/50 bg-surface/30 p-3">
-            <div className="flex items-center gap-2 rounded-xl border border-border/50 bg-surface/60 px-3 py-2 text-sm">
-              <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-xs font-bold text-gold">
+          <div key={`col-${i}`} className="flex flex-col">
+            <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm text-foreground/85">
+              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
                 {i + 1}
               </span>
-              <Users className="h-4 w-4 text-gold/80" />
-              <span className="font-medium text-foreground/85">Партнёр · {ownerAmount}</span>
+              <Users className="h-3.5 w-3.5 text-gold/80" />
+              <span className="font-medium">{ownerAmount}</span>
             </div>
-            <div className="my-2 flex justify-center">
+            <div className="my-1.5 flex justify-center">
               <ChevronDown className="h-4 w-4 text-gold/50" />
             </div>
             <SeatCard seat={s} />
-          </li>
+          </div>
         ))}
-      </ol>
-
-      {/* Desktop: horizontal diagram */}
-      <div className="hidden lg:block">
-        <div className={`grid gap-3 ${cols}`}>
-          {seats.map((_, i) => (
-            <div key={`p-${i}`} className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/40 px-3 py-2 text-sm text-foreground/80">
-              <Users className="h-4 w-4 text-gold/80" />
-              <span className="font-medium">Партнёр · {ownerAmount}</span>
-            </div>
-          ))}
-        </div>
-        <div className={`mt-3 grid gap-3 ${cols}`}>
-          {seats.map((_, i) => (
-            <div key={`a-${i}`} className="flex justify-center"><ChevronDown className="h-5 w-5 text-gold/40" /></div>
-          ))}
-        </div>
-        <div className={`grid gap-3 ${cols}`}>
-          {seats.map((s, i) => <SeatCard key={`s-${i}`} seat={s} />)}
-        </div>
       </div>
     </div>
   );
@@ -495,38 +481,26 @@ export default function NeoClubPage() {
                 <span className="font-semibold text-gold">Вы · 150$</span>
               </div>
             </div>
-            <div className="my-4 flex justify-center"><ChevronDown className="h-6 w-6 text-gold/60" /></div>
+            {/* Fan-out connector */}
+            <div className="relative mx-auto my-3 h-6 w-full max-w-[92%]">
+              <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
+              <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
+            </div>
 
-            {/* Mobile: vertical numbered pairs */}
-            <ol className="space-y-4 sm:hidden">
+            <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
               {NEO_LINE_SEATS.map((s, i) => (
-                <li key={`ml-${i}`} className="rounded-2xl border border-border/50 bg-surface/30 p-3">
-                  <div className="flex items-center gap-2 rounded-xl border border-border/50 bg-surface/60 px-3 py-2 text-sm">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-xs font-bold text-gold">
+                <div key={`nl-${i}`} className="flex flex-col">
+                  <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
                       {i + 1}
                     </span>
-                    {i === 3 ? <InfinityIcon className="h-4 w-4 text-gold" /> : <Users className="h-4 w-4 text-gold/80" />}
-                    <span className="font-medium">Место · 150$</span>
-                  </div>
-                  <div className="my-2 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
-                  <SeatCard seat={s} />
-                </li>
-              ))}
-            </ol>
-
-            {/* Desktop */}
-            <div className="hidden sm:block">
-              <div className="grid gap-3 sm:grid-cols-4">
-                {[0, 1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/40 px-3 py-2 text-sm">
-                    {i === 3 ? <InfinityIcon className="h-4 w-4 text-gold" /> : <Users className="h-4 w-4 text-gold/80" />}
+                    {i === 3 ? <InfinityIcon className="h-3.5 w-3.5 text-gold" /> : <Users className="h-3.5 w-3.5 text-gold/80" />}
                     <span className="font-medium">150$</span>
                   </div>
-                ))}
-              </div>
-              <div className="mt-3 grid gap-3 sm:grid-cols-4">
-                {NEO_LINE_SEATS.map((s, i) => <SeatCard key={i} seat={s} />)}
-              </div>
+                  <div className="my-1.5 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
+                  <SeatCard seat={s} />
+                </div>
+              ))}
             </div>
           </div>
 
