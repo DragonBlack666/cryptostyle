@@ -17,12 +17,28 @@ export function SiteHeader() {
 
   return (
     <header className="fixed top-0 z-40 w-full border-b border-border/40 bg-background/60 backdrop-blur-xl">
-      <div className="mx-auto grid h-16 max-w-7xl grid-cols-[1fr_auto_1fr] items-center px-4 sm:px-6">
-        <div className="flex items-center gap-3">
+      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between gap-3 px-4 sm:px-6 md:grid md:grid-cols-[1fr_auto_1fr]">
+        {/* Left: logo */}
+        <div className="flex min-w-0 items-center">
           <Link to="/" className="flex items-center">
-            <img src={logo} alt="Crypto Style logo" className="h-10 w-auto" />
+            <img src={logo} alt="Crypto Style logo" className="h-9 w-auto sm:h-10" />
           </Link>
+        </div>
+
+        {/* Center: desktop nav */}
+        <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
+          <a href={anchor("why")} className="transition hover:text-gold">{t.nav.features}</a>
+          <Link to="/programs" className="transition hover:text-gold">{t.nav.programs}</Link>
+        </nav>
+
+        {/* Right: desktop socials + language; mobile language + burger */}
+        <div className="flex items-center justify-end gap-2 sm:gap-3">
+          <div className="hidden md:flex">
+            <SocialLinks />
+          </div>
+          <LanguageSwitcher />
           <button
+            type="button"
             className="md:hidden inline-flex items-center justify-center rounded-xl border border-border bg-surface/60 p-2 text-foreground/80 transition hover:border-gold/60 hover:text-gold"
             aria-label="Открыть меню"
             aria-expanded={menuOpen}
@@ -30,14 +46,6 @@ export function SiteHeader() {
           >
             {menuOpen ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
           </button>
-        </div>
-        <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
-          <a href={anchor("why")} className="transition hover:text-gold">{t.nav.features}</a>
-          <Link to="/programs" className="transition hover:text-gold">{t.nav.programs}</Link>
-        </nav>
-        <div className="flex items-center justify-end gap-3">
-          <SocialLinks />
-          <LanguageSwitcher />
         </div>
       </div>
 
@@ -58,6 +66,9 @@ export function SiteHeader() {
             >
               {t.nav.programs}
             </Link>
+            <div className="mt-2 flex items-center justify-center border-t border-border/40 pt-4">
+              <SocialLinks />
+            </div>
           </nav>
         </div>
       )}
