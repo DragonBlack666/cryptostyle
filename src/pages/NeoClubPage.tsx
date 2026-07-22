@@ -380,7 +380,13 @@ function ScaleToFit({ children }: { children: ReactNode }) {
 }
 
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
+  const dense = seats.length >= 4;
   const minCol = seats.length === 3 ? "min-w-[210px]" : "min-w-[180px]";
+  const ownerText = dense ? "text-2xl" : "text-lg";
+  const ownerIcon = dense ? "h-7 w-7" : "h-6 w-6";
+  const partnerText = dense ? "text-2xl" : "text-lg";
+  const partnerIcon = dense ? "h-6 w-6" : "h-5 w-5";
+  const badge = dense ? "h-9 w-9 text-lg" : "h-7 w-7 text-sm";
   return (
     <div className="rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
       <ScaleToFit>
@@ -388,8 +394,8 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           {/* Owner */}
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-6 py-3">
-              <User className="h-6 w-6 text-gold" />
-              <span className="whitespace-nowrap text-lg font-semibold text-gold">Вы · {ownerAmount}</span>
+              <User className={`${ownerIcon} text-gold`} />
+              <span className={`whitespace-nowrap ${ownerText} font-semibold text-gold`}>Вы · {ownerAmount}</span>
             </div>
           </div>
 
@@ -405,17 +411,17 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
           <div className="flex gap-3">
             {seats.map((s, i) => (
               <div key={`col-${i}`} className={`flex ${minCol} flex-1 flex-col`}>
-                <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg text-foreground/85">
-                  <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-gold">
+                <div className={`flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 ${partnerText} text-foreground/85`}>
+                  <span className={`flex ${badge} shrink-0 items-center justify-center rounded-full bg-gold/20 font-bold text-gold`}>
                     {i + 1}
                   </span>
-                  <Users className="h-5 w-5 text-gold/80" />
+                  <Users className={`${partnerIcon} text-gold/80`} />
                   <span className="whitespace-nowrap font-medium">Партнёр · {ownerAmount}</span>
                 </div>
                 <div className="my-1.5 flex justify-center">
                   <ChevronDown className="h-4 w-4 text-gold/50" />
                 </div>
-                <SeatCard seat={s} />
+                <SeatCard seat={s} dense={dense} />
               </div>
             ))}
           </div>
