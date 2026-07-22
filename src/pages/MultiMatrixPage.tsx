@@ -5,11 +5,10 @@ import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
-import roadmapBg from "@/assets/bg-roadmap-light.jpg";
 import {
   ArrowLeft, ArrowRight, User, Users,
-  Wallet, PiggyBank, Copy, UserCheck, TrendingUp, LayoutGrid,
-  Repeat, Settings2, Sparkles, Trophy, ChevronDown, RotateCcw,
+  Wallet, PiggyBank, Copy, UserCheck, TrendingUp,
+  Repeat, Trophy, ChevronDown, RotateCcw,
 } from "lucide-react";
 
 /* ---------- Types ---------- */
@@ -233,16 +232,6 @@ const INCOME_TYPES = [
     text: "У ваших партнёров также создаются дополнительные бизнес-места. Маркетинг предусматривает реферальный бонус и за клонов ваших партнёров." },
 ];
 
-const FEATURES = [
-  { icon: LayoutGrid, title: "Матричная модель",
-    text: "Семиместная бинарная неделящаяся матрица — четкая структура и прогнозируемый рост на каждой площадке." },
-  { icon: Copy,       title: "Автоматическая дубликация",
-    text: "«Клоны» — полноценные бизнес-места: получают вознаграждения, имеют собственные площадки и создают новые клоны." },
-  { icon: Settings2,  title: "Управление структурой",
-    text: "Стратегически направляйте потоки клонов для закрытия приоритетных позиций и ускоряйте движение партнёров." },
-  { icon: Sparkles,   title: "6 бизнес-площадок",
-    text: "Пошаговое развитие и рост дохода на каждом новом уровне — от 15 до 1 200 TON." },
-];
 
 const EXTRAS = [
   { title: "Гибкие возможности расширения",
@@ -265,7 +254,6 @@ function SectionNav() {
     { id: "income",    label: "4 вида дохода" },
     { id: "platforms", label: "Площадки" },
     { id: "summary",   label: "Сводка" },
-    { id: "features",  label: "Особенности" },
     { id: "extras",    label: "Управление" },
     { id: "cta",       label: "Старт" },
   ];
@@ -715,32 +703,6 @@ export default function MultiMatrixPage() {
         </div>
       </section>
 
-      {/* FEATURES */}
-      <section id="features" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={roadmapBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125" />
-        <div className="absolute inset-0 -z-10 bg-section-glow" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/55 via-background/35 to-background/60" />
-        <div className="mx-auto max-w-6xl px-4 sm:px-6">
-          <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Ключевые преимущества</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Особенности маркетинга MULTI Matrix</h2>
-            <p className="mt-4 text-foreground/75">
-              MULTI Matrix сочетает стабильность и динамику — ключевые особенности, которые отличают систему.
-            </p>
-          </header>
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {FEATURES.map(({ icon: Icon, title, text }) => (
-              <div key={title} className="rounded-3xl border border-border/60 bg-surface/50 p-6 backdrop-blur transition hover:border-gold/60">
-                <div className="flex h-12 w-12 items-center justify-center rounded-2xl border border-gold/40 bg-gold/10">
-                  <Icon className="h-6 w-6 text-gold" />
-                </div>
-                <h3 className="mt-4 font-display text-2xl">{title}</h3>
-                <p className="mt-2 text-sm text-foreground/75">{text}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* EXTRAS */}
       <section id="extras" className="relative isolate overflow-hidden py-20 sm:py-24">
