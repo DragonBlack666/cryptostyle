@@ -444,14 +444,14 @@ const de: NeoClubDict = {
     ],
     incomeValues: ["200$", "600$", "1 500$", "2 800$", "6 000$", "16 000$", "45 000$"],
     finalNoteHtml:
-      '<b class="text-gold">72 100$</b> direktes Einkommen, <b class="text-gold">26</b> neue „Klone" zur Stärkung Ihrer Struktur und <b class="text-gold">2 000$</b> Referral-Belohnung — das ist Ihr Ergebnis aus einem Hauptgeschäftsplatz, ohne die Klone zu zählen.',
+      '<b class="text-gold">72 100$</b> direktes Einkommen, <b class="text-gold">26</b> neue „Klone” zur Stärkung Ihrer Struktur und <b class="text-gold">2 000$</b> Referral-Belohnung — das ist Ihr Ergebnis aus einem Hauptgeschäftsplatz, ohne die Klone zu zählen.',
   },
   features: {
     eyebrow: "Wichtige Vorteile", title: "Merkmale des Neo-Club-Marketings",
     subtitle: "Neo Club bietet einen einzigartigen Ansatz zur Führung eines Geschäfts. Die wichtigsten Merkmale, die unser System auszeichnen.",
     items: [
       { title: "Matrixmodell", text: "Die Grundlage des Systems, die eine klare Struktur und vorhersehbares Wachstum sicherstellt." },
-      { title: "Automatische Duplizierung", text: "„Klone" erweitern Ihre Struktur und generieren zusätzliches Einkommen ohne neue Investitionen." },
+      { title: "Automatische Duplizierung", text: "„Klone” erweitern Ihre Struktur und generieren zusätzliches Einkommen ohne neue Investitionen." },
       { title: "Strukturverwaltung", text: "Werkzeuge zur effektiven Kontrolle und Optimierung Ihres Teams und Ihrer Plattformen." },
       { title: "Linear + Tetra", text: "Eine Kombination aus linearem und klassischem Matrix-Marketing in einem System." },
     ],
@@ -462,7 +462,7 @@ const de: NeoClubDict = {
       { title: "Strukturverwaltung", text: "Eine integrierte Funktion erlaubt es, Partner- und Klonströme strategisch zu lenken, um die wichtigsten Positionen auf den Plattformen zu schließen." },
       { title: "Zusätzliche Geschäftsplätze", text: "Die Möglichkeit, zusätzliche Geschäftsplätze auf jeder Plattform nach eigenem Ermessen zu erwerben." },
       { title: "Start von jeder Plattform", text: "Sie können mit jeder Marketingplattform beginnen, die zu Ihren Zielen passt." },
-      { title: "Funktion „Nächster Platz"", text: "Automatisiert die Wahl der optimalen Position für schnelles Strukturwachstum." },
+      { title: "Funktion „Nächster Platz”", text: "Automatisiert die Wahl der optimalen Position für schnelles Strukturwachstum." },
       { title: "Entwicklungsbeitrag", text: "Einmaliger Beitrag von 5$ für die Systementwicklung bei der Aktivierung." },
     ],
   },
@@ -1367,14 +1367,14 @@ const pl_dict: NeoClubDict = {
     ],
     incomeValues: ["200 $", "600 $", "1 500 $", "2 800 $", "6 000 $", "16 000 $", "45 000 $"],
     finalNoteHtml:
-      '<b class="text-gold">72 100 $</b> dochodu bezpośredniego, <b class="text-gold">26</b> nowych „klonów" wzmacniających strukturę i <b class="text-gold">2 000 $</b> wynagrodzenia z poleceń — to Twój wynik z jednego głównego miejsca biznesowego, nie licząc klonów.',
+      '<b class="text-gold">72 100 $</b> dochodu bezpośredniego, <b class="text-gold">26</b> nowych „klonów” wzmacniających strukturę i <b class="text-gold">2 000 $</b> wynagrodzenia z poleceń — to Twój wynik z jednego głównego miejsca biznesowego, nie licząc klonów.',
   },
   features: {
     eyebrow: "Kluczowe zalety", title: "Cechy marketingu Neo Club",
     subtitle: "Neo Club oferuje unikalne podejście do prowadzenia biznesu. Kluczowe cechy, które wyróżniają nasz system.",
     items: [
       { title: "Model matrycowy", text: "Podstawa systemu zapewniająca przejrzystą strukturę i przewidywalny wzrost." },
-      { title: "Automatyczne duplikowanie", text: "„Klony" rozszerzają Twoją strukturę i generują dodatkowy dochód bez nowych inwestycji." },
+      { title: "Automatyczne duplikowanie", text: "„Klony” rozszerzają Twoją strukturę i generują dodatkowy dochód bez nowych inwestycji." },
       { title: "Zarządzanie strukturą", text: "Narzędzia do skutecznej kontroli i optymalizacji Twojego zespołu i platform." },
       { title: "Liniowy + Tetra", text: "Połączenie marketingu liniowego i klasycznego matrycowego w jednym systemie." },
     ],
@@ -1385,7 +1385,7 @@ const pl_dict: NeoClubDict = {
       { title: "Zarządzanie strukturą", text: "Wbudowana funkcja pozwala strategicznie kierować przepływem partnerów i klonów, aby zamykać najbardziej priorytetowe pozycje na platformach." },
       { title: "Dodatkowe miejsca biznesowe", text: "Możliwość zakupu dodatkowych miejsc biznesowych na dowolnej platformie według własnego uznania." },
       { title: "Start z dowolnej platformy", text: "Możesz zacząć od dowolnej platformy marketingowej, która odpowiada Twoim celom." },
-      { title: "Funkcja „Następne miejsce"", text: "Automatyzuje wybór optymalnej pozycji dla szybkiego wzrostu struktury." },
+      { title: "Funkcja „Następne miejsce”", text: "Automatyzuje wybór optymalnej pozycji dla szybkiego wzrostu struktury." },
       { title: "Wkład na rozwój", text: "Jednorazowy wkład 5 $ na rozwój systemu przy aktywacji." },
     ],
   },
@@ -1498,14 +1498,14 @@ const hu: NeoClubDict = {
     ],
     incomeValues: ["200 $", "600 $", "1 500 $", "2 800 $", "6 000 $", "16 000 $", "45 000 $"],
     finalNoteHtml:
-      '<b class="text-gold">72 100 $</b> közvetlen jövedelem, <b class="text-gold">26</b> új „klón" a struktúra megerősítésére és <b class="text-gold">2 000 $</b> ajánlási jutalom — ez az Ön eredménye egyetlen fő üzleti helyről, a klónokat nem számítva.',
+      '<b class="text-gold">72 100 $</b> közvetlen jövedelem, <b class="text-gold">26</b> új „klón” a struktúra megerősítésére és <b class="text-gold">2 000 $</b> ajánlási jutalom — ez az Ön eredménye egyetlen fő üzleti helyről, a klónokat nem számítva.',
   },
   features: {
     eyebrow: "Kulcsfontosságú előnyök", title: "A Neo Club marketing jellemzői",
     subtitle: "A Neo Club egyedi megközelítést kínál az üzletvezetéshez. Íme a rendszerünket megkülönböztető kulcsfontosságú jellemzők.",
     items: [
       { title: "Mátrix modell", text: "A rendszer alapja, amely világos struktúrát és kiszámítható növekedést biztosít." },
-      { title: "Automatikus duplikáció", text: "A „klónok" bővítik a struktúrát, és további jövedelmet generálnak új befektetések nélkül." },
+      { title: "Automatikus duplikáció", text: "A „klónok” bővítik a struktúrát, és további jövedelmet generálnak új befektetések nélkül." },
       { title: "Struktúra kezelése", text: "Eszközök a csapat és a platformok hatékony vezérléséhez és optimalizálásához." },
       { title: "Lineáris + Tetra", text: "Lineáris és klasszikus mátrix marketing kombinációja egyetlen rendszerben." },
     ],
@@ -1516,7 +1516,7 @@ const hu: NeoClubDict = {
       { title: "Struktúra kezelése", text: "A beépített funkció lehetővé teszi a partnerek és klónok áramlásának stratégiai irányítását a legfontosabb pozíciók lezárása érdekében." },
       { title: "További üzleti helyek", text: "Lehetőség további üzleti helyek megvásárlására bármely platformon saját belátás szerint." },
       { title: "Indulás bármely platformról", text: "Bármely marketingplatformról elindulhat, amely megfelel a céljainak." },
-      { title: „Következő hely" funkció", text: "Automatizálja az optimális pozíció kiválasztását a struktúra gyors növekedéséhez." },
+      { title: "„Következő hely” funkció", text: "Automatizálja az optimális pozíció kiválasztását a struktúra gyors növekedéséhez." },
       { title: "Fejlesztési hozzájárulás", text: "Egyszeri 5 $ hozzájárulás a rendszer fejlesztéséhez az aktiváláskor." },
     ],
   },
