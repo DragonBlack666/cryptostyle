@@ -481,38 +481,26 @@ export default function NeoClubPage() {
                 <span className="font-semibold text-gold">Вы · 150$</span>
               </div>
             </div>
-            <div className="my-4 flex justify-center"><ChevronDown className="h-6 w-6 text-gold/60" /></div>
+            {/* Fan-out connector */}
+            <div className="relative mx-auto my-3 h-6 w-full max-w-[92%]">
+              <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
+              <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
+            </div>
 
-            {/* Mobile: vertical numbered pairs */}
-            <ol className="space-y-4 sm:hidden">
+            <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
               {NEO_LINE_SEATS.map((s, i) => (
-                <li key={`ml-${i}`} className="rounded-2xl border border-border/50 bg-surface/30 p-3">
-                  <div className="flex items-center gap-2 rounded-xl border border-border/50 bg-surface/60 px-3 py-2 text-sm">
-                    <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-xs font-bold text-gold">
+                <div key={`nl-${i}`} className="flex flex-col">
+                  <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm">
+                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
                       {i + 1}
                     </span>
-                    {i === 3 ? <InfinityIcon className="h-4 w-4 text-gold" /> : <Users className="h-4 w-4 text-gold/80" />}
-                    <span className="font-medium">Место · 150$</span>
-                  </div>
-                  <div className="my-2 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
-                  <SeatCard seat={s} />
-                </li>
-              ))}
-            </ol>
-
-            {/* Desktop */}
-            <div className="hidden sm:block">
-              <div className="grid gap-3 sm:grid-cols-4">
-                {[0, 1, 2, 3].map((i) => (
-                  <div key={i} className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/40 px-3 py-2 text-sm">
-                    {i === 3 ? <InfinityIcon className="h-4 w-4 text-gold" /> : <Users className="h-4 w-4 text-gold/80" />}
+                    {i === 3 ? <InfinityIcon className="h-3.5 w-3.5 text-gold" /> : <Users className="h-3.5 w-3.5 text-gold/80" />}
                     <span className="font-medium">150$</span>
                   </div>
-                ))}
-              </div>
-              <div className="mt-3 grid gap-3 sm:grid-cols-4">
-                {NEO_LINE_SEATS.map((s, i) => <SeatCard key={i} seat={s} />)}
-              </div>
+                  <div className="my-1.5 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
+                  <SeatCard seat={s} />
+                </div>
+              ))}
             </div>
           </div>
 
