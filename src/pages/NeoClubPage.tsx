@@ -541,11 +541,11 @@ export default function NeoClubPage() {
                 <div className="flex gap-3">
                   {NEO_LINE_SEATS.map((s, i) => (
                     <div key={`nl-${i}`} className="flex min-w-[180px] flex-1 flex-col">
-                      <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2 text-sm sm:text-base">
-                        <span className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full bg-gold/20 text-xs font-bold text-gold">
+                      <div className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/50 px-3 py-2.5 text-lg">
+                        <span className="flex h-7 w-7 shrink-0 items-center justify-center rounded-full bg-gold/20 text-sm font-bold text-gold">
                           {i + 1}
                         </span>
-                        {i === 3 ? <InfinityIcon className="h-4 w-4 text-gold" /> : <Users className="h-4 w-4 text-gold/80" />}
+                        {i === 3 ? <InfinityIcon className="h-5 w-5 text-gold" /> : <Users className="h-5 w-5 text-gold/80" />}
                         <span className="whitespace-nowrap font-medium">150$</span>
                       </div>
                       <div className="my-1.5 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
