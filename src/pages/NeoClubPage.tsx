@@ -483,32 +483,41 @@ export default function NeoClubPage() {
           </header>
 
           <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
-            <div className="flex justify-center">
-              <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
-                <User className="h-5 w-5 text-gold" />
-                <span className="font-semibold text-gold">Вы · 150$</span>
-              </div>
-            </div>
-            {/* Fan-out connector */}
-            <div className="relative mx-auto my-3 h-6 w-full max-w-[92%]">
-              <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
-              <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
-            </div>
-
-            <div className="grid gap-3 grid-cols-2 sm:grid-cols-4">
-              {NEO_LINE_SEATS.map((s, i) => (
-                <div key={`nl-${i}`} className="flex flex-col">
-                  <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm">
-                    <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
-                      {i + 1}
-                    </span>
-                    {i === 3 ? <InfinityIcon className="h-3.5 w-3.5 text-gold" /> : <Users className="h-3.5 w-3.5 text-gold/80" />}
-                    <span className="font-medium">150$</span>
+            <p className="mb-2 text-center text-[11px] uppercase tracking-widest text-foreground/50 lg:hidden">
+              ← прокрутите схему →
+            </p>
+            <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
+              <div className="mx-auto w-max min-w-full">
+                <div className="flex justify-center">
+                  <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
+                    <User className="h-5 w-5 text-gold" />
+                    <span className="whitespace-nowrap font-semibold text-gold">Вы · 150$</span>
                   </div>
-                  <div className="my-1.5 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
-                  <SeatCard seat={s} />
                 </div>
-              ))}
+                {/* Fan-out connector */}
+                <div className="relative mx-auto my-3 h-6 w-[92%]">
+                  <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
+                  <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
+                  <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
+                  <div className="absolute right-0 top-3 h-3 w-px bg-gold/40" />
+                </div>
+
+                <div className="flex gap-3">
+                  {NEO_LINE_SEATS.map((s, i) => (
+                    <div key={`nl-${i}`} className="flex min-w-[180px] flex-1 flex-col">
+                      <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm">
+                        <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
+                          {i + 1}
+                        </span>
+                        {i === 3 ? <InfinityIcon className="h-3.5 w-3.5 text-gold" /> : <Users className="h-3.5 w-3.5 text-gold/80" />}
+                        <span className="whitespace-nowrap font-medium">150$</span>
+                      </div>
+                      <div className="my-1.5 flex justify-center"><ChevronDown className="h-4 w-4 text-gold/50" /></div>
+                      <SeatCard seat={s} />
+                    </div>
+                  ))}
+                </div>
+              </div>
             </div>
           </div>
 
