@@ -611,6 +611,7 @@ const es: Dict = {
     btn2: "Abrir en Telegram",
     btn2Link: en.cta.btn2Link,
     tagline: "Tu dinero. Tus reglas. Tu futuro.",
+    programsBtn: "Conoce los programas de socios de Crypto Style",
   },
   footer: "© Crypto Style. Todos los derechos reservados.",
 };
@@ -693,6 +694,7 @@ const pt: Dict = {
     btn2: "Abrir no Telegram",
     btn2Link: en.cta.btn2Link,
     tagline: "Seu dinheiro. Suas regras. Sua blockchain.",
+    programsBtn: "Conheça os programas de parceiros da Crypto Style",
   },
   footer: "© Crypto Style. Todos os direitos reservados.",
 };
@@ -775,6 +777,7 @@ const uk: Dict = {
     btn2: "Відкрити в Telegram",
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Ваші гроші. Ваші правила. Ваш блокчейн.",
+    programsBtn: "Познайомтеся з партнерськими програмами Crypto Style",
   },
   footer: "© Crypto Style. Усі права захищені.",
 };
@@ -861,6 +864,7 @@ const kk: Dict = {
     btn2: "Telegram-да ашу",
     btn2Link: "https://t.me/CryptoStyleMatrixbot",
     tagline: "Сіздің қаражатыңыз. Сіздің ережелеріңіз. Сіздің блокчейніңіз.",
+    programsBtn: "Crypto Style серіктестік бағдарламаларымен танысыңыз",
   },
   footer: "© Crypto Style. Барлық құқықтар қорғалған.",
 };
@@ -947,6 +951,7 @@ const pl: Dict = {
     btn2: "Otwórz w Telegramie",
     btn2Link: ru.cta.btn2Link,
     tagline: "Twoje pieniądze. Twoje zasady. Twój blockchain.",
+    programsBtn: "Poznaj programy partnerskie Crypto Style",
   },
   footer: "© Crypto Style. Wszystkie prawa zastrzeżone.",
 };
@@ -1085,6 +1090,7 @@ const hu: Dict = {
     btn2: "Megnyitás a Telegramban",
     btn2Link: en.cta.btn2Link,
     tagline: "A pénzed. A szabályaid. A blokkláncod.",
+    programsBtn: "Ismerje meg a Crypto Style partnerprogramokat",
   },
   footer: "© Crypto Style. Minden jog fenntartva.",
 };
