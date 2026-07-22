@@ -526,6 +526,19 @@ export default function NeoClubPage() {
               </div>
             ))}
           </div>
+
+          {lang === "ru" && (
+            <div className="mx-auto mt-10 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
+              <iframe
+                src="https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17/"
+                title="Видео презентация Neo Club"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
       </section>
 
