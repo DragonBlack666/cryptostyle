@@ -313,14 +313,14 @@ function SeatCard({ seat }: { seat: Seat }) {
       ? "border-gold/30 bg-gradient-to-br from-surface/70 to-background/60"
       : "border-border/60 bg-surface/50";
   return (
-    <div className={`rounded-2xl border ${tone} p-4 backdrop-blur transition hover:border-gold/60`}>
-      <ul className="space-y-2 text-base text-foreground/90">
+    <div className={`rounded-2xl border ${tone} p-4 sm:p-5 backdrop-blur transition hover:border-gold/60`}>
+      <ul className="space-y-2 text-lg text-foreground/90">
         {seat.lines.map((ln, i) => {
           const Icon = ln.icon ? iconMap[ln.icon] : null;
           return (
-            <li key={i} className="flex items-start gap-2">
+            <li key={i} className="flex items-start gap-2.5">
               {Icon && <Icon className="mt-0.5 h-5 w-5 shrink-0 text-gold" />}
-              <span>{ln.text}</span>
+              <span className="leading-snug">{ln.text}</span>
             </li>
           );
         })}
