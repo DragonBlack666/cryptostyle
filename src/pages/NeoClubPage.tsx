@@ -365,7 +365,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
 
       {/* Desktop: horizontal diagram */}
       <div className="hidden lg:block">
-        <div className={`grid gap-3 grid-cols-${seats.length === 3 ? "3" : "4"} ${cols}`}>
+        <div className={`grid gap-3 ${cols}`}>
           {seats.map((_, i) => (
             <div key={`p-${i}`} className="flex items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/40 px-3 py-2 text-sm text-foreground/80">
               <Users className="h-4 w-4 text-gold/80" />
