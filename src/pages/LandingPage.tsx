@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
@@ -8,6 +9,7 @@ import nftCard from "@/assets/nft-card.png";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
   Rocket, DollarSign, Send, Wallet, MessageCircle,
+  ArrowRight,
 } from "lucide-react";
 
 export default function LandingPage() {
@@ -267,6 +269,16 @@ export default function LandingPage() {
           </div>
 
           <p className="mt-14 font-display text-xl italic text-gold/90">*{t.cta.tagline}*</p>
+
+          <div className="mt-8 flex justify-center">
+            <Link
+              to="/programs"
+              className="group inline-flex items-center gap-2 rounded-xl btn-gold px-7 py-3.5 font-semibold"
+            >
+              {t.cta.programsBtn}
+              <ArrowRight className="h-5 w-5 transition group-hover:translate-x-1" />
+            </Link>
+          </div>
         </div>
       </section>
 
