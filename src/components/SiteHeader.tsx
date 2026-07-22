@@ -54,7 +54,7 @@ export function SiteHeader() {
           <button
             type="button"
             className="md:hidden inline-flex items-center justify-center rounded-xl border border-border bg-surface/60 p-2 text-foreground/80 transition hover:border-gold/60 hover:text-gold"
-            aria-label="Открыть меню"
+            aria-label={menuOpen ? menuLabel.close : menuLabel.open}
             aria-expanded={menuOpen}
             onClick={() => setMenuOpen((v) => !v)}
           >
