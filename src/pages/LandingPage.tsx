@@ -98,8 +98,17 @@ export default function LandingPage() {
 
       {/* NFT */}
       <section id="nft" className="relative isolate overflow-hidden py-24 sm:py-32">
-        <div className="absolute inset-0 z-0 bg-hero opacity-100" />
+        <img
+          src={tonBg}
+          alt=""
+          aria-hidden
+          loading="lazy"
+          width={1920}
+          height={1080}
+          className="absolute inset-0 z-0 h-full w-full object-cover object-[center_70%] opacity-100 brightness-125 contrast-110 saturate-125"
+        />
         <div className="absolute inset-0 z-[1] bg-section-glow" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="relative z-10 mx-auto grid max-w-7xl gap-16 px-4 sm:px-6 lg:grid-cols-2 lg:items-center">
           <div>
             <p className="text-sm uppercase tracking-[0.25em] text-gold">{t.nft.eyebrow}</p>
