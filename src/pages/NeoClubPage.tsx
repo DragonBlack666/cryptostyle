@@ -305,21 +305,25 @@ function SectionNav() {
   );
 }
 
-function SeatCard({ seat }: { seat: Seat }) {
+function SeatCard({ seat, dense = false }: { seat: Seat; dense?: boolean }) {
   const tone =
     seat.kind === "transition"
       ? "border-gold/50 bg-gradient-to-br from-gold/15 to-gold/5"
       : seat.kind === "vip"
       ? "border-gold/30 bg-gradient-to-br from-surface/70 to-background/60"
       : "border-border/60 bg-surface/50";
+  // "dense" = 4-местная схема: колонка физически уже, поэтому в исходнике даём крупнее текст,
+  // чтобы после CSS-масштабирования выглядело так же читаемо, как 3-местная Neo VIP · 3.
+  const textSize = dense ? "text-2xl" : "text-lg";
+  const iconSize = dense ? "h-6 w-6" : "h-5 w-5";
   return (
     <div className={`rounded-2xl border ${tone} p-4 sm:p-5 backdrop-blur transition hover:border-gold/60`}>
-      <ul className="space-y-2 text-lg text-foreground/90">
+      <ul className={`space-y-2 ${textSize} text-foreground/90`}>
         {seat.lines.map((ln, i) => {
           const Icon = ln.icon ? iconMap[ln.icon] : null;
           return (
             <li key={i} className="flex items-start gap-2.5">
-              {Icon && <Icon className="mt-0.5 h-5 w-5 shrink-0 text-gold" />}
+              {Icon && <Icon className={`mt-0.5 ${iconSize} shrink-0 text-gold`} />}
               <span className="leading-snug">{ln.text}</span>
             </li>
           );
