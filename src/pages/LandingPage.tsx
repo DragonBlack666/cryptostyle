@@ -231,7 +231,7 @@ export default function LandingPage() {
           className="absolute inset-0 z-0 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125"
         />
         <div className="absolute inset-0 z-[1] bg-section-glow" />
-        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/35 via-background/20 to-background/40" />
+        <div className="absolute inset-0 z-[2] bg-gradient-to-b from-background/60 via-background/45 to-background/70" />
         <div className="relative z-10 mx-auto max-w-6xl px-4 text-center sm:px-6">
           <h2 className="font-display text-4xl sm:text-6xl">
             <span className="text-gradient-gold">{t.cta.title}</span>
