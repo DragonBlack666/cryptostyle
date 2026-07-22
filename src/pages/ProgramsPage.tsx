@@ -80,8 +80,8 @@ export default function ProgramsPage() {
           loading="lazy"
           className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110"
         />
-        <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
+        <div className="absolute inset-0 -z-10 bg-section-glow opacity-40" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/50 to-background/70" />
 
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <div className="mx-auto max-w-4xl text-center">
