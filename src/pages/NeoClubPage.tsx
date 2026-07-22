@@ -524,25 +524,20 @@ export default function NeoClubPage() {
           </header>
 
           <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
-            <p className="mb-2 text-center text-[11px] uppercase tracking-widest text-foreground/50 lg:hidden">
-              ← прокрутите схему →
-            </p>
-            <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
-              <div className="mx-auto w-max min-w-full">
+            <ScaleToFit>
+              <div className="min-w-[880px]">
                 <div className="flex justify-center">
                   <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
                     <User className="h-5 w-5 text-gold" />
                     <span className="whitespace-nowrap font-semibold text-gold">Вы · 150$</span>
                   </div>
                 </div>
-                {/* Fan-out connector */}
                 <div className="relative mx-auto my-3 h-6 w-[92%]">
                   <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
                   <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
                   <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
                   <div className="absolute right-0 top-3 h-3 w-px bg-gold/40" />
                 </div>
-
                 <div className="flex gap-3">
                   {NEO_LINE_SEATS.map((s, i) => (
                     <div key={`nl-${i}`} className="flex min-w-[180px] flex-1 flex-col">
@@ -559,7 +554,7 @@ export default function NeoClubPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </ScaleToFit>
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
