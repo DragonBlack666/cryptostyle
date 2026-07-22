@@ -721,8 +721,8 @@ export default function NeoClubPage() {
             </div>
           </div>
 
-          <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-gold/40 bg-gradient-to-br from-gold/10 to-transparent p-6 text-center">
-            <p className="text-foreground/90">
+          <div className="mx-auto mt-8 max-w-3xl rounded-2xl border border-gold/40 bg-surface/80 p-6 text-center shadow-lg shadow-black/20 backdrop-blur">
+            <p className="text-foreground/95">
               <b className="text-gold">72 100$</b> прямого дохода, <b className="text-gold">26</b> новых «клонов»
               для усиления структуры и <b className="text-gold">2 000$</b> реферального вознаграждения —
               это ваш результат с одного основного бизнес-места, не считая клонов.
