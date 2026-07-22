@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
+import { useI18n } from "@/lib/i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
@@ -491,6 +492,8 @@ export default function NeoClubPage() {
     document.title = "Neo Club — Партнёрская программа · Crypto Style";
   }, []);
 
+  const { lang } = useI18n();
+
   return (
     <div className="min-h-screen bg-background text-foreground">
       <SiteHeader />
@@ -523,6 +526,19 @@ export default function NeoClubPage() {
               </div>
             ))}
           </div>
+
+          {lang === "ru" && (
+            <div className="mx-auto mt-10 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
+              <iframe
+                src="https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17/"
+                title="Видео презентация Neo Club"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="h-full w-full"
+                loading="lazy"
+              />
+            </div>
+          )}
         </div>
       </section>
 
