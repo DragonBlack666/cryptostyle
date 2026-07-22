@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { useEffect } from "react";
+import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
@@ -329,17 +329,58 @@ function SeatCard({ seat }: { seat: Seat }) {
   );
 }
 
+function ScaleToFit({ children }: { children: ReactNode }) {
+  const outerRef = useRef<HTMLDivElement>(null);
+  const innerRef = useRef<HTMLDivElement>(null);
+  const [scale, setScale] = useState(1);
+  const [height, setHeight] = useState<number | undefined>(undefined);
+
+  useLayoutEffect(() => {
+    const update = () => {
+      const outer = outerRef.current;
+      const inner = innerRef.current;
+      if (!outer || !inner) return;
+      const oW = outer.clientWidth;
+      const iW = inner.scrollWidth;
+      const iH = inner.scrollHeight;
+      if (!iW || !iH) return;
+      const s = Math.min(1, oW / iW);
+      setScale(s);
+      setHeight(iH * s);
+    };
+    update();
+    const ro = new ResizeObserver(update);
+    if (outerRef.current) ro.observe(outerRef.current);
+    if (innerRef.current) ro.observe(innerRef.current);
+    window.addEventListener("resize", update);
+    return () => {
+      ro.disconnect();
+      window.removeEventListener("resize", update);
+    };
+  }, [children]);
+
+  return (
+    <div ref={outerRef} style={{ height, overflow: "hidden" }}>
+      <div
+        ref={innerRef}
+        style={{
+          transform: `scale(${scale})`,
+          transformOrigin: "top left",
+          width: "max-content",
+        }}
+      >
+        {children}
+      </div>
+    </div>
+  );
+}
+
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
   const minCol = seats.length === 3 ? "min-w-[220px]" : "min-w-[200px]";
   return (
     <div className="rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
-      {/* Hint on mobile */}
-      <p className="mb-2 text-center text-[11px] uppercase tracking-widest text-foreground/50 lg:hidden">
-        ← прокрутите схему →
-      </p>
-
-      <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
-        <div className="mx-auto w-max min-w-full">
+      <ScaleToFit>
+        <div className="min-w-[880px]">
           {/* Owner */}
           <div className="flex justify-center">
             <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
@@ -375,7 +416,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
             ))}
           </div>
         </div>
-      </div>
+      </ScaleToFit>
     </div>
   );
 }
@@ -483,25 +524,20 @@ export default function NeoClubPage() {
           </header>
 
           <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
-            <p className="mb-2 text-center text-[11px] uppercase tracking-widest text-foreground/50 lg:hidden">
-              ← прокрутите схему →
-            </p>
-            <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
-              <div className="mx-auto w-max min-w-full">
+            <ScaleToFit>
+              <div className="min-w-[880px]">
                 <div className="flex justify-center">
                   <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
                     <User className="h-5 w-5 text-gold" />
                     <span className="whitespace-nowrap font-semibold text-gold">Вы · 150$</span>
                   </div>
                 </div>
-                {/* Fan-out connector */}
                 <div className="relative mx-auto my-3 h-6 w-[92%]">
                   <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
                   <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
                   <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
                   <div className="absolute right-0 top-3 h-3 w-px bg-gold/40" />
                 </div>
-
                 <div className="flex gap-3">
                   {NEO_LINE_SEATS.map((s, i) => (
                     <div key={`nl-${i}`} className="flex min-w-[180px] flex-1 flex-col">
@@ -518,7 +554,7 @@ export default function NeoClubPage() {
                   ))}
                 </div>
               </div>
-            </div>
+            </ScaleToFit>
           </div>
 
           <div className="mt-6 grid gap-4 md:grid-cols-2">
