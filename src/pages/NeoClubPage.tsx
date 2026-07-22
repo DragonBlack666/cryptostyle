@@ -423,7 +423,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
                     {i + 1}
                   </span>
                   <Users className="h-5 w-5 text-gold/80" />
-                  <span className="whitespace-nowrap font-medium">Партнёр · {ownerAmount}</span>
+                  <span className="whitespace-nowrap font-medium">{ownerAmount}</span>
                 </div>
                 <div className="my-1.5 flex justify-center">
                   <ChevronDown className="h-4 w-4 text-gold/50" />
