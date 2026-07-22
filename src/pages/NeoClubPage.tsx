@@ -330,43 +330,51 @@ function SeatCard({ seat }: { seat: Seat }) {
 }
 
 function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: string }) {
-  const cols =
-    seats.length === 3
-      ? "grid-cols-1 sm:grid-cols-3"
-      : "grid-cols-2 lg:grid-cols-4";
+  const minCol = seats.length === 3 ? "min-w-[220px]" : "min-w-[200px]";
   return (
     <div className="rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
-      {/* Owner */}
-      <div className="flex justify-center">
-        <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
-          <User className="h-5 w-5 text-gold" />
-          <span className="font-semibold text-gold">Вы · {ownerAmount}</span>
-        </div>
-      </div>
+      {/* Hint on mobile */}
+      <p className="mb-2 text-center text-[11px] uppercase tracking-widest text-foreground/50 lg:hidden">
+        ← прокрутите схему →
+      </p>
 
-      {/* Fan-out connector */}
-      <div className="relative mx-auto my-3 h-6 w-full max-w-[92%]">
-        <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
-        <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
-      </div>
-
-      {/* Grid of partner → distribution pairs (schema on every viewport) */}
-      <div className={`grid gap-3 ${cols}`}>
-        {seats.map((s, i) => (
-          <div key={`col-${i}`} className="flex flex-col">
-            <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm text-foreground/85">
-              <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
-                {i + 1}
-              </span>
-              <Users className="h-3.5 w-3.5 text-gold/80" />
-              <span className="font-medium">{ownerAmount}</span>
+      <div className="-mx-4 overflow-x-auto px-4 pb-2 sm:mx-0 sm:px-0">
+        <div className="mx-auto w-max min-w-full">
+          {/* Owner */}
+          <div className="flex justify-center">
+            <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
+              <User className="h-5 w-5 text-gold" />
+              <span className="whitespace-nowrap font-semibold text-gold">Вы · {ownerAmount}</span>
             </div>
-            <div className="my-1.5 flex justify-center">
-              <ChevronDown className="h-4 w-4 text-gold/50" />
-            </div>
-            <SeatCard seat={s} />
           </div>
-        ))}
+
+          {/* Fan-out connector */}
+          <div className="relative mx-auto my-3 h-6 w-[92%]">
+            <div className="absolute left-1/2 top-0 h-3 w-px -translate-x-1/2 bg-gold/50" />
+            <div className="absolute left-0 right-0 top-3 h-px bg-gold/40" />
+            <div className="absolute left-0 top-3 h-3 w-px bg-gold/40" />
+            <div className="absolute right-0 top-3 h-3 w-px bg-gold/40" />
+          </div>
+
+          {/* Columns: partner → arrow → distribution */}
+          <div className="flex gap-3">
+            {seats.map((s, i) => (
+              <div key={`col-${i}`} className={`flex ${minCol} flex-1 flex-col`}>
+                <div className="flex items-center justify-center gap-1.5 rounded-xl border border-border/50 bg-surface/50 px-2 py-2 text-xs sm:text-sm text-foreground/85">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-gold/20 text-[10px] font-bold text-gold">
+                    {i + 1}
+                  </span>
+                  <Users className="h-3.5 w-3.5 text-gold/80" />
+                  <span className="whitespace-nowrap font-medium">Партнёр · {ownerAmount}</span>
+                </div>
+                <div className="my-1.5 flex justify-center">
+                  <ChevronDown className="h-4 w-4 text-gold/50" />
+                </div>
+                <SeatCard seat={s} />
+              </div>
+            ))}
+          </div>
+        </div>
       </div>
     </div>
   );
