@@ -495,6 +495,7 @@ export default function NeoClubPage() {
   }, []);
 
   const { lang } = useI18n();
+  const [ruVideoSource, setRuVideoSource] = useState<"youtube" | "rutube">("youtube");
 
   return (
     <div className="min-h-screen bg-background text-foreground">
@@ -530,17 +531,51 @@ export default function NeoClubPage() {
           </div>
 
           {lang === "ru" && (
-            <div className="mx-auto mt-10 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
-              <iframe
-                src="https://drive.google.com/file/d/1ja77V0aYtNg1dK34YW_AopqQqUzdJs2k/preview"
-                title="Видео презентация Neo Club"
-                allow="fullscreen"
-                allowFullScreen
-                width="100%"
-                height="100%"
-                loading="lazy"
-                className="h-full w-full"
-              />
+            <div className="mx-auto mt-10 w-full max-w-4xl">
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
+                <iframe
+                  key={ruVideoSource}
+                  src={
+                    ruVideoSource === "youtube"
+                      ? "https://www.youtube.com/embed/SRANvbu9Xlw"
+                      : "https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17"
+                  }
+                  title="Видео презентация Neo Club"
+                  allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  className="h-full w-full"
+                />
+              </div>
+              <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                <span className="text-sm text-foreground/70">Видео не открывается? Выберите другой источник:</span>
+                <div className="flex items-center gap-2">
+                  <button
+                    type="button"
+                    onClick={() => setRuVideoSource("youtube")}
+                    className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                      ruVideoSource === "youtube"
+                        ? "bg-gold text-background"
+                        : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                    }`}
+                  >
+                    YouTube
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setRuVideoSource("rutube")}
+                    className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                      ruVideoSource === "rutube"
+                        ? "bg-gold text-background"
+                        : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                    }`}
+                  >
+                    RUTUBE
+                  </button>
+                </div>
+              </div>
             </div>
           )}
         </div>
