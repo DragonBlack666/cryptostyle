@@ -750,7 +750,7 @@ export default function MultiMatrixPage() {
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">Уникальные «фишки»</p>
-            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Управление структурой и реинвест</h2>
+            <h2 className="mt-3 font-display text-4xl sm:text-5xl">Особенности маркетинга MULTI Matrix</h2>
           </header>
           <div className="mt-12 grid gap-4 md:grid-cols-2 lg:grid-cols-3">
             {EXTRAS.map((e) => (
