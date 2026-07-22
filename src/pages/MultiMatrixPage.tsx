@@ -719,7 +719,7 @@ export default function MultiMatrixPage() {
       <section id="features" className="relative isolate overflow-hidden py-20 sm:py-24">
         <img src={roadmapBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125" />
         <div className="absolute inset-0 -z-10 bg-section-glow" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/55 via-background/35 to-background/60" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">Ключевые преимущества</p>
