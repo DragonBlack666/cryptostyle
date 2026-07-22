@@ -530,11 +530,12 @@ export default function NeoClubPage() {
           </div>
 
           {lang === "ru" && (
-            <div className="mx-auto mt-10 aspect-[9/16] w-full max-w-md overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
+            <div className="mx-auto mt-10 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
               <iframe
-                src="https://geo.dailymotion.com/player.html?video=k6EYiHVMAYxjy7I0O7Y&mute=false&autoplay=false&queue-enable=false&queue-autoplay-next=false&sharing-enable=false&ui-start-screen-info=false&ui-logo=false&ui-highlight=false"
-                title="Видео презентация Neo Club"
-                allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; fullscreen"
+                src="https://www.youtube.com/embed/SRANvbu9Xlw?si=r_tNYRdxOO26cS4z"
+                title="YouTube video player"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerPolicy="strict-origin-when-cross-origin"
                 allowFullScreen
                 frameBorder={0}
                 className="h-full w-full"
