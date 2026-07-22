@@ -657,6 +657,9 @@ export default function NeoClubPage() {
 
       {/* SUMMARY */}
       <section id="summary" className="relative isolate overflow-hidden py-20 sm:py-24">
+        <img src={tonBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125" />
+        <div className="absolute inset-0 -z-10 bg-section-glow" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
             <p className="text-xs uppercase tracking-[0.3em] text-gold">Общая сводка</p>
