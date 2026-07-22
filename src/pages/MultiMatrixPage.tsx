@@ -398,7 +398,7 @@ function StructureDiagram({ seats, ownerAmount }: { seats: Seat[]; ownerAmount: 
             {[0, 1].map((i) => (
               <div key={`fl-${i}`} className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-border/50 bg-surface/60 px-4 py-3 text-lg sm:text-xl">
                 <Users className="h-5 w-5 text-gold/80" />
-                <span className="whitespace-nowrap font-medium">Партнёр {i + 1} · {ownerAmount}</span>
+                <span className="whitespace-nowrap font-medium">{ownerAmount}</span>
               </div>
             ))}
           </div>
