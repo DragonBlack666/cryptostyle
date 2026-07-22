@@ -523,9 +523,9 @@ export default function NeoClubPage() {
             </p>
           </header>
 
-          <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-4 sm:p-6 backdrop-blur">
+          <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
             <ScaleToFit>
-              <div className="min-w-[880px]">
+              <div className="min-w-[780px]">
                 <div className="flex justify-center">
                   <div className="flex items-center gap-3 rounded-full border border-gold/60 bg-gradient-to-br from-gold/25 to-gold/10 px-5 py-2.5">
                     <User className="h-5 w-5 text-gold" />
