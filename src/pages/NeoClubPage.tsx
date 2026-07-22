@@ -474,7 +474,7 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/75 to-background/90" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="max-w-3xl">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Шаг 1 · Вход в систему</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO LINE</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Neo Line — линейный маркетинг</h2>
             <p className="mt-4 text-foreground/75">
               Начало маркетинга Neo Club — это Neo Line: одна площадка с линейным маркетингом, без ограничений в первой линии.
@@ -535,7 +535,7 @@ export default function NeoClubPage() {
       <section id="neo-start" className="relative isolate overflow-hidden py-20 sm:py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Шаг 2 · Матричные площадки</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO START</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl">Neo Start — 4 бизнес-площадки</h2>
             <p className="mt-4 text-foreground/75">
               Вторая часть программы Neo Club. Каждая площадка имеет собственную стоимость, доход, накопление и клонов.
@@ -557,7 +557,7 @@ export default function NeoClubPage() {
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
-            <p className="text-xs uppercase tracking-[0.3em] text-gold">Шаг 3 · VIP-уровень</p>
+            <p className="text-xs uppercase tracking-[0.3em] text-gold">NEO VIP</p>
             <h2 className="mt-3 font-display text-4xl sm:text-5xl text-gradient-gold">Neo VIP — 3 бизнес-площадки</h2>
             <p className="mt-4 text-foreground/75">
               Финальные площадки маркетинга с максимальным доходом. Переход между ними полностью автоматизирован.
