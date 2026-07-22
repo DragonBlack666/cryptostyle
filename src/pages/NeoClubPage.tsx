@@ -540,7 +540,7 @@ export default function NeoClubPage() {
             </p>
           </header>
 
-          <div className="mt-10 rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur">
+          <div className="mx-auto mt-10 rounded-3xl border border-border/60 bg-background/40 p-2 sm:p-6 backdrop-blur md:max-w-[780px]">
             <ScaleToFit>
               <div className="min-w-[780px]">
                 <div className="flex justify-center">
