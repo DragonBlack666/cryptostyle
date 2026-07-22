@@ -33,9 +33,7 @@ export function SiteHeader() {
 
         {/* Right: desktop socials + language; mobile language + burger */}
         <div className="flex items-center justify-end gap-2 sm:gap-3">
-          <div className="hidden md:flex">
-            <SocialLinks />
-          </div>
+          <SocialLinks />
           <LanguageSwitcher />
           <button
             type="button"
