@@ -532,14 +532,14 @@ export default function NeoClubPage() {
           {lang === "ru" && (
             <div className="mx-auto mt-10 aspect-video w-full max-w-4xl overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
               <iframe
-                src="https://www.youtube.com/embed/SRANvbu9Xlw?si=r_tNYRdxOO26cS4z"
-                title="YouTube video player"
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                referrerPolicy="strict-origin-when-cross-origin"
+                src="https://drive.google.com/file/d/1ja77V0aYtNg1dK34YW_AopqQqUzdJs2k/preview"
+                title="Видео презентация Neo Club"
+                allow="fullscreen"
                 allowFullScreen
-                frameBorder={0}
-                className="h-full w-full"
+                width="100%"
+                height="100%"
                 loading="lazy"
+                className="h-full w-full"
               />
             </div>
           )}
