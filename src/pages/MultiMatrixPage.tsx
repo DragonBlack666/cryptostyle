@@ -426,17 +426,19 @@ export default function MultiMatrixPage() {
             ))}
           </div>
 
-          {lang === "ru" && (
+          {(lang === "ru" || lang === "hu") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={ruVideoSource}
+                  key={lang === "ru" ? ruVideoSource : "hu-youtube"}
                   src={
-                    ruVideoSource === "youtube"
-                      ? "https://www.youtube.com/embed/1GL6OPbhzMM"
-                      : "https://rutube.ru/play/embed/715bf220094cab02640be725b5d7879b"
+                    lang === "ru"
+                      ? ruVideoSource === "youtube"
+                        ? "https://www.youtube.com/embed/1GL6OPbhzMM"
+                        : "https://rutube.ru/play/embed/715bf220094cab02640be725b5d7879b"
+                      : "https://www.youtube.com/embed/2z6KAO_KWls"
                   }
-                  title="Видео презентация MULTI Matrix"
+                  title={lang === "hu" ? "MULTI Matrix videó bemutató" : "Видео презентация MULTI Matrix"}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
@@ -445,33 +447,35 @@ export default function MultiMatrixPage() {
                   className="h-full w-full"
                 />
               </div>
-              <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <span className="text-sm text-foreground/70">{d.hero.videoHint}</span>
-                <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setRuVideoSource("youtube")}
-                    className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-                      ruVideoSource === "youtube"
-                        ? "bg-gold text-background"
-                        : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
-                    }`}
-                  >
-                    YouTube
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setRuVideoSource("rutube")}
-                    className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-                      ruVideoSource === "rutube"
-                        ? "bg-gold text-background"
-                        : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
-                    }`}
-                  >
-                    RUTUBE
-                  </button>
+              {lang === "ru" && (
+                <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <span className="text-sm text-foreground/70">{d.hero.videoHint}</span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setRuVideoSource("youtube")}
+                      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                        ruVideoSource === "youtube"
+                          ? "bg-gold text-background"
+                          : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                      }`}
+                    >
+                      YouTube
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setRuVideoSource("rutube")}
+                      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                        ruVideoSource === "rutube"
+                          ? "bg-gold text-background"
+                          : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                      }`}
+                    >
+                      RUTUBE
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           )}
         </div>
