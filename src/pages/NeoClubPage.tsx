@@ -470,17 +470,19 @@ export default function NeoClubPage() {
             ))}
           </div>
 
-          {(lang === "ru" || lang === "hu") && (
+          {(lang === "ru" || lang === "hu" || lang === "uk") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={lang === "ru" ? ruVideoSource : "hu-youtube"}
+                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : "uk-youtube"}
                   src={
                     lang === "ru"
                       ? ruVideoSource === "youtube"
                         ? "https://www.youtube.com/embed/SRANvbu9Xlw"
                         : "https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17"
-                      : "https://www.youtube.com/embed/m_HF-0tH1BU"
+                      : lang === "hu"
+                        ? "https://www.youtube.com/embed/m_HF-0tH1BU"
+                        : "https://www.youtube.com/embed/pkeBMPS_lNs"
                   }
                   title={d.hero.videoTitle}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
