@@ -1410,7 +1410,7 @@ const hu: NeoClubDict = {
     statPlatforms: "Platformok", statMinEntry: "Min. belépő",
     statDirect: "Közvetlen jövedelem", statClones: "Új klónok",
     videoTitle: "Neo Club videó bemutató",
-    videoFallback: "Nem nyílik meg a videó? Válasszon másik forrást:",
+    videoFallback: "Nem nyílik meg a videó? Nézze meg a YouTube-on:",
   },
   neoLine: {
     eyebrow: "NEO LINE", title: "Neo Line — lineáris marketing",
