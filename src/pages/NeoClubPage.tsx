@@ -491,46 +491,35 @@ export default function NeoClubPage() {
                   className="h-full w-full"
                 />
               </div>
-              <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
-                <span className="text-sm text-foreground/70">{d.hero.videoFallback}</span>
-                <div className="flex items-center gap-2">
-                  {lang === "ru" ? (
-                    <>
-                      <button
-                        type="button"
-                        onClick={() => setRuVideoSource("youtube")}
-                        className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-                          ruVideoSource === "youtube"
-                            ? "bg-gold text-background"
-                            : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
-                        }`}
-                      >
-                        YouTube
-                      </button>
-                      <button
-                        type="button"
-                        onClick={() => setRuVideoSource("rutube")}
-                        className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-                          ruVideoSource === "rutube"
-                            ? "bg-gold text-background"
-                            : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
-                        }`}
-                      >
-                        RUTUBE
-                      </button>
-                    </>
-                  ) : (
-                    <a
-                      href="https://www.youtube.com/watch?v=m_HF-0tH1BU"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="rounded-lg bg-gold px-3 py-1.5 text-sm font-medium text-background transition hover:bg-gold/90"
+              {lang === "ru" && (
+                <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
+                  <span className="text-sm text-foreground/70">{d.hero.videoFallback}</span>
+                  <div className="flex items-center gap-2">
+                    <button
+                      type="button"
+                      onClick={() => setRuVideoSource("youtube")}
+                      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                        ruVideoSource === "youtube"
+                          ? "bg-gold text-background"
+                          : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                      }`}
                     >
                       YouTube
-                    </a>
-                  )}
+                    </button>
+                    <button
+                      type="button"
+                      onClick={() => setRuVideoSource("rutube")}
+                      className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                        ruVideoSource === "rutube"
+                          ? "bg-gold text-background"
+                          : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                      }`}
+                    >
+                      RUTUBE
+                    </button>
+                  </div>
                 </div>
-              </div>
+              )}
             </div>
           )}
         </div>
