@@ -36,6 +36,7 @@ export type MMDict = {
     subtitle: string;
     stats: { platforms: string; minEntry: string; directIncome: string; newClones: string };
     videoHint: string;
+    videoTitle?: string;
   };
   income: {
     eyebrow: string;
@@ -107,6 +108,7 @@ const ru: MMDict = {
       "MULTI Matrix — бизнес-система, разработанная для масштабирования вашего дела и увеличения дохода. Уникальная матричная модель с автоматической дубликацией бизнес-мест и управлением структурой.",
     stats: { platforms: "Площадок", minEntry: "Мин. вход", directIncome: "Прямой доход", newClones: "Новых клонов" },
     videoHint: "Видео не открывается? Выберите другой источник:",
+    videoTitle: "Видео презентация MULTI Matrix",
   },
   income: {
     eyebrow: "Четыре вида дохода",
@@ -1025,6 +1027,7 @@ const uk: MMDict = {
       "MULTI Matrix — бізнес-система, розроблена для масштабування вашої справи та збільшення доходу. Унікальна матрична модель з автоматичною дуплікацією бізнес-місць та керуванням структурою.",
     stats: { platforms: "Площадок", minEntry: "Мін. вхід", directIncome: "Прямий дохід", newClones: "Нових клонів" },
     videoHint: "Відео не відкривається? Оберіть інше джерело:",
+    videoTitle: "Відеопрезентація MULTI Matrix",
   },
   income: {
     eyebrow: "Чотири види доходу", title: "Багатоканальна система прибутку",
@@ -1379,6 +1382,7 @@ const hu: MMDict = {
       "A MULTI Matrix üzleti rendszer, amelyet arra terveztek, hogy skálázza vállalkozását és növelje jövedelmét. Egyedi mátrix modell az üzleti helyek automatikus duplikálásával és struktúrakezeléssel.",
     stats: { platforms: "Platformok", minEntry: "Min. belépő", directIncome: "Közvetlen jövedelem", newClones: "Új klónok" },
     videoHint: "A videó nem töltődik? Válasszon másik forrást:",
+    videoTitle: "MULTI Matrix videó bemutató",
   },
   income: {
     eyebrow: "Négy jövedelemtípus", title: "Többcsatornás profitrendszer",
