@@ -520,9 +520,14 @@ export default function NeoClubPage() {
                       </button>
                     </>
                   ) : (
-                    <span className="rounded-lg bg-gold px-3 py-1.5 text-sm font-medium text-background">
+                    <a
+                      href="https://www.youtube.com/watch?v=m_HF-0tH1BU"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="rounded-lg bg-gold px-3 py-1.5 text-sm font-medium text-background transition hover:bg-gold/90"
+                    >
                       YouTube
-                    </span>
+                    </a>
                   )}
                 </div>
               </div>
