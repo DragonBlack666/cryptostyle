@@ -426,19 +426,21 @@ export default function MultiMatrixPage() {
             ))}
           </div>
 
-          {(lang === "ru" || lang === "hu") && (
+          {(lang === "ru" || lang === "hu" || lang === "uk") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={lang === "ru" ? ruVideoSource : "hu-youtube"}
+                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : "uk-youtube"}
                   src={
                     lang === "ru"
                       ? ruVideoSource === "youtube"
                         ? "https://www.youtube.com/embed/1GL6OPbhzMM"
                         : "https://rutube.ru/play/embed/715bf220094cab02640be725b5d7879b"
-                      : "https://www.youtube.com/embed/2z6KAO_KWls"
+                      : lang === "hu"
+                      ? "https://www.youtube.com/embed/2z6KAO_KWls"
+                      : "https://www.youtube.com/embed/ZfMOPsrqDEk"
                   }
-                  title={lang === "hu" ? "MULTI Matrix videó bemutató" : "Видео презентация MULTI Matrix"}
+                  title={d.hero.videoTitle || "MULTI Matrix video presentation"}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
