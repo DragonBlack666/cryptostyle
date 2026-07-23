@@ -470,15 +470,17 @@ export default function NeoClubPage() {
             ))}
           </div>
 
-          {lang === "ru" && (
+          {(lang === "ru" || lang === "hu") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={ruVideoSource}
+                  key={lang === "ru" ? ruVideoSource : "hu-youtube"}
                   src={
-                    ruVideoSource === "youtube"
-                      ? "https://www.youtube.com/embed/SRANvbu9Xlw"
-                      : "https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17"
+                    lang === "ru"
+                      ? ruVideoSource === "youtube"
+                        ? "https://www.youtube.com/embed/SRANvbu9Xlw"
+                        : "https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17"
+                      : "https://www.youtube.com/embed/m_HF-0tH1BU"
                   }
                   title={d.hero.videoTitle}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
@@ -492,28 +494,36 @@ export default function NeoClubPage() {
               <div className="mt-4 flex flex-col items-center justify-center gap-3 sm:flex-row">
                 <span className="text-sm text-foreground/70">{d.hero.videoFallback}</span>
                 <div className="flex items-center gap-2">
-                  <button
-                    type="button"
-                    onClick={() => setRuVideoSource("youtube")}
-                    className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-                      ruVideoSource === "youtube"
-                        ? "bg-gold text-background"
-                        : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
-                    }`}
-                  >
-                    YouTube
-                  </button>
-                  <button
-                    type="button"
-                    onClick={() => setRuVideoSource("rutube")}
-                    className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
-                      ruVideoSource === "rutube"
-                        ? "bg-gold text-background"
-                        : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
-                    }`}
-                  >
-                    RUTUBE
-                  </button>
+                  {lang === "ru" ? (
+                    <>
+                      <button
+                        type="button"
+                        onClick={() => setRuVideoSource("youtube")}
+                        className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                          ruVideoSource === "youtube"
+                            ? "bg-gold text-background"
+                            : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                        }`}
+                      >
+                        YouTube
+                      </button>
+                      <button
+                        type="button"
+                        onClick={() => setRuVideoSource("rutube")}
+                        className={`rounded-lg px-3 py-1.5 text-sm font-medium transition ${
+                          ruVideoSource === "rutube"
+                            ? "bg-gold text-background"
+                            : "border border-gold/30 text-foreground/80 hover:bg-gold/10 hover:text-gold"
+                        }`}
+                      >
+                        RUTUBE
+                      </button>
+                    </>
+                  ) : (
+                    <span className="rounded-lg bg-gold px-3 py-1.5 text-sm font-medium text-background">
+                      YouTube
+                    </span>
+                  )}
                 </div>
               </div>
             </div>
