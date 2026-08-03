@@ -45,6 +45,7 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
           <a href={anchor("why")} className="transition hover:text-gold">{t.nav.features}</a>
           <Link to="/programs" className="transition hover:text-gold">{t.nav.programs}</Link>
+          <Link to="/crypto-cash" className="transition hover:text-gold">Crypto Cash</Link>
         </nav>
 
         {/* Right: desktop socials + language; mobile language + burger */}
@@ -79,6 +80,13 @@ export function SiteHeader() {
               className="rounded-xl px-4 py-3 text-sm font-medium text-foreground/80 transition hover:bg-surface/70 hover:text-gold"
             >
               {t.nav.programs}
+            </Link>
+            <Link
+              to="/crypto-cash"
+              onClick={closeMenu}
+              className="rounded-xl px-4 py-3 text-sm font-medium text-foreground/80 transition hover:bg-surface/70 hover:text-gold"
+            >
+              Crypto Cash
             </Link>
 
           </nav>
