@@ -4,7 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import { PROGRAMS_DICTS } from "@/lib/programs-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import whyBg from "@/assets/bg-why-light.jpg";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wallet } from "lucide-react";
 
 export default function ProgramsPage() {
   const { t, lang } = useI18n();
@@ -47,9 +47,11 @@ export default function ProgramsPage() {
               >
                 <div className="absolute -inset-px -z-10 rounded-3xl bg-[var(--gradient-gold)] opacity-0 blur-xl transition group-hover:opacity-20" />
 
-                <h2 className="font-display text-3xl sm:text-4xl text-gradient-gold">
+                <h2 className="flex items-center gap-3 font-display text-3xl sm:text-4xl text-gradient-gold">
+                  {p.icon === "wallet" && <Wallet className="h-8 w-8 shrink-0 text-gold" />}
                   {p.name}
                 </h2>
+
 
                 <div className="mt-6">
                   <p className="text-xs uppercase tracking-[0.2em] text-gold/80">
