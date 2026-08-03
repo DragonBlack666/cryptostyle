@@ -2,6 +2,7 @@ import type { LangCode } from "@/lib/i18n";
 
 export type ProgramItem = {
   name: string;
+  icon?: "wallet";
   features: string[];
   minEntry: string;
   maxPotential: string;
@@ -24,6 +25,8 @@ const MULTI_HREF = "/programs/multi";
 // Fixed brand tokens shared across languages
 const NEO = "Neo Club";
 const MULTI = "Multi Matrix";
+const CASH = "Crypto Cash";
+const CASH_HREF = "/crypto-cash";
 
 export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
   ru: {
@@ -47,6 +50,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         minEntry: "15 TON",
         maxPotential: "от 3500 TON",
         href: MULTI_HREF,
+      },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 уровня", "Компрессия", "Системные клоны", "Циклы", "100% распределение"],
+        minEntry: "от $10",
+        maxPotential: "до $80 000 за цикл",
+        href: CASH_HREF,
       },
     ],
   },
@@ -72,6 +83,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         maxPotential: "from 3,500 TON",
         href: MULTI_HREF,
       },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 levels", "Compression", "System clones", "Cycles", "100% distribution"],
+        minEntry: "from $10",
+        maxPotential: "up to $80,000 per cycle",
+        href: CASH_HREF,
+      },
     ],
   },
   de: {
@@ -95,6 +114,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         minEntry: "15 TON",
         maxPotential: "ab 3500 TON",
         href: MULTI_HREF,
+      },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 Ebenen", "Kompression", "Systemklone", "Zyklen", "100 % Verteilung"],
+        minEntry: "ab 10 $",
+        maxPotential: "bis zu 80 000 $ pro Zyklus",
+        href: CASH_HREF,
       },
     ],
   },
@@ -120,6 +147,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         maxPotential: "à partir de 3 500 TON",
         href: MULTI_HREF,
       },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 niveaux", "Compression", "Clones système", "Cycles", "Distribution à 100 %"],
+        minEntry: "à partir de 10 $",
+        maxPotential: "jusqu'à 80 000 $ par cycle",
+        href: CASH_HREF,
+      },
     ],
   },
   it: {
@@ -143,6 +178,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         minEntry: "15 TON",
         maxPotential: "da 3.500 TON",
         href: MULTI_HREF,
+      },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 livelli", "Compressione", "Cloni di sistema", "Cicli", "Distribuzione al 100%"],
+        minEntry: "da 10 $",
+        maxPotential: "fino a 80.000 $ per ciclo",
+        href: CASH_HREF,
       },
     ],
   },
@@ -168,6 +211,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         maxPotential: "desde 3500 TON",
         href: MULTI_HREF,
       },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 niveles", "Compresión", "Clones del sistema", "Ciclos", "Distribución del 100 %"],
+        minEntry: "desde 10 $",
+        maxPotential: "hasta 80 000 $ por ciclo",
+        href: CASH_HREF,
+      },
     ],
   },
   pt: {
@@ -191,6 +242,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         minEntry: "15 TON",
         maxPotential: "a partir de 3500 TON",
         href: MULTI_HREF,
+      },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 níveis", "Compressão", "Clones do sistema", "Ciclos", "Distribuição de 100%"],
+        minEntry: "a partir de 10 $",
+        maxPotential: "até 80 000 $ por ciclo",
+        href: CASH_HREF,
       },
     ],
   },
@@ -216,6 +275,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         maxPotential: "від 3500 TON",
         href: MULTI_HREF,
       },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 рівні", "Компресія", "Системні клони", "Цикли", "100% розподіл"],
+        minEntry: "від $10",
+        maxPotential: "до $80 000 за цикл",
+        href: CASH_HREF,
+      },
     ],
   },
   kk: {
@@ -239,6 +306,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         minEntry: "15 TON",
         maxPotential: "3500 TON-нан",
         href: MULTI_HREF,
+      },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 деңгей", "Компрессия", "Жүйелік клондар", "Циклдер", "100% үлестіру"],
+        minEntry: "$10-нан",
+        maxPotential: "бір циклде $80 000-ға дейін",
+        href: CASH_HREF,
       },
     ],
   },
@@ -264,6 +339,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         maxPotential: "od 3500 TON",
         href: MULTI_HREF,
       },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 poziomy", "Kompresja", "Klony systemowe", "Cykle", "100% dystrybucji"],
+        minEntry: "od 10 $",
+        maxPotential: "do 80 000 $ za cykl",
+        href: CASH_HREF,
+      },
     ],
   },
   hu: {
@@ -287,6 +370,14 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
         minEntry: "15 TON",
         maxPotential: "3500 TON-tól",
         href: MULTI_HREF,
+      },
+      {
+        name: CASH,
+        icon: "wallet",
+        features: ["4 szint", "Kompresszió", "Rendszerklónok", "Ciklusok", "100%-os elosztás"],
+        minEntry: "10 $-tól",
+        maxPotential: "akár 80 000 $ ciklusonként",
+        href: CASH_HREF,
       },
     ],
   },
