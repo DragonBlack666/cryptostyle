@@ -6,7 +6,7 @@ import { Button } from "@/components/ui/button";
 import { useT } from "@/crypto-cash/i18n";
 import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
-function Page() {
+export default function Page() {
   const t = useT();
   useDocumentMeta({
     title: t.meta.arch.title,

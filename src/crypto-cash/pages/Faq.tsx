@@ -5,7 +5,7 @@ import { Plus, Minus } from "lucide-react";
 import { useT } from "@/crypto-cash/i18n";
 import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
-function Page() {
+export default function Page() {
   const t = useT();
   useDocumentMeta({
     title: t.meta.faq.title,

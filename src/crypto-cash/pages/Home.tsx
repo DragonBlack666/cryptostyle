@@ -5,7 +5,7 @@ import { Zap, Recycle, Coins, Trophy, GitBranch, Layers, ArrowRight } from "luci
 import { useT } from "@/crypto-cash/i18n";
 import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
-function HomePage() {
+export default function HomePage() {
   const t = useT();
   useDocumentMeta({
     title: t.meta.home.title,
