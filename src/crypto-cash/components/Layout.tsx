@@ -2,7 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import type { ReactNode } from "react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useT } from "@/crypto-cash/i18n";
-import siteBg from "@/assets/cc-site-bg.jpg";
+import { ccSiteBg } from "@/lib/images";
 
 type NavItem = { to: string; label: string };
 
@@ -83,7 +83,7 @@ export default function SiteLayout({ children }: { children: ReactNode }) {
       <div
         aria-hidden
         className="fixed inset-0 -z-20 bg-cover bg-center bg-no-repeat"
-        style={{ backgroundImage: `url(${siteBg})` }}
+        style={{ backgroundImage: `url(${ccSiteBg.src})` }}
       />
       <div
         aria-hidden

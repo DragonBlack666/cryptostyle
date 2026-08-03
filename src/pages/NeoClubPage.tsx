@@ -3,11 +3,8 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode }
 import { useI18n } from "@/lib/i18n";
 import { NEO_CLUB_DICTS, type NeoClubDict } from "@/lib/neo-club-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
+import { heroBgImg as heroBg, whyBgImg as whyBg, tonBgImg as tonBg, roadmapBgImg as roadmapBg } from "@/lib/images";
 import { useHeadMeta } from "@/lib/useHeadMeta";
-import heroBg from "@/assets/hero-bg.jpg";
-import whyBg from "@/assets/bg-why-light.jpg";
-import tonBg from "@/assets/bg-ton-light.jpg";
-import roadmapBg from "@/assets/bg-roadmap-light.jpg";
 import {
   ArrowLeft, ArrowRight, User, Users, Infinity as InfinityIcon,
   Wallet, PiggyBank, Copy, UserCheck, TrendingUp, LayoutGrid,
@@ -451,7 +448,7 @@ export default function NeoClubPage() {
 
       {/* HERO */}
       <section id="intro" className="relative isolate overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-28">
-        <img src={heroBg} alt="" aria-hidden className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
+        <img {...heroBg} alt="" aria-hidden fetchPriority="high" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.hero.eyebrow}</p>
@@ -535,7 +532,7 @@ export default function NeoClubPage() {
 
       {/* NEO LINE */}
       <section id="neo-line" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30" />
+        <img {...whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-30" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/75 to-background/90" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
@@ -599,7 +596,7 @@ export default function NeoClubPage() {
 
       {/* NEO START */}
       <section id="neo-start" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
+        <img {...whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
         <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
@@ -619,7 +616,7 @@ export default function NeoClubPage() {
 
       {/* NEO VIP */}
       <section id="neo-vip" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25" />
+        <img {...whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-25" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/85 via-background/70 to-background/90" />
         <div className="mx-auto max-w-7xl px-4 sm:px-6">
           <header className="mx-auto max-w-3xl text-center">
@@ -638,7 +635,7 @@ export default function NeoClubPage() {
 
       {/* SUMMARY */}
       <section id="summary" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={tonBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125" />
+        <img {...tonBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-100 brightness-125 contrast-110 saturate-125" />
         <div className="absolute inset-0 -z-10 bg-section-glow" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -708,7 +705,7 @@ export default function NeoClubPage() {
 
       {/* FEATURES */}
       <section id="features" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={roadmapBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125" />
+        <img {...roadmapBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover object-[center_65%] opacity-100 brightness-150 contrast-110 saturate-125" />
         <div className="absolute inset-0 -z-10 bg-section-glow" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/10 via-transparent to-background/15" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -736,7 +733,7 @@ export default function NeoClubPage() {
 
       {/* EXTRAS */}
       <section id="extras" className="relative isolate overflow-hidden py-20 sm:py-24">
-        <img src={whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
+        <img {...whyBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-40 brightness-75 saturate-110" />
         <div className="absolute inset-0 -z-10 bg-section-glow opacity-60" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/80 via-background/70 to-background/85" />
         <div className="mx-auto max-w-6xl px-4 sm:px-6">
@@ -757,7 +754,7 @@ export default function NeoClubPage() {
 
       {/* CTA */}
       <section id="cta" className="relative isolate overflow-hidden py-24 sm:py-32">
-        <img src={heroBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
+        <img {...heroBg} alt="" aria-hidden loading="lazy" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/60 via-background/70 to-background" />
         <div className="mx-auto max-w-3xl px-4 text-center sm:px-6">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.cta.eyebrow}</p>
