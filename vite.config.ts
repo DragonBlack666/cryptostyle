@@ -66,5 +66,17 @@ export default defineConfig({
   },
   build: {
     outDir: "dist",
+    rollupOptions: {
+      output: {
+        manualChunks(id: string) {
+          if (id.includes("node_modules/react-dom") || id.includes("node_modules/react/") || id.includes("node_modules/scheduler")) {
+            return "react-vendor";
+          }
+          if (id.includes("node_modules/react-router")) return "router";
+          return undefined;
+        },
+      },
+    },
   },
+
 });
