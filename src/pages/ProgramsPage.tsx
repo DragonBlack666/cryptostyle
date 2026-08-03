@@ -68,21 +68,24 @@ export default function ProgramsPage() {
                 </div>
 
                 <div className="mt-8 grid gap-4 sm:grid-cols-2">
-                  <div className="rounded-2xl border border-border bg-surface/60 p-4">
+                  <div className="rounded-2xl border border-border bg-surface/60 p-5">
                     <p className="text-xs uppercase tracking-widest text-foreground/60">
                       {c.minEntry}
                     </p>
-                    <p className="mt-2 font-display text-2xl text-foreground">{p.minEntry}</p>
+                    <p className="mt-2 font-sans text-3xl font-extrabold tracking-tight tabular-nums text-foreground sm:text-4xl">
+                      {p.minEntry}
+                    </p>
                   </div>
-                  <div className="rounded-2xl border border-border bg-surface/60 p-4">
+                  <div className="rounded-2xl border border-border bg-surface/60 p-5">
                     <p className="text-xs uppercase tracking-widest text-foreground/60">
                       {c.maxPotential}
                     </p>
-                    <p className="mt-2 font-display text-2xl text-gradient-gold">
+                    <p className="mt-2 font-sans text-3xl font-extrabold tracking-tight tabular-nums text-gradient-gold sm:text-4xl">
                       {p.maxPotential}
                     </p>
                   </div>
                 </div>
+
 
                 <div className="mt-8 flex-1" />
 
