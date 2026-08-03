@@ -37,6 +37,15 @@ export function useDocumentMeta({ title, description, ogTitle, ogDescription }: 
     upsertMeta('meta[property="og:type"]', "property", "og:type", "website");
     const url = window.location.origin + window.location.pathname;
     upsertMeta('meta[property="og:url"]', "property", "og:url", url);
+    upsertMeta('meta[name="twitter:title"]', "name", "twitter:title", ogTitle ?? title);
+    upsertMeta('meta[name="twitter:description"]', "name", "twitter:description", ogDescription ?? description);
+    let canonical = document.head.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+    if (!canonical) {
+      canonical = document.createElement("link");
+      canonical.setAttribute("rel", "canonical");
+      document.head.appendChild(canonical);
+    }
+    canonical.setAttribute("href", url);
     document.documentElement.lang = lang;
   }, [title, description, ogTitle, ogDescription, lang]);
 }

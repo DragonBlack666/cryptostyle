@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "re
 import { useI18n } from "@/lib/i18n";
 import { MULTI_MATRIX_DICTS, type MMDict, type SeatTmpl } from "@/lib/multi-matrix-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
+import { useHeadMeta } from "@/lib/useHeadMeta";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
@@ -386,6 +387,11 @@ function PlatformBlock({ p, index, total, d }: { p: PlatformData; index: number;
 export default function MultiMatrixPage() {
   const { lang } = useI18n();
   const d = MULTI_MATRIX_DICTS[lang];
+
+  useHeadMeta({
+    title: `MULTI Matrix — ${d.hero.title2} | Crypto Style`,
+    description: d.hero.subtitle,
+  });
   const [ruVideoSource, setRuVideoSource] = useState<"youtube" | "rutube">("youtube");
 
   useEffect(() => {

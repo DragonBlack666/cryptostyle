@@ -3,6 +3,7 @@ import { useEffect, useLayoutEffect, useMemo, useRef, useState, type ReactNode }
 import { useI18n } from "@/lib/i18n";
 import { NEO_CLUB_DICTS, type NeoClubDict } from "@/lib/neo-club-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
+import { useHeadMeta } from "@/lib/useHeadMeta";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
 import tonBg from "@/assets/bg-ton-light.jpg";
@@ -430,6 +431,11 @@ function PlatformBlock({
 export default function NeoClubPage() {
   const { lang } = useI18n();
   const d = NEO_CLUB_DICTS[lang];
+
+  useHeadMeta({
+    title: `${d.hero.titleTop} — ${d.hero.titleBottom} | Crypto Style`,
+    description: d.hero.subtitle,
+  });
 
   useEffect(() => {
     document.title = d.meta.docTitle;

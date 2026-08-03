@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://cryptostyle.lovable.app/sitemap.xml
+Sitemap: https://crypto-style.org/sitemap.xml
