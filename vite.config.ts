@@ -25,28 +25,31 @@ function githubPagesSpaFallback() {
 // Injects a <link rel="preload"> for the hero background (the LCP element) into
 // index.html at build time, using the hashed filenames Vite emits.
 function preloadHeroImage() {
-  let heroFull = "";
-  let heroSmall = "";
   return {
     name: "preload-hero-image",
     apply: "build" as const,
     enforce: "post" as const,
-    generateBundle(_options: unknown, bundle: Record<string, { fileName?: string }>) {
-      for (const file of Object.keys(bundle)) {
-        if (/hero-bg-960-.*\.webp$/.test(file)) heroSmall = "/" + file;
-        else if (/hero-bg-.*\.webp$/.test(file)) heroFull = "/" + file;
-      }
-    },
-    transformIndexHtml: {
-      order: "post" as const,
-      handler(html: string) {
-        if (!heroSmall && !heroFull) return html;
-        const tag = `<link rel="preload" as="image" fetchpriority="high" href="${heroSmall || heroFull}" imagesrcset="${heroSmall} 960w, ${heroFull} 1920w" imagesizes="100vw" />`;
-        return html.replace("</head>", `  ${tag}\n  </head>`);
-      },
+    closeBundle() {
+      const dist = path.resolve(__dirname, "dist");
+      const indexPath = path.join(dist, "index.html");
+      const assetsDir = path.join(dist, "assets");
+      if (!fs.existsSync(indexPath) || !fs.existsSync(assetsDir)) return;
+      const files = fs.readdirSync(assetsDir);
+      const small = files.find((f) => /^hero-bg-960-.*\.webp$/.test(f));
+      const full = files.find((f) => /^hero-bg-(?!960)[^/]*\.webp$/.test(f));
+      if (!small && !full) return;
+      const href = `/assets/${small ?? full}`;
+      const srcset = [small && `/assets/${small} 960w`, full && `/assets/${full} 1920w`]
+        .filter(Boolean)
+        .join(", ");
+      const tag = `<link rel="preload" as="image" fetchpriority="high" href="${href}" imagesrcset="${srcset}" imagesizes="100vw" />`;
+      const html = fs.readFileSync(indexPath, "utf8");
+      if (html.includes('rel="preload" as="image"')) return;
+      fs.writeFileSync(indexPath, html.replace("</head>", `  ${tag}\n  </head>`));
     },
   };
 }
+
 
 export default defineConfig({
   base: "/",
