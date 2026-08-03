@@ -28,7 +28,6 @@ function preloadHeroImage() {
   return {
     name: "preload-hero-image",
     apply: "build" as const,
-    enforce: "post" as const,
     closeBundle() {
       const dist = path.resolve(__dirname, "dist");
       const indexPath = path.join(dist, "index.html");
