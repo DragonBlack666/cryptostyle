@@ -140,3 +140,41 @@
     filter: brightness(1.05);
   }
 }
+
+@utility gold-text {
+  background: linear-gradient(135deg, #F5D678 0%, #D4AF37 50%, #A8862A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+@utility gold-border {
+  border: 1px solid transparent;
+  background:
+    linear-gradient(var(--surface), var(--surface)) padding-box,
+    linear-gradient(135deg, #D4AF37, #7a5f1a 60%, #D4AF37) border-box;
+}
+
+@utility gold-divider {
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #D4AF37, transparent);
+}
+
+@utility tier-word {
+  background: linear-gradient(135deg, #F5D678 0%, #D4AF37 50%, #A8862A 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  opacity: 0.3;
+  animation: tier-cycle 3s ease-in-out infinite;
+}
+
+@utility tier-word-1 { animation-delay: 0s; }
+@utility tier-word-2 { animation-delay: 0.75s; }
+@utility tier-word-3 { animation-delay: 1.5s; }
+@utility tier-word-4 { animation-delay: 2.25s; }
+
+@keyframes tier-cycle {
+  0%, 100% { opacity: 0.3; }
+  25% { opacity: 1; }
+}
