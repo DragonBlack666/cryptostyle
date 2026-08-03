@@ -1,12 +1,15 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import SiteLayout from "@/crypto-cash/components/Layout";
 import { Section, Eyebrow, Card } from "@/crypto-cash/components/ui";
 import { Zap, Recycle, Coins, Trophy, GitBranch, Layers, ArrowRight } from "lucide-react";
-import { useT } from "@/crypto-cash/i18n";
+import { useI18n } from "@/crypto-cash/i18n";
 import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 export default function HomePage() {
-  const t = useT();
+  const { lang, t } = useI18n();
+  const [ruVideoSource, setRuVideoSource] = useState<"youtube" | "rutube">("youtube");
+
   useDocumentMeta({
     title: t.meta.home.title,
     description: t.meta.home.desc,
