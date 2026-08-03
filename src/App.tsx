@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
+import { ScrollToTop } from "@/components/ScrollToTop";
 import { DICTS, I18nContext, type LangCode } from "@/lib/i18n";
 import LandingPage from "./pages/LandingPage";
 import ProgramsPage from "./pages/ProgramsPage";
@@ -18,7 +19,9 @@ export default function App() {
 
   useEffect(() => {
     const saved = window.localStorage.getItem("cs_lang") as LangCode | null;
-    if (saved && saved in DICTS) setLangState(saved);
+    const initial = saved && saved in DICTS ? saved : "ru";
+    setLangState(initial);
+    document.documentElement.lang = initial;
   }, []);
 
   const setLang = (l: LangCode) => {
@@ -30,6 +33,7 @@ export default function App() {
   return (
     <I18nContext.Provider value={{ lang, setLang, t: DICTS[lang] }}>
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<LandingPage />} />
           <Route path="/programs" element={<ProgramsPage />} />
@@ -42,6 +46,7 @@ export default function App() {
           <Route path="/crypto-cash/razvitie" element={<CryptoCashDevelopment />} />
           <Route path="/crypto-cash/kak-nachat" element={<CryptoCashHowToStart />} />
           <Route path="/crypto-cash/faq" element={<CryptoCashFaq />} />
+          <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </BrowserRouter>
     </I18nContext.Provider>
