@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
+import { useHeadMeta } from "@/lib/useHeadMeta";
 import { SiteHeader } from "@/components/SiteHeader";
 import heroBg from "@/assets/hero-bg.jpg";
 import whyBg from "@/assets/bg-why-light.jpg";
@@ -14,6 +15,11 @@ import {
 
 export default function LandingPage() {
   const { t } = useI18n();
+
+  useHeadMeta({
+    title: `${t.hero.title1} — ${t.hero.title2}`,
+    description: t.hero.subtitle,
+  });
 
 
   const whyIcons = [ShieldCheck, Zap, Globe2, Gem];

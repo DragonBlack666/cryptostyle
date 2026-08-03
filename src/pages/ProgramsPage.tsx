@@ -1,6 +1,6 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
+import { useHeadMeta } from "@/lib/useHeadMeta";
 import { PROGRAMS_DICTS } from "@/lib/programs-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import whyBg from "@/assets/bg-why-light.jpg";
@@ -10,9 +10,7 @@ export default function ProgramsPage() {
   const { t, lang } = useI18n();
   const c = PROGRAMS_DICTS[lang];
 
-  useEffect(() => {
-    document.title = c.documentTitle;
-  }, [c.documentTitle]);
+  useHeadMeta({ title: c.documentTitle, description: c.intro });
 
   return (
     <div className="min-h-screen bg-background text-foreground">
