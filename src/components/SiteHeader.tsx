@@ -3,7 +3,7 @@ import { useState } from "react";
 import { useI18n, type LangCode } from "@/lib/i18n";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
 import { SocialLinks } from "@/components/SocialLinks";
-import logo from "@/assets/logo.png";
+import { logoSrc as logo } from "@/lib/images";
 import { Menu, X } from "lucide-react";
 
 const MENU_LABEL: Record<LangCode, { open: string; close: string }> = {

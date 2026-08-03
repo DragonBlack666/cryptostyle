@@ -3,7 +3,7 @@ import { useEffect, useLayoutEffect, useRef, useState, type ReactNode } from "re
 import { useI18n } from "@/lib/i18n";
 import { MULTI_MATRIX_DICTS, type MMDict, type SeatTmpl } from "@/lib/multi-matrix-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
-import { heroBgImg as heroBg, whyBgImg as whyBg, tonBgImg as tonBg, roadmapBgImg as roadmapBg, nftCardImg as nftCard } from "@/lib/images";
+import { heroBgImg as heroBg, whyBgImg as whyBg, tonBgImg as tonBg } from "@/lib/images";
 import { useHeadMeta } from "@/lib/useHeadMeta";
 import {
   ArrowLeft, ArrowRight, User, Users,
@@ -405,7 +405,7 @@ export default function MultiMatrixPage() {
 
       {/* HERO */}
       <section id="intro" className="relative isolate overflow-hidden pt-16 pb-20 sm:pt-24 sm:pb-28">
-        <img {...heroBg} alt="" aria-hidden className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
+        <img {...heroBg} alt="" aria-hidden fetchPriority="high" className="absolute inset-0 -z-10 h-full w-full object-cover opacity-50" />
         <div className="absolute inset-0 -z-10 bg-gradient-to-b from-background/40 via-background/60 to-background" />
         <div className="mx-auto max-w-5xl px-4 text-center sm:px-6">
           <p className="text-xs uppercase tracking-[0.3em] text-gold">{d.hero.eyebrow}</p>

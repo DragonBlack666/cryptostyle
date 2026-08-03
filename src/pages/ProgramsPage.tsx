@@ -3,7 +3,7 @@ import { useI18n } from "@/lib/i18n";
 import { useHeadMeta } from "@/lib/useHeadMeta";
 import { PROGRAMS_DICTS } from "@/lib/programs-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
-import { heroBgImg as heroBg, whyBgImg as whyBg, tonBgImg as tonBg, roadmapBgImg as roadmapBg, nftCardImg as nftCard } from "@/lib/images";
+import { whyBgImg as whyBg } from "@/lib/images";
 import { ArrowRight, CheckCircle2, Wallet } from "lucide-react";
 
 export default function ProgramsPage() {
