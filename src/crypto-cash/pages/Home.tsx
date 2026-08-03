@@ -122,9 +122,22 @@ export default function HomePage() {
             </div>
           )}
 
-
-
-          <div className="gold-divider mt-16 max-w-sm mx-auto" />
+          {lang === "hu" && (
+            <div className="mx-auto mt-10 w-full max-w-4xl">
+              <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
+                <iframe
+                  src="https://www.youtube.com/embed/rwC5lZc5dv0"
+                  title="Crypto Cash bemutató"
+                  allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
+                  allowFullScreen
+                  width="100%"
+                  height="100%"
+                  loading="lazy"
+                  className="h-full w-full"
+                />
+              </div>
+            </div>
+          )}
         </div>
       </section>
 
