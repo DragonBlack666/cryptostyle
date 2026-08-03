@@ -47,19 +47,19 @@ export default function Page() {
               )}
               <div className="text-sm tracking-[0.25em] uppercase text-muted-foreground mb-2">{tier.name}</div>
               <div className="flex items-baseline gap-2 mb-2">
-                <span className={`font-display text-5xl ${tier.featured ? "gold-text" : ""}`}>{tier.price}</span>
-                <span className="text-xs text-muted-foreground">{t.tiers.perActivation}</span>
+                <span className={`font-sans text-5xl md:text-6xl font-bold tracking-tight ${tier.featured ? "gold-text" : ""}`}>{tier.price}</span>
+                <span className="text-sm text-muted-foreground">{t.tiers.perActivation}</span>
               </div>
-              <p className="text-sm text-muted-foreground mb-6">{tier.tagline}</p>
+              <p className="text-base text-muted-foreground mb-6">{tier.tagline}</p>
 
               <div className="text-xs uppercase tracking-widest text-primary/80 mb-2">{t.tiers.periodLabel}</div>
-              <p className="text-sm mb-6">{tier.period}</p>
+              <p className="text-base mb-6">{tier.period}</p>
 
               <div className="text-xs uppercase tracking-widest text-primary/80 mb-3">{t.tiers.distLabel}</div>
               <ul className="space-y-2 mb-6 flex-1">
                 {tier.distribution.map((d) => (
-                  <li key={d} className="flex gap-2 text-sm text-muted-foreground">
-                    <Check size={16} className="text-primary shrink-0 mt-0.5" />
+                  <li key={d} className="flex gap-2 text-base text-muted-foreground">
+                    <Check size={18} className="text-primary shrink-0 mt-0.5" />
                     <span>{d}</span>
                   </li>
                 ))}
@@ -67,10 +67,10 @@ export default function Page() {
 
               <div className="pt-6 border-t border-border">
                 <div className="text-xs uppercase tracking-widest text-primary/80 mb-1">{t.tiers.potentialLabel}</div>
-                <div className="font-display text-xl md:text-2xl leading-tight">
+                <div className="font-sans text-xl md:text-2xl font-semibold leading-tight">
                   <span className="text-muted-foreground">{t.tiers.potentialPrefix} </span>
-                  <span className="gold-text text-2xl md:text-3xl">{tier.amount}</span>
-                  <span className="text-muted-foreground whitespace-pre-line"> {tier.potentialPeriod}</span>
+                  <span className="gold-text text-3xl md:text-4xl font-bold tracking-tight">{tier.amount}</span>
+                  <span className="text-muted-foreground whitespace-pre-line text-base md:text-lg"> {tier.potentialPeriod}</span>
                 </div>
               </div>
             </div>
