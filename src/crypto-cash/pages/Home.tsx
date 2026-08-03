@@ -1,13 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import SiteLayout from "@/components/site/Layout";
-import { Section, Eyebrow, Card } from "@/components/site/ui";
+import { Link } from "react-router-dom";
+import SiteLayout from "@/crypto-cash/components/Layout";
+import { Section, Eyebrow, Card } from "@/crypto-cash/components/ui";
 import { Zap, Recycle, Coins, Trophy, GitBranch, Layers, ArrowRight } from "lucide-react";
-import { useT } from "@/i18n";
-import { useDocumentMeta } from "@/i18n/useDocumentMeta";
-
-export const Route = createFileRoute("/")({
-  component: HomePage,
-});
+import { useT } from "@/crypto-cash/i18n";
+import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 function HomePage() {
   const t = useT();
@@ -44,13 +40,13 @@ function HomePage() {
           </p>
           <div className="mt-10 flex flex-wrap gap-4 justify-center">
             <Link
-              to="/kak-nachat"
+              to="/crypto-cash/kak-nachat"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-gradient-to-r from-[#F5D678] via-[#D4AF37] to-[#A8862A] text-[#0B0B0F] font-medium hover:shadow-[0_0_35px_rgba(212,175,55,0.5)] transition-shadow"
             >
               {t.home.ctaPrimary} <ArrowRight size={18} />
             </Link>
             <Link
-              to="/arkhitektura"
+              to="/crypto-cash/arkhitektura"
               className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md border border-border hover:border-primary/60 hover:text-primary transition-colors"
             >
               {t.home.ctaSecondary}
@@ -94,7 +90,7 @@ function HomePage() {
         </div>
         <div className="mt-12 text-center">
           <Link
-            to="/arkhitektura"
+            to="/crypto-cash/arkhitektura"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-md bg-gradient-to-r from-[#F5D678] via-[#D4AF37] to-[#A8862A] text-[#0B0B0F] font-medium hover:shadow-[0_0_35px_rgba(212,175,55,0.5)] transition-shadow"
           >
             {t.home.mechMore} <ArrowRight size={18} />
@@ -133,7 +129,7 @@ function HomePage() {
                 {t.home.teaserDesc}
               </p>
               <Link
-                to="/tarify"
+                to="/crypto-cash/tarify"
                 className="inline-flex w-full sm:w-auto items-center justify-center gap-2 px-8 py-4 rounded-xl bg-gradient-to-r from-primary to-gold-soft text-primary-foreground font-extrabold text-sm uppercase tracking-widest hover:brightness-110 active:scale-[0.98] transition-all shadow-[0_0_20px_rgba(212,175,55,0.3)]"
               >
                 {t.home.teaserBtn} <ArrowRight size={18} />

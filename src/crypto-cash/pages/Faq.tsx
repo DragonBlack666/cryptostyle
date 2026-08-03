@@ -1,14 +1,9 @@
-import { createFileRoute } from "@tanstack/react-router";
-import SiteLayout from "@/components/site/Layout";
-import { Section, PageHero } from "@/components/site/ui";
+import SiteLayout from "@/crypto-cash/components/Layout";
+import { Section, PageHero } from "@/crypto-cash/components/ui";
 import { useState } from "react";
 import { Plus, Minus } from "lucide-react";
-import { useT } from "@/i18n";
-import { useDocumentMeta } from "@/i18n/useDocumentMeta";
-
-export const Route = createFileRoute("/faq")({
-  component: Page,
-});
+import { useT } from "@/crypto-cash/i18n";
+import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 function Page() {
   const t = useT();

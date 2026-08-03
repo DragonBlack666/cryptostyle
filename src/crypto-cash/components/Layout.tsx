@@ -1,8 +1,8 @@
-import { Link, useRouterState } from "@tanstack/react-router";
+import { Link, useRouterState } from "react-router-dom";
 import { useState, type ReactNode } from "react";
 import { Menu, X } from "lucide-react";
 import { LanguageSwitcher } from "./LanguageSwitcher";
-import { useT } from "@/i18n";
+import { useT } from "@/crypto-cash/i18n";
 import siteBg from "@/assets/site-bg.jpg";
 
 type NavItem = { to: "/" | "/arkhitektura" | "/tarify" | "/rangi" | "/razvitie" | "/kak-nachat" | "/faq"; label: string };
@@ -28,7 +28,7 @@ export function SiteHeader() {
   return (
     <header className="sticky top-0 z-40 backdrop-blur-xl bg-background/70 border-b border-border">
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <Link to="/" className="flex items-center gap-2 group">
+        <Link to="/crypto-cash" className="flex items-center gap-2 group">
           <div className="w-8 h-8 rounded-full bg-gradient-to-br from-[#F5D678] via-[#D4AF37] to-[#7a5f1a] shadow-[0_0_20px_rgba(212,175,55,0.4)] group-hover:shadow-[0_0_30px_rgba(212,175,55,0.7)] transition-shadow" />
           <span className="font-display text-xl tracking-wide">
             Crypto&nbsp;<span className="gold-text font-semibold">{t.brand.cash}</span>

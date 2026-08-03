@@ -1,14 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import SiteLayout from "@/components/site/Layout";
-import { Section, PageHero, Card } from "@/components/site/ui";
+import { Link } from "react-router-dom";
+import SiteLayout from "@/crypto-cash/components/Layout";
+import { Section, PageHero, Card } from "@/crypto-cash/components/ui";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useT } from "@/i18n";
-import { useDocumentMeta } from "@/i18n/useDocumentMeta";
-
-export const Route = createFileRoute("/razvitie")({
-  component: Page,
-});
+import { useT } from "@/crypto-cash/i18n";
+import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 function Page() {
   const t = useT();
@@ -94,7 +90,7 @@ function Page() {
           <div className="gold-border rounded-2xl p-8 md:p-10 bg-gradient-to-br from-primary/10 via-primary/5 to-transparent text-center">
             <h2 className="font-display text-2xl md:text-3xl mb-3">{t.dev.cta.title}</h2>
             <p className="text-foreground/80 leading-relaxed mb-6 max-w-2xl mx-auto">{t.dev.cta.text}</p>
-            <Link to="/kak-nachat">
+            <Link to="/crypto-cash/kak-nachat">
               <Button size="lg" className="bg-gradient-to-r from-primary to-primary/80 text-primary-foreground hover:from-primary/90 hover:to-primary/60 group">
                 {t.dev.cta.btn}
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />

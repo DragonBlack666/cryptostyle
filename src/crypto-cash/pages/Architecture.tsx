@@ -1,14 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import SiteLayout from "@/components/site/Layout";
-import { Section, PageHero, Card, Highlight, Eyebrow } from "@/components/site/ui";
+import { Link } from "react-router-dom";
+import SiteLayout from "@/crypto-cash/components/Layout";
+import { Section, PageHero, Card, Highlight, Eyebrow } from "@/crypto-cash/components/ui";
 import { Zap, GitBranch, Coins, Recycle, Layers, Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import { useT } from "@/i18n";
-import { useDocumentMeta } from "@/i18n/useDocumentMeta";
-
-export const Route = createFileRoute("/arkhitektura")({
-  component: Page,
-});
+import { useT } from "@/crypto-cash/i18n";
+import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 function Page() {
   const t = useT();
@@ -144,7 +140,7 @@ function Page() {
             </h2>
             <p className="text-lg text-muted-foreground">{t.arch.cta.text}</p>
             <Button asChild size="lg" className="bg-gradient-to-r from-primary to-[#b8932f] text-primary-foreground shadow-[0_0_25px_rgba(212,175,55,0.3)] hover:shadow-[0_0_35px_rgba(212,175,55,0.5)]">
-              <Link to="/tarify" className="gap-2">
+              <Link to="/crypto-cash/tarify" className="gap-2">
                 {t.arch.cta.btn}
                 <ArrowRight size={18} />
               </Link>

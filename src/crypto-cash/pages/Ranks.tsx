@@ -1,14 +1,10 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import SiteLayout from "@/components/site/Layout";
-import { Section, PageHero } from "@/components/site/ui";
+import { Link } from "react-router-dom";
+import SiteLayout from "@/crypto-cash/components/Layout";
+import { Section, PageHero } from "@/crypto-cash/components/ui";
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import { useT } from "@/i18n";
-import { useDocumentMeta } from "@/i18n/useDocumentMeta";
-
-export const Route = createFileRoute("/rangi")({
-  component: Page,
-});
+import { useT } from "@/crypto-cash/i18n";
+import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 function Page() {
   const t = useT();
@@ -98,7 +94,7 @@ function Page() {
             </h2>
             <p className="text-lg text-muted-foreground">{t.ranks.cta.text}</p>
             <Button asChild size="lg" className="bg-gradient-to-r from-primary to-[#b8932f] text-primary-foreground shadow-[0_0_25px_rgba(212,175,55,0.3)] hover:shadow-[0_0_35px_rgba(212,175,55,0.5)]">
-              <Link to="/razvitie" className="gap-2">
+              <Link to="/crypto-cash/razvitie" className="gap-2">
                 {t.ranks.cta.btn}
                 <ArrowRight size={18} />
               </Link>

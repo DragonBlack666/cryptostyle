@@ -1,13 +1,9 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import SiteLayout from "@/components/site/Layout";
-import { Section, PageHero, Card } from "@/components/site/ui";
+import { Link } from "react-router-dom";
+import SiteLayout from "@/crypto-cash/components/Layout";
+import { Section, PageHero, Card } from "@/crypto-cash/components/ui";
 import { Wallet, Layers, ShieldCheck, Sparkles } from "lucide-react";
-import { useT } from "@/i18n";
-import { useDocumentMeta } from "@/i18n/useDocumentMeta";
-
-export const Route = createFileRoute("/kak-nachat")({
-  component: Page,
-});
+import { useT } from "@/crypto-cash/i18n";
+import { useDocumentMeta } from "@/crypto-cash/i18n/useDocumentMeta";
 
 function Page() {
   const t = useT();
@@ -68,7 +64,7 @@ function Page() {
             </a>
           </div>
           <div className="mt-6">
-            <Link to="/faq" className="text-sm text-muted-foreground hover:text-primary">
+            <Link to="/crypto-cash/faq" className="text-sm text-muted-foreground hover:text-primary">
               {t.how.faqLink}
             </Link>
           </div>
