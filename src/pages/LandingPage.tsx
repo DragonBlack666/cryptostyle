@@ -2,11 +2,7 @@ import { Link } from "react-router-dom";
 import { useI18n } from "@/lib/i18n";
 import { useHeadMeta } from "@/lib/useHeadMeta";
 import { SiteHeader } from "@/components/SiteHeader";
-import heroBg from "@/assets/hero-bg.jpg";
-import whyBg from "@/assets/bg-why-light.jpg";
-import tonBg from "@/assets/bg-ton-light.jpg";
-import roadmapBg from "@/assets/bg-roadmap-light.jpg";
-import nftCard from "@/assets/nft-card.png";
+import { heroBgImg as heroBg, whyBgImg as whyBg, tonBgImg as tonBg, roadmapBgImg as roadmapBg, nftCardImg as nftCard } from "@/lib/images";
 import {
   ShieldCheck, Zap, Globe2, Gem, CheckCircle2, Quote,
   Rocket, DollarSign, Send, Wallet, MessageCircle,
@@ -32,7 +28,7 @@ export default function LandingPage() {
       {/* HERO */}
       <section id="top" className="relative isolate overflow-hidden pt-32 pb-24 sm:pt-40 sm:pb-32">
         <img
-          src={heroBg}
+          {...heroBg}
           alt=""
           aria-hidden
           width={1920}
@@ -68,7 +64,7 @@ export default function LandingPage() {
       {/* WHY */}
       <section id="why" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
-          src={whyBg}
+          {...whyBg}
           alt=""
           aria-hidden
           loading="lazy"
@@ -107,7 +103,7 @@ export default function LandingPage() {
       {/* NFT */}
       <section id="nft" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
-          src={tonBg}
+          {...tonBg}
           alt=""
           aria-hidden
           loading="lazy"
@@ -138,7 +134,7 @@ export default function LandingPage() {
           <div className="relative mx-auto w-full max-w-md">
             <div className="absolute -inset-6 -z-10 rounded-[2rem] bg-[var(--gradient-gold)] opacity-30 blur-2xl" />
             <img
-              src={nftCard}
+              {...nftCard}
               alt={`${t.nft.caption} — ${t.nft.title}`}
               loading="lazy"
               width={1024}
@@ -153,7 +149,7 @@ export default function LandingPage() {
       {/* TON */}
       <section id="ton" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
-          src={tonBg}
+          {...tonBg}
           alt=""
           aria-hidden
           loading="lazy"
@@ -194,7 +190,7 @@ export default function LandingPage() {
       {/* ROADMAP */}
       <section id="roadmap" className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
-          src={roadmapBg}
+          {...roadmapBg}
           alt=""
           aria-hidden
           loading="lazy"
@@ -230,7 +226,7 @@ export default function LandingPage() {
       {/* CTA */}
       <section className="relative isolate overflow-hidden py-24 sm:py-32">
         <img
-          src={roadmapBg}
+          {...roadmapBg}
           alt=""
           aria-hidden
           loading="lazy"
