@@ -4,7 +4,7 @@ import { useI18n } from "@/lib/i18n";
 import { PROGRAMS_DICTS } from "@/lib/programs-i18n";
 import { SiteHeader } from "@/components/SiteHeader";
 import whyBg from "@/assets/bg-why-light.jpg";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle2, Wallet } from "lucide-react";
 
 export default function ProgramsPage() {
   const { t, lang } = useI18n();
