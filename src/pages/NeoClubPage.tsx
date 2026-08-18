@@ -473,11 +473,11 @@ export default function NeoClubPage() {
             ))}
           </div>
 
-          {(lang === "ru" || lang === "hu" || lang === "uk") && (
+          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : "uk-youtube"}
+                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : lang === "uk" ? "uk-youtube" : "it-youtube"}
                   src={
                     lang === "ru"
                       ? ruVideoSource === "youtube"
@@ -485,9 +485,11 @@ export default function NeoClubPage() {
                         : "https://rutube.ru/play/embed/983349183ee08721da112daacf0e4e17"
                       : lang === "hu"
                         ? "https://www.youtube.com/embed/m_HF-0tH1BU"
-                        : "https://www.youtube.com/embed/pkeBMPS_lNs"
+                        : lang === "uk"
+                          ? "https://www.youtube.com/embed/pkeBMPS_lNs"
+                          : "https://www.youtube.com/embed/EzFjhCqcGzY"
                   }
-                  title={d.hero.videoTitle}
+                  title={lang === "it" ? "Presentazione di Neo Club" : d.hero.videoTitle}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
