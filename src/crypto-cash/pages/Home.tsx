@@ -143,7 +143,7 @@ export default function HomePage() {
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  src="https://www.youtube.com/embed/s9kg8mon_Bo"
+                  src="https://www.youtube.com/embed/eG-mRwZO368"
                   title="Crypto Cash Presentation"
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
