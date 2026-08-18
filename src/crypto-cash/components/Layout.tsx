@@ -21,11 +21,19 @@ function useNav(): ReadonlyArray<NavItem> {
 }
 
 function PresentationNav() {
+  const t = useT();
   const nav = useNav();
   const { pathname } = useLocation();
   return (
     <div className="sticky top-16 z-30 border-b border-border bg-background/70 backdrop-blur-xl">
-      <div className="mx-auto flex max-w-7xl items-center gap-1 overflow-x-auto px-4 py-2 sm:px-6">
+      <div className="mx-auto flex max-w-7xl items-center gap-2 overflow-x-auto px-4 py-2 sm:px-6">
+        <Link
+          to="/programs"
+          className="inline-flex shrink-0 items-center gap-1.5 rounded-lg border border-border/60 bg-surface/60 px-3 py-2 text-xs font-medium text-foreground/80 transition hover:border-gold/60 hover:text-gold"
+        >
+          <ArrowLeft className="h-3.5 w-3.5" /> {t.nav.backToPrograms}
+        </Link>
+        <div className="mx-1 h-4 w-px bg-border/60" />
         {nav.map((n) => {
           const active = pathname === n.to;
           return (
