@@ -12,6 +12,7 @@ export const fr: Dict = {
     how: "Commencer",
     faq: "FAQ",
     menu: "Menu",
+    backToPrograms: "← Tous les programmes",
   },
   footer: {
     about: "Un programme complémentaire de l’écosystème Crypto Style sur un smart contract TON.",

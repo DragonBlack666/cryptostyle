@@ -14,6 +14,7 @@ export const en: Dict = {
     how: "Get Started",
     faq: "FAQ",
     menu: "Menu",
+    backToPrograms: "← All programs",
   },
 
   footer: {
