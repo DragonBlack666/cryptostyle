@@ -430,7 +430,7 @@ export default function MultiMatrixPage() {
             ))}
           </div>
 
-          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it") && (
+          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it" || lang === "en") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
@@ -444,9 +444,11 @@ export default function MultiMatrixPage() {
                       ? "https://www.youtube.com/embed/2z6KAO_KWls"
                       : lang === "uk"
                       ? "https://www.youtube.com/embed/ZfMOPsrqDEk"
-                      : "https://www.youtube.com/embed/K5cPHiKuhpA"
+                      : lang === "it"
+                      ? "https://www.youtube.com/embed/K5cPHiKuhpA"
+                      : "https://www.youtube.com/embed/w7upMxQdE4I"
                   }
-                  title={lang === "it" ? "Presentazione di MULTI Matrix" : (d.hero.videoTitle || "MULTI Matrix video presentation")}
+                  title={lang === "en" ? "MULTI Matrix Presentation" : lang === "it" ? "Presentazione di MULTI Matrix" : (d.hero.videoTitle || "MULTI Matrix video presentation")}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
