@@ -1,5 +1,6 @@
 import { Link, useLocation } from "react-router-dom";
 import type { ReactNode } from "react";
+import { ArrowLeft } from "lucide-react";
 import { SiteHeader } from "@/components/SiteHeader";
 import { useT } from "@/crypto-cash/i18n";
 import { ccSiteBg } from "@/lib/images";
