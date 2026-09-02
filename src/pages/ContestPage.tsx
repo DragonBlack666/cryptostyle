@@ -250,9 +250,6 @@ export default function ContestPage() {
                   </li>
                 ))}
               </ul>
-              <p className="mt-4 flex items-start gap-2 text-sm text-foreground/70">
-                <Info className="mt-0.5 h-4 w-4 shrink-0 text-gold" /> {d.points.subscribe.note}
-              </p>
             </article>
           </div>
 
