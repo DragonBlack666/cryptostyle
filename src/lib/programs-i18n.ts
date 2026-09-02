@@ -2,7 +2,6 @@ import type { LangCode } from "@/lib/i18n";
 
 export type ProgramItem = {
   name: string;
-  icon?: "wallet";
   features: string[];
   minEntry: string;
   maxPotential: string;
