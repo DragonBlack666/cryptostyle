@@ -17,7 +17,7 @@ export const LANGUAGES = [
 export type LangCode = (typeof LANGUAGES)[number]["code"];
 
 export type Dict = {
-  nav: { features: string; nft: string; ton: string; roadmap: string; programs: string };
+  nav: { features: string; nft: string; ton: string; roadmap: string; programs: string; contest: string };
   hero: { title1: string; title2: string; subtitle: string; cta1: string; cta2: string; cta1Link: string };
   social: { youtube: string; twitter: string; telegram: string };
   why: {
@@ -61,7 +61,7 @@ export type Dict = {
 };
 
 const ru: Dict = {
-  nav: { features: "Возможности", nft: "NFT-профиль", ton: "TON", roadmap: "Дорожная карта", programs: "Партнёрские программы" },
+  nav: { features: "Возможности", nft: "NFT-профиль", ton: "TON", roadmap: "Дорожная карта", programs: "Партнёрские программы", contest: "Конкурс" },
   hero: {
     title1: "Crypto Style",
     title2: "Платформа нового поколения",
@@ -149,7 +149,7 @@ const ru: Dict = {
 };
 
 const en: Dict = {
-  nav: { features: "Features", nft: "NFT profile", ton: "TON", roadmap: "Roadmap", programs: "Partner programs" },
+  nav: { features: "Features", nft: "NFT profile", ton: "TON", roadmap: "Roadmap", programs: "Partner programs", contest: "Contest" },
   hero: {
     title1: "Crypto Style",
     title2: "The Next-Generation Affiliate Platform",
@@ -240,7 +240,7 @@ const en: Dict = {
 // To keep this lean, we start with EN as base for de/fr/it/es/pt/uk/kk/pl/hu.
 // You can extend these dictionaries per-language over time.
 const de: Dict = {
-  nav: { features: "Funktionen", nft: "NFT-Profil", ton: "TON", roadmap: "Roadmap", programs: "Partnerprogramme" },
+  nav: { features: "Funktionen", nft: "NFT-Profil", ton: "TON", roadmap: "Roadmap", programs: "Partnerprogramme", contest: "Wettbewerb" },
   hero: {
     title1: "Crypto Style",
     title2: "Die nächste Generation des Affiliate-Marketings",
@@ -323,7 +323,7 @@ const de: Dict = {
   footer: "© Crypto Style. Alle Rechte vorbehalten.",
 };
 const fr: Dict = {
-  nav: { features: "Fonctionnalités", nft: "Profil NFT", ton: "TON", roadmap: "Feuille de route", programs: "Programmes partenaires" },
+  nav: { features: "Fonctionnalités", nft: "Profil NFT", ton: "TON", roadmap: "Feuille de route", programs: "Programmes partenaires", contest: "Concours" },
   hero: {
     title1: "Crypto Style",
     title2: "La plateforme d'affiliation nouvelle génération",
@@ -406,7 +406,7 @@ const fr: Dict = {
   footer: "© Crypto Style. Tous droits réservés.",
 };
 const it: Dict = {
-  nav: { features: "Funzionalità", nft: "Profilo NFT", ton: "TON", roadmap: "Roadmap", programs: "Programmi partner" },
+  nav: { features: "Funzionalità", nft: "Profilo NFT", ton: "TON", roadmap: "Roadmap", programs: "Programmi partner", contest: "Concorso" },
   hero: {
     title1: "Crypto Style",
     title2: "La piattaforma di affiliazione di nuova generazione",
@@ -489,7 +489,7 @@ const it: Dict = {
   footer: "© Crypto Style. Tutti i diritti riservati.",
 };
 const es: Dict = {
-  nav: { features: "Funciones", nft: "Perfil NFT", ton: "TON", roadmap: "Hoja de ruta", programs: "Programas de socios" },
+  nav: { features: "Funciones", nft: "Perfil NFT", ton: "TON", roadmap: "Hoja de ruta", programs: "Programas de socios", contest: "Concurso" },
   hero: {
     title1: "Crypto Style",
     title2: "La plataforma de afiliación de nueva generación",
@@ -616,7 +616,7 @@ const es: Dict = {
   footer: "© Crypto Style. Todos los derechos reservados.",
 };
 const pt: Dict = {
-  nav: { features: "Funcionalidades", nft: "Perfil NFT", ton: "TON", roadmap: "Roteiro", programs: "Programas de parceiros" },
+  nav: { features: "Funcionalidades", nft: "Perfil NFT", ton: "TON", roadmap: "Roteiro", programs: "Programas de parceiros", contest: "Concurso" },
   hero: {
     title1: "Crypto Style",
     title2: "A plataforma de afiliados da nova geração",
@@ -699,7 +699,7 @@ const pt: Dict = {
   footer: "© Crypto Style. Todos os direitos reservados.",
 };
 const uk: Dict = {
-  nav: { features: "Можливості", nft: "NFT-профіль", ton: "TON", roadmap: "Дорожня карта", programs: "Партнерські програми" },
+  nav: { features: "Можливості", nft: "NFT-профіль", ton: "TON", roadmap: "Дорожня карта", programs: "Партнерські програми", contest: "Конкурс" },
   hero: {
     title1: "Crypto Style",
     title2: "Платформа нового покоління",
@@ -782,7 +782,7 @@ const uk: Dict = {
   footer: "© Crypto Style. Усі права захищені.",
 };
 const kk: Dict = {
-  nav: { features: "Мүмкіндіктер", nft: "NFT-профиль", ton: "TON", roadmap: "Жол картасы", programs: "Серіктестік бағдарламалар" },
+  nav: { features: "Мүмкіндіктер", nft: "NFT-профиль", ton: "TON", roadmap: "Жол картасы", programs: "Серіктестік бағдарламалар", contest: "Байқау" },
   hero: {
     title1: "Crypto Style",
     title2: "Жаңа буын платформасы",
@@ -869,7 +869,7 @@ const kk: Dict = {
   footer: "© Crypto Style. Барлық құқықтар қорғалған.",
 };
 const pl: Dict = {
-  nav: { features: "Funkcje", nft: "Profil NFT", ton: "TON", roadmap: "Mapa drogowa", programs: "Programy partnerskie" },
+  nav: { features: "Funkcje", nft: "Profil NFT", ton: "TON", roadmap: "Mapa drogowa", programs: "Programy partnerskie", contest: "Konkurs" },
   hero: {
     title1: ru.hero.title1,
     title2: "Platforma nowej generacji",
@@ -956,7 +956,7 @@ const pl: Dict = {
   footer: "© Crypto Style. Wszystkie prawa zastrzeżone.",
 };
 const hu: Dict = {
-  nav: { features: "Funkciók", nft: "NFT-profil", ton: "TON", roadmap: "Ütemterv", programs: "Partnerprogramok" },
+  nav: { features: "Funkciók", nft: "NFT-profil", ton: "TON", roadmap: "Ütemterv", programs: "Partnerprogramok", contest: "Verseny" },
   hero: {
     title1: "Crypto Style",
     title2: "A következő generáció platformja",

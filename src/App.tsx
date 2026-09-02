@@ -9,6 +9,7 @@ import LandingPage from "./pages/LandingPage";
 const ProgramsPage = lazy(() => import("./pages/ProgramsPage"));
 const NeoClubPage = lazy(() => import("./pages/NeoClubPage"));
 const MultiMatrixPage = lazy(() => import("./pages/MultiMatrixPage"));
+const ContestPage = lazy(() => import("./pages/ContestPage"));
 const CryptoCashHome = lazy(() => import("./crypto-cash/pages/Home"));
 const CryptoCashArchitecture = lazy(() => import("./crypto-cash/pages/Architecture"));
 const CryptoCashTiers = lazy(() => import("./crypto-cash/pages/Tiers"));
@@ -43,6 +44,7 @@ export default function App() {
             <Route path="/programs" element={<ProgramsPage />} />
             <Route path="/programs/neo" element={<NeoClubPage />} />
             <Route path="/programs/multi" element={<MultiMatrixPage />} />
+            <Route path="/contest" element={<ContestPage />} />
             <Route path="/crypto-cash" element={<CryptoCashHome />} />
             <Route path="/crypto-cash/arkhitektura" element={<CryptoCashArchitecture />} />
             <Route path="/crypto-cash/tarify" element={<CryptoCashTiers />} />
