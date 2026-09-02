@@ -2,7 +2,6 @@ import type { LangCode } from "@/lib/i18n";
 
 export type ProgramItem = {
   name: string;
-  icon?: "wallet";
   features: string[];
   minEntry: string;
   maxPotential: string;
@@ -53,7 +52,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 уровня", "Компрессия", "Системные клоны", "Циклы", "100% распределение"],
         minEntry: "от $10",
         maxPotential: "до $80 000 за цикл",
@@ -85,7 +83,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 levels", "Compression", "System clones", "Cycles", "100% distribution"],
         minEntry: "from $10",
         maxPotential: "up to $80,000 per cycle",
@@ -117,7 +114,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 Ebenen", "Kompression", "Systemklone", "Zyklen", "100 % Verteilung"],
         minEntry: "ab 10 $",
         maxPotential: "bis zu 80 000 $ pro Zyklus",
@@ -149,7 +145,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 niveaux", "Compression", "Clones système", "Cycles", "Distribution à 100 %"],
         minEntry: "à partir de 10 $",
         maxPotential: "jusqu'à 80 000 $ par cycle",
@@ -181,7 +176,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 livelli", "Compressione", "Cloni di sistema", "Cicli", "Distribuzione al 100%"],
         minEntry: "da 10 $",
         maxPotential: "fino a 80.000 $ per ciclo",
@@ -213,7 +207,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 niveles", "Compresión", "Clones del sistema", "Ciclos", "Distribución del 100 %"],
         minEntry: "desde 10 $",
         maxPotential: "hasta 80 000 $ por ciclo",
@@ -245,7 +238,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 níveis", "Compressão", "Clones do sistema", "Ciclos", "Distribuição de 100%"],
         minEntry: "a partir de 10 $",
         maxPotential: "até 80 000 $ por ciclo",
@@ -277,7 +269,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 рівні", "Компресія", "Системні клони", "Цикли", "100% розподіл"],
         minEntry: "від $10",
         maxPotential: "до $80 000 за цикл",
@@ -309,7 +300,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 деңгей", "Компрессия", "Жүйелік клондар", "Циклдер", "100% үлестіру"],
         minEntry: "$10-нан",
         maxPotential: "бір циклде $80 000-ға дейін",
@@ -341,7 +331,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 poziomy", "Kompresja", "Klony systemowe", "Cykle", "100% dystrybucji"],
         minEntry: "od 10 $",
         maxPotential: "do 80 000 $ za cykl",
@@ -373,7 +362,6 @@ export const PROGRAMS_DICTS: Record<LangCode, ProgramsDict> = {
       },
       {
         name: CASH,
-        icon: "wallet",
         features: ["4 szint", "Kompresszió", "Rendszerklónok", "Ciklusok", "100%-os elosztás"],
         minEntry: "10 $-tól",
         maxPotential: "akár 80 000 $ ciklusonként",
