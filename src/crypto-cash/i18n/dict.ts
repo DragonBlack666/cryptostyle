@@ -15,7 +15,7 @@ export const ru = {
     how: "Как начать",
     faq: "FAQ",
     menu: "Меню",
-    backToPrograms: "← Все программы",
+    backToPrograms: "Все программы",
   },
 
   footer: {

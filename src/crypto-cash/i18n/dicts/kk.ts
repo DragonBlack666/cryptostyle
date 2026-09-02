@@ -12,7 +12,7 @@ export const kk: Dict = {
     how: "Қалай бастау керек",
     faq: "FAQ",
     menu: "Мәзір",
-    backToPrograms: "← Барлық бағдарламалар",
+    backToPrograms: "Барлық бағдарламалар",
   },
   footer: {
     about: "Crypto Style экожүйесінің TON смарт-контрактіндегі қосымша бағдарламасы.",
