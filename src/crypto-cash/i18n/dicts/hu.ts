@@ -12,7 +12,7 @@ export const hu: Dict = {
     how: "Kezdés",
     faq: "GYIK",
     menu: "Menü",
-    backToPrograms: "← Összes program",
+    backToPrograms: "Összes program",
   },
   footer: {
     about: "A Crypto Style ökoszisztéma kiegészítő programja TON smart contracton.",
