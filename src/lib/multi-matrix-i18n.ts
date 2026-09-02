@@ -92,7 +92,7 @@ const ruClonesP2 = (n: number) => `${n} клона по 45 TON во 2-ю пло�
 
 const ru: MMDict = {
   docTitle: "MULTI Matrix — Партнёрская программа · Crypto Style",
-  back: "Все партнёрские программы",
+  back: "Все программы",
   nav: {
     intro: "О программе",
     income: "4 вида дохода",
@@ -247,7 +247,7 @@ const ru: MMDict = {
     subtitle:
       "Шесть площадок, автоматические переходы, клоны, реинвест и прогнозируемый рост — всё в одной бизнес-системе на TON.",
     registerBtn: "Регистрация в MULTI Matrix",
-    backBtn: "Все партнёрские программы",
+    backBtn: "Все программы",
   },
 };
 
