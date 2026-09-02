@@ -255,7 +255,7 @@ const ru: MMDict = {
 
 const en: MMDict = {
   docTitle: "MULTI Matrix — Partner Program · Crypto Style",
-  back: "All partner programs",
+  back: "All programs",
   nav: {
     intro: "About",
     income: "4 income streams",
@@ -409,7 +409,7 @@ const en: MMDict = {
     subtitle:
       "Six platforms, automatic transitions, clones, reinvest and predictable growth — all in one business system on TON.",
     registerBtn: "Register in MULTI Matrix",
-    backBtn: "All partner programs",
+    backBtn: "All programs",
   },
 };
 
@@ -417,7 +417,7 @@ const en: MMDict = {
 
 const de: MMDict = {
   docTitle: "MULTI Matrix — Partnerprogramm · Crypto Style",
-  back: "Alle Partnerprogramme",
+  back: "Alle Programme",
   nav: { intro: "Über das Programm", income: "4 Einkommensarten", platforms: "Plattformen", summary: "Übersicht", extras: "Verwaltung", cta: "Start" },
   hero: {
     eyebrow: "Partnerprogramm",
@@ -535,7 +535,7 @@ const de: MMDict = {
   cta: {
     eyebrow: "Machen Sie mit", title: "Starten Sie mit MULTI Matrix",
     subtitle: "Sechs Plattformen, automatische Übergänge, Klone, Reinvest und planbares Wachstum — alles in einem Geschäftssystem auf TON.",
-    registerBtn: "In MULTI Matrix registrieren", backBtn: "Alle Partnerprogramme",
+    registerBtn: "In MULTI Matrix registrieren", backBtn: "Alle Programme",
   },
 };
 
@@ -543,7 +543,7 @@ const de: MMDict = {
 
 const fr: MMDict = {
   docTitle: "MULTI Matrix — Programme partenaire · Crypto Style",
-  back: "Tous les programmes partenaires",
+  back: "Tous les programmes",
   nav: { intro: "À propos", income: "4 revenus", platforms: "Plateformes", summary: "Récapitulatif", extras: "Gestion", cta: "Démarrer" },
   hero: {
     eyebrow: "Programme partenaire",
@@ -653,7 +653,7 @@ const fr: MMDict = {
   cta: {
     eyebrow: "Rejoignez-nous", title: "Commencez avec MULTI Matrix",
     subtitle: "Six plateformes, transitions automatiques, clones, réinvest et croissance prévisible — le tout dans un système d'affaires sur TON.",
-    registerBtn: "Inscription à MULTI Matrix", backBtn: "Tous les programmes partenaires",
+    registerBtn: "Inscription à MULTI Matrix", backBtn: "Tous les programmes",
   },
 };
 
@@ -661,7 +661,7 @@ const fr: MMDict = {
 
 const it: MMDict = {
   docTitle: "MULTI Matrix — Programma partner · Crypto Style",
-  back: "Tutti i programmi partner",
+  back: "Tutti i programmi",
   nav: { intro: "Sul programma", income: "4 redditi", platforms: "Piattaforme", summary: "Riepilogo", extras: "Gestione", cta: "Inizia" },
   hero: {
     eyebrow: "Programma partner",
@@ -771,7 +771,7 @@ const it: MMDict = {
   cta: {
     eyebrow: "Unisciti a noi", title: "Inizia con MULTI Matrix",
     subtitle: "Sei piattaforme, transizioni automatiche, cloni, reinvest e crescita prevedibile — tutto in un unico sistema di business su TON.",
-    registerBtn: "Registrati in MULTI Matrix", backBtn: "Tutti i programmi partner",
+    registerBtn: "Registrati in MULTI Matrix", backBtn: "Tutti i programmi",
   },
 };
 
@@ -779,7 +779,7 @@ const it: MMDict = {
 
 const es: MMDict = {
   docTitle: "MULTI Matrix — Programa de socios · Crypto Style",
-  back: "Todos los programas de socios",
+  back: "Todos los programas",
   nav: { intro: "Sobre el programa", income: "4 ingresos", platforms: "Plataformas", summary: "Resumen", extras: "Gestión", cta: "Empezar" },
   hero: {
     eyebrow: "Programa de socios",
@@ -889,7 +889,7 @@ const es: MMDict = {
   cta: {
     eyebrow: "Únete", title: "Empieza con MULTI Matrix",
     subtitle: "Seis plataformas, transiciones automáticas, clones, reinvest y crecimiento predecible — todo en un solo sistema de negocio en TON.",
-    registerBtn: "Registro en MULTI Matrix", backBtn: "Todos los programas de socios",
+    registerBtn: "Registro en MULTI Matrix", backBtn: "Todos los programas",
   },
 };
 
@@ -897,7 +897,7 @@ const es: MMDict = {
 
 const pt: MMDict = {
   docTitle: "MULTI Matrix — Programa de parceiros · Crypto Style",
-  back: "Todos os programas de parceiros",
+  back: "Todos os programas",
   nav: { intro: "Sobre o programa", income: "4 rendimentos", platforms: "Plataformas", summary: "Resumo", extras: "Gestão", cta: "Começar" },
   hero: {
     eyebrow: "Programa de parceiros",
@@ -1007,7 +1007,7 @@ const pt: MMDict = {
   cta: {
     eyebrow: "Junte-se", title: "Comece com o MULTI Matrix",
     subtitle: "Seis plataformas, transições automáticas, clones, reinvest e crescimento previsível — tudo num sistema de negócio na TON.",
-    registerBtn: "Registo no MULTI Matrix", backBtn: "Todos os programas de parceiros",
+    registerBtn: "Registo no MULTI Matrix", backBtn: "Todos os programas",
   },
 };
 
@@ -1018,7 +1018,7 @@ const ukClonesP1 = (n: number) =>
 
 const uk: MMDict = {
   docTitle: "MULTI Matrix — Партнерська програма · Crypto Style",
-  back: "Усі партнерські програми",
+  back: "Усі програми",
   nav: { intro: "Про програму", income: "4 види доходу", platforms: "Площадки", summary: "Зведення", extras: "Керування", cta: "Старт" },
   hero: {
     eyebrow: "Партнерська програма",
@@ -1129,7 +1129,7 @@ const uk: MMDict = {
   cta: {
     eyebrow: "Приєднуйтеся", title: "Почніть із MULTI Matrix",
     subtitle: "Шість площадок, автоматичні переходи, клони, реінвест та прогнозоване зростання — усе в одній бізнес-системі на TON.",
-    registerBtn: "Реєстрація у MULTI Matrix", backBtn: "Усі партнерські програми",
+    registerBtn: "Реєстрація у MULTI Matrix", backBtn: "Усі програми",
   },
 };
 
@@ -1137,7 +1137,7 @@ const uk: MMDict = {
 
 const kk: MMDict = {
   docTitle: "MULTI Matrix — Серіктестік бағдарлама · Crypto Style",
-  back: "Барлық серіктестік бағдарламалар",
+  back: "Барлық бағдарламалар",
   nav: { intro: "Бағдарлама туралы", income: "4 табыс түрі", platforms: "Алаңдар", summary: "Жиынтық", extras: "Басқару", cta: "Бастау" },
   hero: {
     eyebrow: "Серіктестік бағдарлама",
@@ -1247,7 +1247,7 @@ const kk: MMDict = {
   cta: {
     eyebrow: "Қосылыңыз", title: "MULTI Matrix-тен бастаңыз",
     subtitle: "Алты алаң, автоматты өтулер, клондар, реинвест және болжамды өсім — барлығы TON-дағы бір бизнес-жүйеде.",
-    registerBtn: "MULTI Matrix-ке тіркелу", backBtn: "Барлық серіктестік бағдарламалар",
+    registerBtn: "MULTI Matrix-ке тіркелу", backBtn: "Барлық бағдарламалар",
   },
 };
 
@@ -1255,7 +1255,7 @@ const kk: MMDict = {
 
 const pl: MMDict = {
   docTitle: "MULTI Matrix — Program partnerski · Crypto Style",
-  back: "Wszystkie programy partnerskie",
+  back: "Wszystkie programy",
   nav: { intro: "O programie", income: "4 rodzaje dochodu", platforms: "Platformy", summary: "Podsumowanie", extras: "Zarządzanie", cta: "Start" },
   hero: {
     eyebrow: "Program partnerski",
@@ -1366,7 +1366,7 @@ const pl: MMDict = {
   cta: {
     eyebrow: "Dołącz", title: "Zacznij od MULTI Matrix",
     subtitle: "Sześć platform, automatyczne przejścia, klony, reinvest i przewidywalny wzrost — wszystko w jednym systemie biznesowym na TON.",
-    registerBtn: "Rejestracja w MULTI Matrix", backBtn: "Wszystkie programy partnerskie",
+    registerBtn: "Rejestracja w MULTI Matrix", backBtn: "Wszystkie programy",
   },
 };
 
@@ -1374,7 +1374,7 @@ const pl: MMDict = {
 
 const hu: MMDict = {
   docTitle: "MULTI Matrix — Partnerprogram · Crypto Style",
-  back: "Összes partnerprogram",
+  back: "Összes program",
   nav: { intro: "A programról", income: "4 jövedelemtípus", platforms: "Platformok", summary: "Összegzés", extras: "Kezelés", cta: "Kezdés" },
   hero: {
     eyebrow: "Partnerprogram",
@@ -1485,7 +1485,7 @@ const hu: MMDict = {
   cta: {
     eyebrow: "Csatlakozzon", title: "Kezdje a MULTI Matrixszal",
     subtitle: "Hat platform, automatikus átmenetek, klónok, reinvest és kiszámítható növekedés — mindez egyetlen üzleti rendszerben a TON-on.",
-    registerBtn: "Regisztráció a MULTI Matrixba", backBtn: "Összes partnerprogram",
+    registerBtn: "Regisztráció a MULTI Matrixba", backBtn: "Összes program",
   },
 };
 
