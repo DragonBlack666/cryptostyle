@@ -45,6 +45,7 @@ export function SiteHeader() {
         <nav className="hidden items-center gap-8 text-sm text-foreground/75 md:flex">
           <a href={anchor("why")} className="transition hover:text-gold">{t.nav.features}</a>
           <Link to="/programs" className="transition hover:text-gold">{t.nav.programs}</Link>
+          <Link to="/contest" className="transition hover:text-gold">{t.nav.contest}</Link>
         </nav>
 
         {/* Right: desktop socials + language; mobile language + burger */}
@@ -80,7 +81,13 @@ export function SiteHeader() {
             >
               {t.nav.programs}
             </Link>
-
+            <Link
+              to="/contest"
+              onClick={closeMenu}
+              className="rounded-xl px-4 py-3 text-sm font-medium text-foreground/80 transition hover:bg-surface/70 hover:text-gold"
+            >
+              {t.nav.contest}
+            </Link>
           </nav>
         </div>
       )}
