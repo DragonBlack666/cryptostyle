@@ -200,7 +200,7 @@ const en: ContestDict = {
     structure: {
       title: "Structure growth",
       desc: "Points for activating personal partners at any Crypto Cash level.",
-      note: "Only real activations of personal partners count. A simple registration does not earn points.",
+      note: "Only real activations of new personal partners count. A simple registration does not earn points.",
     },
     subscribe: {
       title: "Video channel subscription",
@@ -295,7 +295,7 @@ const de: ContestDict = {
     structure: {
       title: "Strukturaufbau",
       desc: "Punkte für die Aktivierung persönlicher Partner auf jeder Crypto-Cash-Stufe.",
-      note: "Es zählen nur echte Aktivierungen persönlicher Partner. Eine einfache Registrierung bringt keine Punkte.",
+      note: "Es zählen nur echte Aktivierungen neuer persönlicher Partner. Eine einfache Registrierung bringt keine Punkte.",
     },
     subscribe: {
       title: "Videokanal abonnieren",
@@ -390,7 +390,7 @@ const fr: ContestDict = {
     structure: {
       title: "Développement de la structure",
       desc: "Des points pour l'activation de partenaires personnels à n'importe quel niveau Crypto Cash.",
-      note: "Seules les activations réelles de partenaires personnels sont prises en compte. Une simple inscription ne rapporte pas de points.",
+      note: "Seules les activations réelles de nouveaux partenaires personnels sont prises en compte. Une simple inscription ne rapporte pas de points.",
     },
     subscribe: {
       title: "Abonnement à la chaîne vidéo",
@@ -485,7 +485,7 @@ const it: ContestDict = {
     structure: {
       title: "Sviluppo della struttura",
       desc: "Punti per l'attivazione di partner personali a qualsiasi livello Crypto Cash.",
-      note: "Contano solo le attivazioni reali di partner personali. La semplice registrazione non dà punti.",
+      note: "Contano solo le attivazioni reali di nuovi partner personali. La semplice registrazione non dà punti.",
     },
     subscribe: {
       title: "Iscrizione al canale video",
@@ -580,7 +580,7 @@ const es: ContestDict = {
     structure: {
       title: "Desarrollo de la estructura",
       desc: "Puntos por activar socios personales en cualquier nivel de Crypto Cash.",
-      note: "Solo cuentan las activaciones reales de socios personales. El simple registro no otorga puntos.",
+      note: "Solo cuentan las activaciones reales de nuevos socios personales. El simple registro no otorga puntos.",
     },
     subscribe: {
       title: "Suscripción al canal de vídeo",
@@ -675,7 +675,7 @@ const pt: ContestDict = {
     structure: {
       title: "Desenvolvimento da estrutura",
       desc: "Pontos pela ativação de parceiros pessoais em qualquer nível do Crypto Cash.",
-      note: "Apenas contam ativações reais de parceiros pessoais. O simples registo não dá pontos.",
+      note: "Apenas contam ativações reais de novos parceiros pessoais. O simples registo não dá pontos.",
     },
     subscribe: {
       title: "Subscrição do canal de vídeo",
@@ -770,7 +770,7 @@ const uk: ContestDict = {
     structure: {
       title: "Розвиток структури",
       desc: "Бали за активацію особистих партнерів на будь-якому рівні Crypto Cash.",
-      note: "Враховуються лише реальні активації особистих партнерів. Проста реєстрація балів не дає.",
+      note: "Враховуються лише реальні активації нових особистих партнерів. Проста реєстрація балів не дає.",
     },
     subscribe: {
       title: "Підписка на відеоканал",
@@ -865,7 +865,7 @@ const kk: ContestDict = {
     structure: {
       title: "Құрылымды дамыту",
       desc: "Crypto Cash-тің кез келген деңгейінде жеке серіктестерді белсендіргені үшін ұпайлар.",
-      note: "Тек жеке серіктестердің нақты белсендірулері есепке алынады. Жай тіркелу ұпай бермейді.",
+      note: "Тек жаңа жеке серіктестердің нақты белсендірулері есепке алынады. Жай тіркелу ұпай бермейді.",
     },
     subscribe: {
       title: "Бейнеарнаға жазылу",
@@ -960,7 +960,7 @@ const pl: ContestDict = {
     structure: {
       title: "Rozwój struktury",
       desc: "Punkty za aktywację osobistych partnerów na dowolnym poziomie Crypto Cash.",
-      note: "Liczą się tylko realne aktywacje osobistych partnerów. Sama rejestracja nie daje punktów.",
+      note: "Liczą się tylko realne aktywacje nowych osobistych partnerów. Sama rejestracja nie daje punktów.",
     },
     subscribe: {
       title: "Subskrypcja kanału wideo",
@@ -1064,7 +1064,7 @@ const hu: ContestDict = {
     structure: {
       title: "Struktúraépítés",
       desc: "Pontok személyes partnerek aktiválásáért a Crypto Cash bármely szintjén.",
-      note: "Csak a személyes partnerek valódi aktiválása számít. Az egyszerű regisztráció nem ér pontot.",
+      note: "Csak az új személyes partnerek valódi aktiválása számít. Az egyszerű regisztráció nem ér pontot.",
     },
     subscribe: {
       title: "Feliratkozás a videócsatornára",
