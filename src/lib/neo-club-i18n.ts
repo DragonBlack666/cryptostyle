@@ -207,7 +207,7 @@ const ru: NeoClubDict = {
   cta: {
     eyebrow: "Присоединяйтесь", title: "Начните с Neo Club",
     subtitle: "Восемь площадок, автоматические переходы, клоны и прогнозируемый рост — всё в одной бизнес-системе.",
-    register: "Регистрация в Neo Club", backAll: "Все партнёрские программы",
+    register: "Регистрация в Neo Club", backAll: "Все программы",
   },
 };
 
@@ -216,7 +216,7 @@ const en: NeoClubDict = {
   meta: { docTitle: "Neo Club — Partner Program · Crypto Style" },
   nav: { about: "About", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Summary", features: "Features", extras: "Management", cta: "Start",
-    backAll: "All partner programs" },
+    backAll: "All programs" },
   hero: {
     eyebrow: "Partner program",
     titleTop: "Neo Club", titleBottom: "A business system for entrepreneurs",
@@ -338,7 +338,7 @@ const en: NeoClubDict = {
   cta: {
     eyebrow: "Join us", title: "Start with Neo Club",
     subtitle: "Eight platforms, automatic transitions, clones and predictable growth — all in a single business system.",
-    register: "Register in Neo Club", backAll: "All partner programs",
+    register: "Register in Neo Club", backAll: "All programs",
   },
 };
 
@@ -347,7 +347,7 @@ const de: NeoClubDict = {
   meta: { docTitle: "Neo Club — Partnerprogramm · Crypto Style" },
   nav: { about: "Über das Programm", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Übersicht", features: "Merkmale", extras: "Verwaltung", cta: "Start",
-    backAll: "Alle Partnerprogramme" },
+    backAll: "Alle Programme" },
   hero: {
     eyebrow: "Partnerprogramm",
     titleTop: "Neo Club", titleBottom: "Ein Geschäftssystem für Unternehmer",
@@ -469,7 +469,7 @@ const de: NeoClubDict = {
   cta: {
     eyebrow: "Machen Sie mit", title: "Beginnen Sie mit Neo Club",
     subtitle: "Acht Plattformen, automatische Übergänge, Klone und vorhersehbares Wachstum — alles in einem Geschäftssystem.",
-    register: "Registrierung bei Neo Club", backAll: "Alle Partnerprogramme",
+    register: "Registrierung bei Neo Club", backAll: "Alle Programme",
   },
 };
 
@@ -478,7 +478,7 @@ const fr: NeoClubDict = {
   meta: { docTitle: "Neo Club — Programme partenaire · Crypto Style" },
   nav: { about: "À propos", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Résumé", features: "Caractéristiques", extras: "Gestion", cta: "Démarrer",
-    backAll: "Tous les programmes partenaires" },
+    backAll: "Tous les programmes" },
   hero: {
     eyebrow: "Programme partenaire",
     titleTop: "Neo Club", titleBottom: "Un système d'affaires pour entrepreneurs",
@@ -600,7 +600,7 @@ const fr: NeoClubDict = {
   cta: {
     eyebrow: "Rejoignez-nous", title: "Commencez avec Neo Club",
     subtitle: "Huit plateformes, des transitions automatiques, des clones et une croissance prévisible — le tout dans un seul système d'affaires.",
-    register: "Inscription à Neo Club", backAll: "Tous les programmes partenaires",
+    register: "Inscription à Neo Club", backAll: "Tous les programmes",
   },
 };
 
@@ -609,7 +609,7 @@ const it: NeoClubDict = {
   meta: { docTitle: "Neo Club — Programma partner · Crypto Style" },
   nav: { about: "Informazioni", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Riepilogo", features: "Caratteristiche", extras: "Gestione", cta: "Inizia",
-    backAll: "Tutti i programmi partner" },
+    backAll: "Tutti i programmi" },
   hero: {
     eyebrow: "Programma partner",
     titleTop: "Neo Club", titleBottom: "Un sistema di business per imprenditori",
@@ -731,7 +731,7 @@ const it: NeoClubDict = {
   cta: {
     eyebrow: "Unisciti a noi", title: "Inizia con Neo Club",
     subtitle: "Otto piattaforme, transizioni automatiche, cloni e crescita prevedibile — il tutto in un unico sistema di business.",
-    register: "Registrazione a Neo Club", backAll: "Tutti i programmi partner",
+    register: "Registrazione a Neo Club", backAll: "Tutti i programmi",
   },
 };
 
@@ -740,7 +740,7 @@ const es: NeoClubDict = {
   meta: { docTitle: "Neo Club — Programa de socios · Crypto Style" },
   nav: { about: "Acerca de", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Resumen", features: "Características", extras: "Gestión", cta: "Comenzar",
-    backAll: "Todos los programas de socios" },
+    backAll: "Todos los programas" },
   hero: {
     eyebrow: "Programa de socios",
     titleTop: "Neo Club", titleBottom: "Un sistema de negocio para emprendedores",
@@ -862,7 +862,7 @@ const es: NeoClubDict = {
   cta: {
     eyebrow: "Únete", title: "Comienza con Neo Club",
     subtitle: "Ocho plataformas, transiciones automáticas, clones y crecimiento predecible — todo en un solo sistema de negocio.",
-    register: "Registro en Neo Club", backAll: "Todos los programas de socios",
+    register: "Registro en Neo Club", backAll: "Todos los programas",
   },
 };
 
@@ -871,7 +871,7 @@ const pt: NeoClubDict = {
   meta: { docTitle: "Neo Club — Programa de parceiros · Crypto Style" },
   nav: { about: "Sobre", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Resumo", features: "Características", extras: "Gestão", cta: "Começar",
-    backAll: "Todos os programas de parceiros" },
+    backAll: "Todos os programas" },
   hero: {
     eyebrow: "Programa de parceiros",
     titleTop: "Neo Club", titleBottom: "Um sistema de negócio para empreendedores",
@@ -993,7 +993,7 @@ const pt: NeoClubDict = {
   cta: {
     eyebrow: "Junte-se a nós", title: "Comece com o Neo Club",
     subtitle: "Oito plataformas, transições automáticas, clones e crescimento previsível — tudo num único sistema de negócio.",
-    register: "Registo no Neo Club", backAll: "Todos os programas de parceiros",
+    register: "Registo no Neo Club", backAll: "Todos os programas",
   },
 };
 
@@ -1002,7 +1002,7 @@ const uk: NeoClubDict = {
   meta: { docTitle: "Neo Club — Партнерська програма · Crypto Style" },
   nav: { about: "Про програму", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Зведення", features: "Особливості", extras: "Керування", cta: "Старт",
-    backAll: "Усі партнерські програми" },
+    backAll: "Усі програми" },
   hero: {
     eyebrow: "Партнерська програма",
     titleTop: "Neo Club", titleBottom: "Бізнес-система для підприємців",
@@ -1127,7 +1127,7 @@ const uk: NeoClubDict = {
   cta: {
     eyebrow: "Приєднуйтесь", title: "Почніть з Neo Club",
     subtitle: "Вісім майданчиків, автоматичні переходи, клони й прогнозоване зростання — усе в одній бізнес-системі.",
-    register: "Реєстрація в Neo Club", backAll: "Усі партнерські програми",
+    register: "Реєстрація в Neo Club", backAll: "Усі програми",
   },
 };
 
@@ -1136,7 +1136,7 @@ const kk: NeoClubDict = {
   meta: { docTitle: "Neo Club — Серіктестік бағдарлама · Crypto Style" },
   nav: { about: "Бағдарлама туралы", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Жиынтық", features: "Ерекшеліктер", extras: "Басқару", cta: "Бастау",
-    backAll: "Барлық серіктестік бағдарламалар" },
+    backAll: "Барлық бағдарламалар" },
   hero: {
     eyebrow: "Серіктестік бағдарлама",
     titleTop: "Neo Club", titleBottom: "Кәсіпкерлерге арналған бизнес-жүйе",
@@ -1258,7 +1258,7 @@ const kk: NeoClubDict = {
   cta: {
     eyebrow: "Қосылыңыз", title: "Neo Club-пен бастаңыз",
     subtitle: "Сегіз алаң, автоматты өтулер, клондар және болжамды өсім — бәрі бір бизнес-жүйеде.",
-    register: "Neo Club-қа тіркелу", backAll: "Барлық серіктестік бағдарламалар",
+    register: "Neo Club-қа тіркелу", backAll: "Барлық бағдарламалар",
   },
 };
 
@@ -1267,7 +1267,7 @@ const pl_dict: NeoClubDict = {
   meta: { docTitle: "Neo Club — Program partnerski · Crypto Style" },
   nav: { about: "O programie", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Podsumowanie", features: "Funkcje", extras: "Zarządzanie", cta: "Start",
-    backAll: "Wszystkie programy partnerskie" },
+    backAll: "Wszystkie programy" },
   hero: {
     eyebrow: "Program partnerski",
     titleTop: "Neo Club", titleBottom: "System biznesowy dla przedsiębiorców",
@@ -1392,7 +1392,7 @@ const pl_dict: NeoClubDict = {
   cta: {
     eyebrow: "Dołącz", title: "Zacznij od Neo Club",
     subtitle: "Osiem platform, automatyczne przejścia, klony i przewidywalny wzrost — wszystko w jednym systemie biznesowym.",
-    register: "Rejestracja w Neo Club", backAll: "Wszystkie programy partnerskie",
+    register: "Rejestracja w Neo Club", backAll: "Wszystkie programy",
   },
 };
 
@@ -1401,7 +1401,7 @@ const hu: NeoClubDict = {
   meta: { docTitle: "Neo Club — Partnerprogram · Crypto Style" },
   nav: { about: "A programról", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Összegzés", features: "Jellemzők", extras: "Kezelés", cta: "Indítás",
-    backAll: "Összes partnerprogram" },
+    backAll: "Összes program" },
   hero: {
     eyebrow: "Partnerprogram",
     titleTop: "Neo Club", titleBottom: "Üzleti rendszer vállalkozóknak",
@@ -1523,7 +1523,7 @@ const hu: NeoClubDict = {
   cta: {
     eyebrow: "Csatlakozzon", title: "Kezdje a Neo Clubbal",
     subtitle: "Nyolc platform, automatikus átmenetek, klónok és kiszámítható növekedés — mindez egyetlen üzleti rendszerben.",
-    register: "Regisztráció a Neo Clubba", backAll: "Összes partnerprogram",
+    register: "Regisztráció a Neo Clubba", backAll: "Összes program",
   },
 };
 
