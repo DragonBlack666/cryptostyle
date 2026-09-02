@@ -80,7 +80,7 @@ const ru: NeoClubDict = {
   nav: {
     about: "О программе", neoLine: "Neo Line", neoStart: "Neo Start", neoVip: "Neo VIP",
     summary: "Сводка", features: "Особенности", extras: "Управление", cta: "Старт",
-    backAll: "Все партнёрские программы",
+    backAll: "Все программы",
   },
   hero: {
     eyebrow: "Партнёрская программа",
