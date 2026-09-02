@@ -213,7 +213,7 @@ const en: ContestDict = {
       desc: "Talk about Crypto Cash on social media — every publication earns points.",
       items: [
         { title: "Own post", pts: 5, desc: "Maximum 3 own posts per week. The post must contain real information about Crypto Cash or be related to the program." },
-        { title: "Own video", pts: 7, desc: "Points are awarded for each separate video publication." },
+        { title: "Own video", pts: 7, desc: "Points are awarded for each separate video publication.\nMaximum 3 videos per week." },
         { title: "Stories / short publication", pts: 2, desc: "Maximum 3 own Stories per week." },
         { title: "Complex promotion", pts: 10, desc: "Extra points for completing three actions: own post + Stories/short publication + own video. No more than once a week." },
       ],
@@ -308,7 +308,7 @@ const de: ContestDict = {
       desc: "Berichten Sie in sozialen Netzwerken über Crypto Cash — jede Veröffentlichung bringt Punkte.",
       items: [
         { title: "Eigener Beitrag", pts: 5, desc: "Maximal 3 eigene Beiträge pro Woche. Der Beitrag muss echte Informationen über Crypto Cash enthalten oder mit dem Programm zusammenhängen." },
-        { title: "Eigenes Video", pts: 7, desc: "Für jede einzelne Videoveröffentlichung werden Punkte vergeben." },
+        { title: "Eigenes Video", pts: 7, desc: "Für jede einzelne Videoveröffentlichung werden Punkte vergeben.\nMaximal 3 Videos pro Woche." },
         { title: "Stories / Kurzbeitrag", pts: 2, desc: "Maximal 3 eigene Stories pro Woche." },
         { title: "Komplexe Promotion", pts: 10, desc: "Zusatzpunkte für drei Aktionen: eigener Beitrag + Stories/Kurzbeitrag + eigenes Video. Höchstens 1-mal pro Woche." },
       ],
@@ -364,7 +364,7 @@ const de: ContestDict = {
 const fr: ContestDict = {
   docTitle: "TOP CRYPTO CASH — concours pour les participants Crypto Cash | Crypto Style",
   metaDescription:
-    "Le premier concours pour les participants Crypto Cash : du 2 au 24 septembre 2026. Développez votre structure, faites connaître Crypto Cash et gagnez des points. Cagnotte de 700 $ versée sur votre portefeuille TON.",
+    "Le premier concours pour les participants Crypto Cash : du 2 au 24 septembre 2026. Développez votre structure, faites connaître Crypto Cash et gagnez des points. Cagnotte de 700 $ versée sur votre wallet TON.",
   back: "Tous les programmes",
   nav: { intro: "Présentation", prizes: "Prix", points: "Points", rules: "Règles", confirm: "Confirmation", leaderboard: "Classement", dates: "Dates" },
   hero: {
@@ -380,7 +380,7 @@ const fr: ContestDict = {
     title: "Cagnotte",
     intro: "Les cinq meilleurs participants reçoivent des prix en argent à l'issue du concours.",
     place: (n) => `${n}${n === 1 ? "re" : "e"} place`,
-    note: "Les prix sont versés directement sur le portefeuille TON du gagnant.",
+    note: "Les prix sont versés directement sur le wallet TON du gagnant.",
   },
   points: {
     eyebrow: "Comment gagner des points ?",
@@ -403,7 +403,7 @@ const fr: ContestDict = {
       desc: "Parlez de Crypto Cash sur les réseaux sociaux — chaque publication rapporte des points.",
       items: [
         { title: "Publication personnelle", pts: 5, desc: "Maximum 3 publications personnelles par semaine. La publication doit contenir des informations réelles sur Crypto Cash ou être liée au programme." },
-        { title: "Vidéo personnelle", pts: 7, desc: "Des points sont attribués pour chaque publication vidéo distincte." },
+        { title: "Vidéo personnelle", pts: 7, desc: "Des points sont attribués pour chaque publication vidéo distincte.\nMaximum 3 vidéos par semaine." },
         { title: "Stories / publication courte", pts: 2, desc: "Maximum 3 Stories personnelles par semaine." },
         { title: "Promotion complète", pts: 10, desc: "Points supplémentaires pour trois actions : publication personnelle + Stories/publication courte + vidéo personnelle. Pas plus d'une fois par semaine." },
       ],
@@ -459,7 +459,7 @@ const fr: ContestDict = {
 const it: ContestDict = {
   docTitle: "TOP CRYPTO CASH — concorso per i partecipanti Crypto Cash | Crypto Style",
   metaDescription:
-    "Il primo concorso per i partecipanti Crypto Cash: 2–24 settembre 2026. Sviluppa la struttura, promuovi Crypto Cash e accumula punti. Montepremi di 700 $ pagato sul portafoglio TON.",
+    "Il primo concorso per i partecipanti Crypto Cash: 2–24 settembre 2026. Sviluppa la struttura, promuovi Crypto Cash e accumula punti. Montepremi di 700 $ pagato sul wallet TON.",
   back: "Tutti i programmi",
   nav: { intro: "Panoramica", prizes: "Premi", points: "Punti", rules: "Regole", confirm: "Conferma", leaderboard: "Classifica", dates: "Date" },
   hero: {
@@ -475,7 +475,7 @@ const it: ContestDict = {
     title: "Montepremi",
     intro: "I cinque migliori partecipanti ricevono premi in denaro al termine del concorso.",
     place: (n) => `${n}º posto`,
-    note: "I premi vengono accreditati direttamente sul portafoglio TON del vincitore.",
+    note: "I premi vengono accreditati direttamente sul wallet TON del vincitore.",
   },
   points: {
     eyebrow: "Come guadagnare punti?",
@@ -498,7 +498,7 @@ const it: ContestDict = {
       desc: "Parla di Crypto Cash sui social — ogni pubblicazione porta punti.",
       items: [
         { title: "Post personale", pts: 5, desc: "Massimo 3 post personali a settimana. Il post deve contenere informazioni reali su Crypto Cash o essere collegato al programma." },
-        { title: "Video personale", pts: 7, desc: "I punti vengono assegnati per ogni singola pubblicazione video." },
+        { title: "Video personale", pts: 7, desc: "I punti vengono assegnati per ogni singola pubblicazione video.\nMassimo 3 video a settimana." },
         { title: "Stories / pubblicazione breve", pts: 2, desc: "Massimo 3 Stories personali a settimana." },
         { title: "Promozione completa", pts: 10, desc: "Punti extra per tre azioni: post personale + Stories/pubblicazione breve + video personale. Non più di 1 volta a settimana." },
       ],
@@ -554,7 +554,7 @@ const it: ContestDict = {
 const es: ContestDict = {
   docTitle: "TOP CRYPTO CASH — concurso para participantes de Crypto Cash | Crypto Style",
   metaDescription:
-    "El primer concurso para participantes de Crypto Cash: del 2 al 24 de septiembre de 2026. Desarrolla tu estructura, promociona Crypto Cash y suma puntos. Bolsa de premios de 700 $ pagada a tu billetera TON.",
+    "El primer concurso para participantes de Crypto Cash: del 2 al 24 de septiembre de 2026. Desarrolla tu estructura, promociona Crypto Cash y suma puntos. Bolsa de premios de 700 $ pagada a tu wallet TON.",
   back: "Todos los programas",
   nav: { intro: "Resumen", prizes: "Premios", points: "Puntos", rules: "Reglas", confirm: "Confirmación", leaderboard: "Clasificación", dates: "Fechas" },
   hero: {
@@ -570,7 +570,7 @@ const es: ContestDict = {
     title: "Bolsa de premios",
     intro: "Los cinco mejores participantes reciben premios en efectivo al finalizar el concurso.",
     place: (n) => `${n}º lugar`,
-    note: "Los premios se abonan directamente en la billetera TON del ganador.",
+    note: "Los premios se abonan directamente en la wallet TON del ganador.",
   },
   points: {
     eyebrow: "¿Cómo sumar puntos?",
@@ -593,7 +593,7 @@ const es: ContestDict = {
       desc: "Habla de Crypto Cash en redes sociales: cada publicación suma puntos.",
       items: [
         { title: "Publicación propia", pts: 5, desc: "Máximo 3 publicaciones propias por semana. La publicación debe contener información real sobre Crypto Cash o estar relacionada con el programa." },
-        { title: "Vídeo propio", pts: 7, desc: "Se otorgan puntos por cada publicación de vídeo independiente." },
+        { title: "Vídeo propio", pts: 7, desc: "Se otorgan puntos por cada publicación de vídeo independiente.\nMáximo 3 vídeos por semana." },
         { title: "Stories / publicación corta", pts: 2, desc: "Máximo 3 Stories propias por semana." },
         { title: "Promoción integral", pts: 10, desc: "Puntos adicionales por realizar tres acciones: publicación propia + Stories/publicación corta + vídeo propio. No más de 1 vez por semana." },
       ],
@@ -649,7 +649,7 @@ const es: ContestDict = {
 const pt: ContestDict = {
   docTitle: "TOP CRYPTO CASH — concurso para participantes do Crypto Cash | Crypto Style",
   metaDescription:
-    "O primeiro concurso para participantes do Crypto Cash: 2–24 de setembro de 2026. Desenvolva a sua estrutura, promova o Crypto Cash e acumule pontos. Prémios de 700 $ pagos na carteira TON.",
+    "O primeiro concurso para participantes do Crypto Cash: 2–24 de setembro de 2026. Desenvolva a sua estrutura, promova o Crypto Cash e acumule pontos. Prémios de 700 $ pagos na wallet TON.",
   back: "Todos os programas",
   nav: { intro: "Visão geral", prizes: "Prémios", points: "Pontos", rules: "Regras", confirm: "Confirmação", leaderboard: "Classificação", dates: "Datas" },
   hero: {
@@ -665,7 +665,7 @@ const pt: ContestDict = {
     title: "Fundo de prémios",
     intro: "Os cinco melhores participantes recebem prémios em dinheiro no final do concurso.",
     place: (n) => `${n}º lugar`,
-    note: "Os prémios são creditados diretamente na carteira TON do vencedor.",
+    note: "Os prémios são creditados diretamente na wallet TON do vencedor.",
   },
   points: {
     eyebrow: "Como acumular pontos?",
@@ -688,7 +688,7 @@ const pt: ContestDict = {
       desc: "Fale sobre o Crypto Cash nas redes sociais — cada publicação dá pontos.",
       items: [
         { title: "Publicação própria", pts: 5, desc: "Máximo de 3 publicações próprias por semana. A publicação deve conter informação real sobre o Crypto Cash ou estar relacionada com o programa." },
-        { title: "Vídeo próprio", pts: 7, desc: "Os pontos são atribuídos por cada publicação de vídeo individual." },
+        { title: "Vídeo próprio", pts: 7, desc: "Os pontos são atribuídos por cada publicação de vídeo individual.\nMáximo de 3 vídeos por semana." },
         { title: "Stories / publicação curta", pts: 2, desc: "Máximo de 3 Stories próprias por semana." },
         { title: "Promoção completa", pts: 10, desc: "Pontos adicionais por realizar três ações: publicação própria + Stories/publicação curta + vídeo próprio. No máximo 1 vez por semana." },
       ],
@@ -783,7 +783,7 @@ const uk: ContestDict = {
       desc: "Розповідайте про Crypto Cash у соціальних мережах — кожна публікація приносить бали.",
       items: [
         { title: "Власний пост", pts: 5, desc: "Максимум 3 власні пости на тиждень. Пост має містити реальну інформацію про Crypto Cash або бути пов'язаним із програмою." },
-        { title: "Власне відео", pts: 7, desc: "За кожну окрему публікацію відео нараховуються бали." },
+        { title: "Власне відео", pts: 7, desc: "За кожну окрему публікацію відео нараховуються бали.\nМаксимум 3 відео на тиждень." },
         { title: "Stories / коротка публікація", pts: 2, desc: "Максимум 3 власні Stories на тиждень." },
         { title: "Комплексне просування", pts: 10, desc: "Додаткові бали за виконання трьох дій: власний пост + Stories/коротка публікація + власне відео. Не більше 1 разу на тиждень." },
       ],
@@ -878,7 +878,7 @@ const kk: ContestDict = {
       desc: "Әлеуметтік желілерде Crypto Cash туралы айтыңыз — әр жарияланым ұпай әкеледі.",
       items: [
         { title: "Өз посты", pts: 5, desc: "Аптасына ең көбі 3 өз посты. Постта Crypto Cash туралы нақты ақпарат болуы немесе бағдарламамен байланысты болуы керек." },
-        { title: "Өз бейнесі", pts: 7, desc: "Әрбір жеке бейне жарияланымы үшін ұпай беріледі." },
+        { title: "Өз бейнесі", pts: 7, desc: "Әрбір жеке бейне жарияланымы үшін ұпай беріледі.\nАптасына ең көбі 3 бейне." },
         { title: "Stories / қысқа жарияланым", pts: 2, desc: "Аптасына ең көбі 3 өз Stories." },
         { title: "Кешенді жарнамалау", pts: 10, desc: "Үш әрекетті орындағаны үшін қосымша ұпай: өз посты + Stories/қысқа жарияланым + өз бейнесі. Аптасына 1 реттен артық емес." },
       ],
@@ -973,7 +973,7 @@ const pl: ContestDict = {
       desc: "Opowiadaj o Crypto Cash w mediach społecznościowych — każda publikacja daje punkty.",
       items: [
         { title: "Własny post", pts: 5, desc: "Maksymalnie 3 własne posty tygodniowo. Post musi zawierać prawdziwe informacje o Crypto Cash lub być związany z programem." },
-        { title: "Własne wideo", pts: 7, desc: "Punkty przyznawane są za każdą osobną publikację wideo." },
+        { title: "Własne wideo", pts: 7, desc: "Punkty przyznawane są za każdą osobną publikację wideo.\nMaksymalnie 3 filmy tygodniowo." },
         { title: "Stories / krótka publikacja", pts: 2, desc: "Maksymalnie 3 własne Stories tygodniowo." },
         { title: "Promocja kompleksowa", pts: 10, desc: "Dodatkowe punkty za wykonanie trzech działań: własny post + Stories/krótka publikacja + własne wideo. Nie częściej niż 1 raz w tygodniu." },
       ],
@@ -1077,7 +1077,7 @@ const hu: ContestDict = {
       desc: "Beszélj a Crypto Cashről a közösségi médiában — minden megjelenés pontot ér.",
       items: [
         { title: "Saját poszt", pts: 5, desc: "Hetente legfeljebb 3 saját poszt. A posztnak valós információt kell tartalmaznia a Crypto Cashről, vagy kapcsolódnia kell a programhoz." },
-        { title: "Saját videó", pts: 7, desc: "Minden külön videómegjelenésért pont jár." },
+        { title: "Saját videó", pts: 7, desc: "Minden külön videómegjelenésért pont jár.\nHetente legfeljebb 3 videó." },
         { title: "Stories / rövid megjelenés", pts: 2, desc: "Hetente legfeljebb 3 saját Stories." },
         { title: "Komplex népszerűsítés", pts: 10, desc: "Extra pontok három tevékenység teljesítéséért: saját poszt + Stories/rövid megjelenés + saját videó. Hetente legfeljebb 1 alkalommal." },
       ],
