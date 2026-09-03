@@ -473,11 +473,11 @@ export default function NeoClubPage() {
             ))}
           </div>
 
-          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it" || lang === "en" || lang === "pl") && (
+          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it" || lang === "en" || lang === "pl" || lang === "de") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : lang === "uk" ? "uk-youtube" : lang === "it" ? "it-youtube" : lang === "pl" ? "pl-youtube" : "en-youtube"}
+                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : lang === "uk" ? "uk-youtube" : lang === "it" ? "it-youtube" : lang === "pl" ? "pl-youtube" : lang === "de" ? "de-youtube" : "en-youtube"}
                   src={
                     lang === "ru"
                       ? ruVideoSource === "youtube"
@@ -491,9 +491,11 @@ export default function NeoClubPage() {
                             ? "https://www.youtube.com/embed/EzFjhCqcGzY"
                             : lang === "pl"
                               ? "https://www.youtube.com/embed/3q_SYnnVozk"
-                              : "https://www.youtube.com/embed/WYi-OJHYBoU"
+                              : lang === "de"
+                                ? "https://www.youtube.com/embed/j6Tg8vf1gvE"
+                                : "https://www.youtube.com/embed/WYi-OJHYBoU"
                   }
-                  title={lang === "en" ? "Neo Club Presentation" : lang === "it" ? "Presentazione di Neo Club" : lang === "pl" ? "Prezentacja Neo Club" : d.hero.videoTitle}
+                  title={lang === "en" ? "Neo Club Presentation" : lang === "it" ? "Presentazione di Neo Club" : lang === "pl" ? "Prezentacja Neo Club" : lang === "de" ? "Neo Club Videopräsentation" : d.hero.videoTitle}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
