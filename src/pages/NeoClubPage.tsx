@@ -473,11 +473,11 @@ export default function NeoClubPage() {
             ))}
           </div>
 
-          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it" || lang === "en" || lang === "pl" || lang === "de") && (
+          {(lang === "ru" || lang === "hu" || lang === "uk" || lang === "it" || lang === "en" || lang === "pl" || lang === "de" || lang === "fr") && (
             <div className="mx-auto mt-10 w-full max-w-4xl">
               <div className="aspect-video w-full overflow-hidden rounded-2xl border border-border/60 bg-surface/50 shadow-2xl">
                 <iframe
-                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : lang === "uk" ? "uk-youtube" : lang === "it" ? "it-youtube" : lang === "pl" ? "pl-youtube" : lang === "de" ? "de-youtube" : "en-youtube"}
+                  key={lang === "ru" ? ruVideoSource : lang === "hu" ? "hu-youtube" : lang === "uk" ? "uk-youtube" : lang === "it" ? "it-youtube" : lang === "pl" ? "pl-youtube" : lang === "de" ? "de-youtube" : lang === "fr" ? "fr-youtube" : "en-youtube"}
                   src={
                     lang === "ru"
                       ? ruVideoSource === "youtube"
@@ -493,9 +493,11 @@ export default function NeoClubPage() {
                               ? "https://www.youtube.com/embed/3q_SYnnVozk"
                               : lang === "de"
                                 ? "https://www.youtube.com/embed/j6Tg8vf1gvE"
-                                : "https://www.youtube.com/embed/WYi-OJHYBoU"
+                                : lang === "fr"
+                                  ? "https://www.youtube.com/embed/48RnqDtCrRg"
+                                  : "https://www.youtube.com/embed/WYi-OJHYBoU"
                   }
-                  title={lang === "en" ? "Neo Club Presentation" : lang === "it" ? "Presentazione di Neo Club" : lang === "pl" ? "Prezentacja Neo Club" : lang === "de" ? "Neo Club Videopräsentation" : d.hero.videoTitle}
+                  title={lang === "en" ? "Neo Club Presentation" : lang === "it" ? "Presentazione di Neo Club" : lang === "pl" ? "Prezentacja Neo Club" : lang === "de" ? "Neo Club Videopräsentation" : lang === "fr" ? "Présentation vidéo de Neo Club" : d.hero.videoTitle}
                   allow="accelerometer; clipboard-write; encrypted-media; fullscreen; gyroscope; picture-in-picture; web-share"
                   allowFullScreen
                   width="100%"
