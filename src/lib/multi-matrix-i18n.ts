@@ -426,6 +426,7 @@ const de: MMDict = {
       "MULTI Matrix ist ein Geschäftssystem, das entwickelt wurde, um Ihr Business zu skalieren und Ihr Einkommen zu steigern. Ein einzigartiges Matrixmodell mit automatischer Duplizierung von Geschäftsplätzen und Strukturverwaltung.",
     stats: { platforms: "Plattformen", minEntry: "Min. Einstieg", directIncome: "Direktes Einkommen", newClones: "Neue Klone" },
     videoHint: "Video lädt nicht? Wählen Sie eine andere Quelle:",
+    videoTitle: "MULTI Matrix Videopräsentation",
   },
   income: {
     eyebrow: "Vier Einkommensarten",
